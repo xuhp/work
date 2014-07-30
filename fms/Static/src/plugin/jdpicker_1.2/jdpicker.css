@@ -1,0 +1,101 @@
+
+.jdpicker_w
+{
+    width:90%;
+    position:relative;
+    margin:0 auto;
+    left:-4px;
+}
+.date_selector,.date_selector *{ width:auto; height:auto; border:0; background:0; margin:0; padding:0; text-align:left; text-decoration:none;}
+.date_selector{ width:220px;}
+.date_selector{ background:#fff; border:1px solid #bbb; padding:5px; margin:-1px 0 0 0; position:absolute; z-index:100000; display:none;}
+.date_selector_ieframe{ position:absolute; z-index:99999; display:none;}
+.date_selector .nav{ width:17.5em;}
+.date_selector .month_nav,.date_selector .year_nav{ margin:0 0 3px 0; padding:0; display:block; position:relative; text-align:center;}
+.date_selector .month_nav{ float:left; width:55%;}
+.date_selector .year_nav{ float:right; width:35%; margin-right:-8px;}
+.date_selector .month_name,.date_selector .year_name{ font-weight:bold; line-height:20px;}
+.date_selector .button{ display:block; position:absolute; top:0; width:18px; height:18px; line-height:17px; font-weight:bold; color:#003c78; text-align:center; font-size:120%; overflow:hidden; border:1px solid #f2f2f2;}
+.date_selector .button:hover,.date_selector .button.hover{ background:0; color:#003c78; cursor:pointer; border-color:#ccc;}
+.date_selector .prev{ left:0;}
+.date_selector .next{ right:0;}
+.date_selector table{ border-spacing:0; border-collapse:collapse; clear:both;}
+
+.date_selector thead th,.date_selector tbody td{ width:2.5em; height:2em; padding:0; text-align:center; color:black;}
+.date_selector thead th
+{
+    font-weight:bold;
+    background:#fff;
+}
+.date_selector td{ border:1px solid #ccc; line-height:2em; text-align:center; white-space:nowrap; color:#003c78; background:white;}
+.date_selector td.today{ background:#fffeb3;}
+.date_selector td.unselected_month{ color:#ccc;}
+.date_selector td.selectable_day{ cursor:pointer;background:#E3E3E3;}
+.date_selector td.selected{ background:#3693CB; font-weight:bold;color:#fff;}
+.date_selector td.selectable_day:hover,.date_selector td.selectable_day.hover{ background:#3FA7E8; color:white;}
+
+.date_time {
+	position: relative;
+	width:200px;
+    margin-top:10px;
+}
+.date_time div {
+	display: inline-block;
+}
+.time_item{
+	margin-left: 5px;
+}
+.time_item span {
+	display: inline-block;
+	border: 1px solid #ccc;
+	padding: 2px 3px;
+	cursor: pointer;
+}
+.select_item{
+	position: absolute;
+	background: #FFF;
+	border: 2px solid #09C;
+	width: 168px;
+	left:10px;
+}
+.select_item span{
+	line-height: 20px;
+	text-align: center;
+	display: block;
+	float: left;
+	height: 20px;
+	width: 20px;
+	border-bottom: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+}
+.select_item span:hover{
+	background-color: #009999;
+	color: #FFF;
+	cursor: pointer;
+}
+.select_item .time_selectd{
+	background-color: #009999;
+	color: #FFF;
+	cursor: pointer;
+}
+.select_item_hour{
+	top:-75px;
+}
+.select_item_minute,.select_item_second{
+	top:-180px;
+}
+.cur_time{
+	margin-top: 5px;
+    float:right;
+}
+.data_ui_btn {
+	display: inline-block;
+	margin-left: 5px;
+	padding: 1px 5px;
+	background: #EAEAEA;
+	border: 1px solid #ccc;
+}
+.data_ui_btn:hover {
+	background: #FFFFFF;
+	cursor: pointer;
+}

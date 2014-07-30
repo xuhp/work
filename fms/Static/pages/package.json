@@ -1,0 +1,23 @@
+{
+  "family": "assets",
+  "name": "fms",
+  "version": "1.0.0",
+  "description": "The best project ever.",
+  "homepage": "https://github.com/ctkj-czpp9v1/fms",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ctkj-czpp9v1/fms.git"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "keywords": ["widget"],
+  "licenses": "MIT",
+  "spm": {
+    "output": ["fms.js"],
+    "alias": {},
+    "devAlias": {},
+    "engines": {}
+  }
+}

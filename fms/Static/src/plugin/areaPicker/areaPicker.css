@@ -1,0 +1,55 @@
+﻿/*地区选择*/
+.areaWrapper
+{
+    /*border:1px solid ;*/
+    padding:20px 10px;
+    width:460px;
+    position:absolute;
+    background:#b0e6f2;
+    z-index:99999;
+}
+#provinceAll, #cityAll, #siteAll
+{
+    width:120px;
+   
+}
+.province_ul,.city_ul,.site_ul
+{
+    position:absolute;
+    top:44px;
+    width:120px;
+    padding: 0px 0px;
+    background:#3FA7E8;
+    max-height:200px;
+    overflow:auto;
+    display:none;
+}
+.province_ul
+{
+    left:10px;
+}
+.city_ul
+{
+    left:148px;
+}
+.site_ul
+{
+    left:286px;
+}
+.province_ul li,.city_ul li,.site_ul li
+{
+    cursor:pointer;
+    height:20px;
+    line-height:20px;
+    color:#fff;
+    padding:0 5px;
+}
+/*.province_ul li:hover,.city_ul li:hover,.site_ul li:hover
+{
+    background:#206F96;
+}*/
+.selected_li
+{
+    /*position:absolute;*/
+    background:#206F96;
+}

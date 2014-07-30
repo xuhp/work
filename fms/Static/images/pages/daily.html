@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>日志-财务管理系统</title>
+<link type="text/css" rel="stylesheet" href="/Static/assets/style/common/base.css" />
+<link type="text/css" rel="stylesheet" href="/Static/assets/style/daily.css">
+</head>
+<form method="post" action="" name="dailyForm" id="dailyForm">
+<ul class="daily_content">
+    <li class="daily_felid clearfix">
+        <div class="fl mr20 pr"><label for="node_Creat" class="fms-label w70 tr">日期：</label><input id="node_Creat_1" name="node_Creat_1" type="text" class="form-text form-normal w100 jdpicker" readonly /></div>
+        <div class="fl mr20 pr"><input id="node_Creat_2" name="node_Creat_2" type="text" class="form-text form-normal w100 jdpicker " readonly /></div>
+        <div class="fl mr20"><label for="daily_Person" class="fms-label w70 tr">操作人：</label><input id="daily_Person" name="daily_Person" type="text" class="form-text form-normal w120" uid="" /><input type="hidden" id="daily_PersonID" name="daily_PersonID" value="" /></div>
+        <div class="fl"><label for="daily_Form" class="fms-label w70 tr">模块：</label><select id="daily_Form" name="daily_Form" type="text" class="fms-select sw150"><option formid="">请选择</option></select></div>
+    </li>
+</ul>
+<div class="searchWrap"><input type="submit" name="dailySearch" value="搜 索" id="dailySearch" class="blueBtn searchBtn subBtn" /></div>
+<div id="dailyTabWrap">
+    <table id="dailyTitle" class="fms-table allEditTable daily-table ellip-table">
+        <thead>
+            <tr>
+                <th class="pw15">日期</th>
+                <th class="pw15">操作人</th>
+                <th>操作事件</th>
+                <th class="pw15">模块</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div id="dailyTab" class="daily-tab">
+        <table id="dailyTable" class="fms-table allEditTable daily-table ellip-table">
+            <tbody>
+            	<tr>
+                    <td class="pw15">2013/06/04</td>
+                    <td class="pw15">徐华平</td>
+                    <td class="tl" title="这里是各种操作事件这里是各种操作事件这里是各种操作事件这里是各种操作事件这里是各种操作事件这里是各种操作事件这里是各种操作事件这里是各种操作事件这里是各种操作事件这里是各种操作事件这里是各种操作事件">这里是各种操作事件这里是各种操作事件这里是各种操作事件这里是各种操作事件这里是各种操作事件这里是各种操作事件这里是各种操作事件这里是各种操作事件这里是各种操作事件这里是各种操作事件这里是各种操作事件</td>
+                    <td class="pw15">陈栋</td>
+                </tr>
+            	<tr>
+                    <td class="pw15">2013/06/04</td>
+                    <td class="pw15">徐华平</td>
+                    <td class="tl">这里是各种操作事件........</td>
+                    <td class="pw15">陈栋</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> 
+    <div class="f_pages tc pa"> <span class="paginationInfo"><b>1/3</b> 记录数:<b>22</b></span> &nbsp;<span><a href="javascript:void(0);">首页</a></span> <span><a class="PagerIcon" title="上一页" href="javascript:void(0);">上一页</a></span> <span class="currentPage">1</span> <span><a href="Default.aspx?page=2">2</a></span> <span><a href="Default.aspx?page=3">3</a></span> <span><a class="PagerIcon" title="下一页" href="Default.aspx?page=2">下一页</a></div>
+</div>
+</form>
+<body>
+<script type="text/javascript" src="/Static/assets/seajs/2.1.1/sea-debug.js"></script>
+<script type="text/javascript">
+//配置
+seajs.config({
+	//别名配置
+   	alias: {
+    	"jquery": "/Static/src/plugin/jquery/1.7.2/jquery.js",
+		"daily": "/Static/src/daily.js"
+    }
+});
+seajs.use(['jquery','daily'], function ($,daily ) {
+	daily($);
+	$(function(){
+		$(document).daily();
+	});	
+});
+</script>
+</body>
+</html>

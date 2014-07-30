@@ -1,0 +1,13 @@
+html,body { height:100%; border:none; overflow:hidden;}
+/*daily_content*/
+.daily_content { padding:5px 0px;}
+.daily_felid { padding:5px 0px;}
+.daily_felid.bb { border-bottom: 1px dashed #DADADA; padding-bottom:10px; margin-bottom:5px;}
+.searchWrap { width:100px; height:26px; position:absolute; top:9px; right:15px;}
+#dailySearch { width:100px; height:26px; line-height:26px; padding-left:10px; font-size:14px; font-weight:bold;}
+/*daily_table*/
+.daily-tab { border:1px solid #DADADA; border-top:none; overflow-x:hidden; overflow-y:auto;}
+.daily-tab .daily-table { border:none;}
+.daily-table { position:relative; overflow:auto;}
+.pw15 { width:15%;}
+

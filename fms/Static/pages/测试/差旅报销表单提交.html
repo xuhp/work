@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/common/base.css" />
+    <style>
+        body
+        {
+            text-align:center;
+            padding-top:100px;
+        }
+        h1
+        {
+            font-size:25px;
+            font-weight:bold;
+        }
+        .blueBtn
+        {
+            margin-top:50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>本页面为模拟信息提交</h1>
+    <a class="blueBtn h22 w100" id="submit">提交</a>
+    <script src="/Static/src/plugin/jquery/1.7.2/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $('#submit').click(function () {
+                var this_data = get_data();
+                $.ajax({
+                    type: "post",
+                    url: 'http://fms.ct108.org:1403/Ashx/Workflow/TravelExpenseHandler.ashx?method=AddOrder',
+                    async: false,
+                    data: this_data,
+                    dataType: "json",
+                    success: function (data) {
+                        if (data != null && data.error) {
+                           alert(data.msg)
+                            return false;
+                        }
+                        if (data != null && data.status == 'OK') {
+                            window.location.href = '/Workflow/TravelExpense/ApplySuccess.html';
+                        }
+                    },
+                    error: function (error) {
+                        window.location.href = error.responseText;
+                    }
+                });
+            })
+        })
+
+
+
+        function get_data() {
+            //头部信息
+            var headdata = {
+                "CompanyID":"1","DeptID":"5","BusiID":"8","UserID":"286","TrueName":"徐华平","Phone":"15266666666","Description":"rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrgggggggggggggggggghtngd","FormID":"2","ApplyCase":"100"
+            }
+            //出差目的
+            var purposedata = [
+                { "PurposeDesc": "gggggggggggggg", "ContactName": "江苏南通优梦纺织品有限公司", "ContactID": "119", "CusName": "郝波", "CusID": "152", "Duty": "老板", "Phone": "13862811823" }
+            ]
+            //形成描述
+            var traveldata = [
+                { "Type": 0, "TravelTag": 0, "AreaID": "040202", "AreaName": "江苏 - 苏州 - 平江区", "StartDate": "2014-5-1 19:01:14", "IncityTrafficFee": "55.00", "LongDistancTrafficFee": "55.00", "LongDistancTransportation": "汽车" },
+                { "Type": 0, "TravelTag": 1, "AreaID": "0503", "AreaName": "山东 - 德州", "ArrivalTime": "2014-5-3 19:01:14", "LeaveTime": "2014-5-5 19:01:14", "IncityTrafficFee": "55.00", "LongDistancTrafficFee": "55.00", "LongDistancTransportation": "轮船", "LodgingFee": "55.00", "Total": "275.00" },
+                { "Type": 0, "TravelTag": -1, "AreaID": "0907", "AreaName": "江西 - 宜春", "ArrivalTime": "2014-5-7 19:01:14", "SumDays": "5.0", "IncityTrafficFeeSum": "110.00", "LodgingFeeSum": "55.00", "LongDistancTrafficFeeSum": "110.00", "AvgFee": "55.00", "SumFee": "275.00" }
+            ]
+            var data = {
+                'headdata': JSON.stringify(headdata),
+                'purposedata': JSON.stringify(purposedata),
+                'traveldata': JSON.stringify(traveldata)
+            }
+            return data;
+        }
+
+       
+    </script>
+</body>
+</html>

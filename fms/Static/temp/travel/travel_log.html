@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <script type="text/html" id="travel_log">
+        <div id="full-page-container">
+        <table class="fms-table noBorderTable ellip-table" id="daily">
+            <thead>
+                <tr>
+                    <th style="width:17%;"></th>
+                    <th style="width:11%;">日期</th>
+                    <th style="width:9%;">时间</th>
+                    <th style="width:33%;">操作事件</th>
+                    <th style="width:15%;">操作人</th>
+                    <th style="width:15%;">下一个操作人</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%for(var i=0;i<data.length;i++){%>
+                    <tr>
+                        <td class="tl"><span class="flow  fl"><%=i+1%></span><span class="fl text-middle"><%=data[i].HistoryStatus%></span></td>
+                        <td class="operateDate"><%=data[i].OperateDate%></td>
+                        <td class="operateTime"><%=data[i].OperateTime%></td>
+                        <td class="tl" title="<%=data[i].Event%>"><%=data[i].Event%></td>
+                        <td><%=data[i].OperateUser%></td>
+                        <td><%=data[i].NextUser%></td>
+                    </tr>
+                <%}%>
+            </tbody>
+        </table>
+    </div>
+        
+    </script>
+</body>
+</html>

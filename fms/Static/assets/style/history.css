@@ -1,0 +1,21 @@
+html,body { height:100%; border:none; overflow:hidden;}
+/*his_content*/
+.his_content { padding:5px 0px;}
+.his_felid { padding:5px 0px;}
+.his_felid.bb { border-bottom: 1px dashed #DADADA; padding-bottom:10px; margin-bottom:5px;}
+.searchWrap { width:60px; height:60px; position:absolute; top:10px; right:15px;}
+#hisSearch { width:60px; height:60px; font-size:16px; font-weight:bold;}
+/*his_table*/
+.his-tab { border:1px solid #DADADA; border-top:none; overflow-x:hidden; overflow-y:auto;}
+.his-tab .his-table { border:none;}
+.his-table { position:relative; overflow:auto;}
+.pw8 { width:8%;}
+.pw10 { width:10%;}
+.pw12 { width:12%;}
+.pw15 { width:15%;}
+.pw20 { width:20%;}
+a.blueBtn { display:inline-block; vertical-align:middle; cursor:pointer;}
+/*********** 弹出框架 ************/
+#close { position:absolute; z-index:1000; left: 50%; bottom:5px; margin-left: -41px;}
+#dFrameWrap { background-color:#FFF; position:absolute; z-index:400; top:10px; left:10px; display:none;}
+.maskLayer { width:100%; height:100%; background-color:#000; -moz-opacity: 0.5; opacity:0.5; filter: alpha(opacity=30); position:absolute; z-index:300; left:0px; top:0px; }

@@ -1,0 +1,342 @@
+﻿/*
+ *@Description: common.css
+ *@Version:	    v1.0(2013-08-07 9:00)
+ *@Website:	    
+ *@Author:      xuhp
+ *@Update:      xuhp(2013-08-28 21:44)
+ */
+.tr_selected td
+{
+    background:#EFEFF2;
+}
+/*上下居中居中*/
+html, body
+{
+    height:100%;
+}
+.h_percent50
+{
+    height:50%;
+}
+/*人员配置首页*/
+.staffingIndex
+{
+    width:780px;
+    margin:auto;
+}
+
+.staffingIndex a
+{
+    display:inline-block;
+    width:200px;
+    height:80px;
+    line-height:40px;
+    padding:20px 20px;
+    text-align:center;
+    font-size:30px;
+    color:#fff;
+    margin:0 10px 10px 0;
+    font-weight:bold;
+    float:left;
+}
+.staffingIndex a:hover
+{
+    text-decoration:none;
+}
+.staffing_color_0
+{
+    background:#F27C78;
+}
+.staffing_color_0:hover
+{
+    background:#D02A8C;
+}
+.staffing_color_1
+{
+    background:#EFBE23;
+}
+.staffing_color_1:hover
+{
+    background:#D89C2A;
+}
+.staffing_color_2
+{
+    background:#8DCA48;
+}
+.staffing_color_2:hover
+{
+    background:#80B148;
+}
+.staffing_color_3
+{
+    background:#8BD3E9;
+}
+.staffing_color_3:hover
+{
+    background:#94BDC3;
+}
+.staffing_color_4
+{
+    background:#6BB6D6;
+}
+.staffing_color_4:hover
+{
+    background:#3BA4B9;
+}
+.staffing_color_5
+{
+    background:#BDA3E2;
+}
+.staffing_color_5:hover
+{
+    background:#A99AC5;
+}
+/*人员配置内容页面*/
+.starffingMain
+{
+    position:relative;
+}
+.addStaffingForm
+{
+    height:100%;
+    padding-right:10px;
+    float:left;
+    overflow-y:auto;
+    overflow-x:hidden;
+    width:400px;
+    border-right:2px solid #3BA4B9;
+
+}
+.innerStaffingForm
+{
+    width:398px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    margin-bottom:26px;
+    position:relative;
+    margin-top:34px;
+    border-left:1px solid #efefef;
+    border-right:1px solid #efefef;
+}
+.staffingTab
+{
+    width:398px;
+    overflow:no-content;
+    border:none;
+}
+.staffingTab thead th
+{
+    height:0;
+    line-height:0;
+    overflow:hidden;
+}
+.staffing-business
+{
+    width:185px
+}
+.staffing-list
+{
+    width:185px;
+}
+.staffing-operate
+{
+    width:30px;
+}
+.staffingForm-select
+{
+    width:90%;
+}
+.staffingTab .allEditTab-txtInput
+{
+    width:90%;
+}
+#add_sfBtn
+{
+    position:absolute;
+    bottom:1px;
+    left:0;
+    width:400px;
+}
+.staffingTab td
+{
+    border:none;
+}
+.slide_tr:hover
+{
+    cursor:pointer;
+}
+.table-onlyth
+{
+    width:400px;
+    position:absolute;
+    top:10px;
+    left:0;
+}
+.staffing-btn
+{
+    display:block;
+    width:24px;
+    height:24px;
+    cursor:pointer;
+}
+.staffing-sure
+{
+    background:url(../../images/base/icon/formRight.png) 7px 7px no-repeat;
+}
+.staffing-del
+{
+
+    background:url(../../images/base/icon/formError.png) 7px 7px no-repeat;
+}
+.staffing-fillIn
+{
+    margin-left:422px;
+    height:100%;
+    position:relative;
+}
+.staffing-inner-fillIn
+{
+    overflow-y:auto;
+    overflow-x:auto;
+}
+.staffing-inner-fillIn .sideHeadTable
+{
+    min-width:630px;
+}
+.staffing-fillIn th
+{
+    width:150px;
+}
+.staffing-fillIn .allEditTab-txtInput
+{
+    width:150px;
+}
+.finance_decmal
+{
+    font-size:13px;
+}
+.saveBtnWrapper
+{
+    height:26px;
+    background:#eeecec;
+    width:100%;
+    text-align:center;
+    position:absolute;
+    bottom:1px;
+    right:0;
+}
+#starffingSaveBtn
+{
+    width:150px;
+}
+.staffingTab .tr_opera
+{
+    width:30px;
+    overflow:hidden;
+}
+/*artdiag样式*/
+.sf_btnWrapper
+{
+    padding-top:20px;
+    text-align:center;
+}
+#sf_cancelBtn
+{
+    margin-left:10px;
+}
+/*人员配置表头*/
+.staffing_tr_h td
+{
+    background: #eef3fa;
+    color: #666666;
+    font-size:14px;
+    font-weight:900;
+    cursor:pointer;
+}
+.tr_hide
+{
+    display:none;
+}
+.copy_to_other
+{
+    float:right;
+    color:#D89C2A;
+    margin-right:25px;
+    position:relative;
+}
+.copy_to_other ul
+{
+    position:absolute;
+    z-index:999;
+    background: #3FA7E8;
+    color:#fff;
+    display:none;
+    font-size:12px;
+    width:80px;
+}
+.copy_to_other ul li
+{
+    height:25px;
+    line-height:25px;
+    font-weight:100;
+    padding-left:10px;
+    padding-right:10px;
+}
+.copy_to_other ul li:hover
+{
+    background:#0D354E;
+}
+.staffing_tr_h a
+{
+    float:right;
+    margin-right:15px;
+    font-weight:100;
+    font-size:13px;
+    color:#3372a2;
+}
+/*表单筛选*/
+.staffing-list{
+	position:relative;
+	cursor:pointer;
+}
+.choice_form {
+	position:absolute;
+	top:30px;
+	left:0px;
+	z-index:9999;
+	background:#3fa7e8;
+	display:block;
+	width:100%;
+}
+.choice_form a{
+	float:left;
+	display:bock;
+	width:90%;
+	padding-left:10%;
+	height:25px;
+	line-height:25px;
+	text-align:left;
+	color:#fff;
+}
+.choice_form a:hover{
+	background:#0D354E;
+	text-decoration:none;
+}
+.staffing-list b{
+	display:inline-block;
+	width: 0;
+    height: 0;
+	margin-left:5px;
+}
+.arrow_top b{
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #fff;
+}
+.arrow_bottom b{
+	border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 8px solid #fff;
+}
+
+

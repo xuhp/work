@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>从属关系</title>
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/common/base.css" />
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/dependence.css" />
+</head>
+<body>
+    <div class="user_wrapper">
+        <div class="user_inner_wrapper scroll-pane">
+            <ul class="user_ul">
+                <li class="user_root" uid="0">
+                    <div class="about_user">
+                        <span class="user_head">人员从属</span>
+                        <span class="user_opera">
+                            <a class="add_user"></a>
+                        </span>
+                    </div>
+                    <ul class="ul_0">
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="btn_wrapper" style="display:none;">
+            <button class="blueBtn h26 w82" id="save_dep">确定</button>
+        </div>
+        <div class="tree_opera">
+            <span class="openAll">全部打开</span>
+            <span class="closeAll">全部关闭</span>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/Static/assets/seajs/2.1.1/sea-debug.js"></script>
+    <script type="text/javascript">
+        //配置
+        seajs.config({
+            //别名配置
+            alias: {
+                "jquery": "/Static/src/plugin/jquery/1.7.2/jquery.js"
+            }
+        });
+        seajs.use('/Static/src/dependence', function (d) {
+            d.init();
+        })
+    </script>
+</body>
+</html>

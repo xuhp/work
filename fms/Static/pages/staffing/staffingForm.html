@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/common/base.css"/>
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/staffing.css" />
+</head>
+<body>
+    <div class="fms-navsite">
+        <a href="/Static/staffingIndex.html">上级页面</a>
+        <span class="songti">> </span>
+    </div>
+    <div class="starffingMain pt10">
+        <div class="addStaffingForm">
+            <div class="innerStaffingForm scroll-pane">
+                <table class="allEditTable fms-table staffingTab">
+                    <thead>
+                        <tr>
+                            <th class="staffing-business">业务名称</th>
+                            <th class="staffing-list">报销单</th>
+                            <th class="staffing-operate"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <table class="allEditTable fms-table table-onlyth">
+                <thead>
+                    <tr>
+                        <th class="staffing-business">业务类型</th>
+                        <th class="staffing-list">报销单</th>
+                        <th class="staffing-operate">&nbsp;</th>
+                    </tr>
+                </thead>
+            </table>
+            <button class="blueBtn h26 " id="add_sfBtn" style="display:none;">增加一行</button>
+        </div>
+        <div class="staffing-fillIn">
+            <div class="staffing-inner-fillIn">
+                <table class="fms-table sideHeadTable">
+                </table>
+            </div>
+            <div class="saveBtnWrapper" style="display:none;">
+                <button class="blueBtn h26" id="starffingSaveBtn">保存</button></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/Static/assets/seajs/2.1.1/sea-debug.js"></script>
+    <script type="text/javascript">
+        //配置
+        seajs.config({
+            //别名配置
+            alias: {
+                "jquery": "/Static/src/plugin/jquery/1.7.2/jquery.js"
+            }
+        });
+        seajs.use('/Static/src/staffing', function (a) {
+            a.init();
+        });
+    </script>
+</body>
+</html>

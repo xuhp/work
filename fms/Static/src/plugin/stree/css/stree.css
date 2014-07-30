@@ -1,0 +1,60 @@
+.stree { float:left; width:auto; padding:10px 0px 10px 10px;}
+.stree li { float:left; width:auto; white-space:nowrap; line-height:18px; clear:both;}
+.stree li ul { padding:0px 0px 0px 18px; clear: both;}
+.stree li div { width:auto; padding-left:14px; float: left; clear: both;}
+.stree li div,.croot { height:18px; padding-top:1px; padding-bottom:1px; position:relative; cursor:pointer;}
+.stree li div.entered { background-color:#F7E7CC;}
+.stree li a,.croot a { display:inline-block; width:auto; height:18px; text-decoration:none;}
+.stree li a.inherit span.node-text { text-decoration:line-through; color:#C1C1C1;}
+.stree li a span.icon, .croot a span.icon { background-position:0px -38px; vertical-align:middle;}
+.stree li a span.node-text,.croot span.node-text { display:inline-block; height:18px;  line-height:18px; vertical-align:middle;}
+.stree li p { height:10px; position:absolute; right:10px; top:0px; display:none;}
+.stree li p.show { display:block;}
+.stree li span.button, .croot span.button { display:inline-block; height:18px; width:14px; background-image:url(../images/icon_tree.gif); background-repeat:no-repeat; outline:none; border:none; vertical-align:top; cursor:pointer;}
+.stree li span.button.operate { margin-left:2px; margin-right:2px;}
+.stree li span.button.add { background-position:2px -56px;}
+.stree li span.button.edit { background-position:0px -98px;}
+.stree li span.button.remove { background-position:0px -76px;}
+.stree li span.button.transfer { background-position:2px -116px;}
+.switch { margin-left:-14px; background-position:14px 18px;}
+.switch_open { background-position:0px -14px;}
+.switch_close { background-position:1px 3px;}
+.removeWrap .buttonwrap { padding-top:10px; padding-bottom:10px; text-align:center;}
+.tc { text-align:center;}
+.bline_g { border-bottom:1px solid #CCCCCC;}
+.s-gridtable4 td{border-top:1px solid #EEEEEE; padding:10px 5px;}
+.s-gridtable4 .s-t-head { font-size:12px; border-right:1px solid #EEEEEE; text-align:right; padding-left:10px; padding-right:10px;}
+.s-form-textarea{ font-size:12px; vertical-align:middle; border:1px solid #CCCCCC; border-radius:3px; color:#333333; padding:2px 4px;}
+.netip { margin-left:10px; color:#F00;}
+/*transferTree*/
+.transferWrap { width:300px;}
+#transferTree { width:300px; max-height:200px; overflow:auto; padding:0px;}
+#transferTree li p { display:none;}
+#transferTree li a {padding-right: 15px;}
+.transferWrap .checknode,#checkBox .checknode{ height:18px; vertical-align:middle; margin-left:2px; margin-right:2px;}
+.croot { padding-left:14px;}
+.croot span.node-text { font-weight:bold;}
+.transferWrap .buttonwrap { float:left; width:100%; padding-top:10px; padding-bottom:10px;}
+/*partTree*/
+.popbox { width:200px; height:222px; padding:0px; border:1px solid #ccc; position:absolute; left:0px; top:0px; z-index:9999!important; background:#FFF; overflow:hidden; display:none;}
+.popbox .streewrap { width:190px; height:180px; margin:5px; overflow:auto;}
+.popbox .buttonwrap{ width:190px; margin:0 auto; text-align:center;}
+.popbox .stree { padding:0px;}
+.popbox .stree li div { padding-top:0px; padding-bottom:0px;}
+.popbox .stree li a { padding-right:15px;}
+.popbox .buttonwrap .sureBtn,.popbox .buttonwrap .sureBtn:hover { width:190px; background-position:60px 9px;}
+#partTree.stree li a { padding-left:0px; background:none;}
+#partTree.stree li div { padding-right:0px;}
+/*tabletree*/
+.pw20 { width:20%;}
+.stree-t,.stree-t2 { padding:10px 0px 10px 0px;}
+.stree-t li,.stree-t2 li { white-space:nowrap; line-height:24px;}
+.stree-t li div,.stree-t2 li div {cursor:pointer;}
+.stree-t li div.entered,.stree-t2 li div.entered { background-color:#F7E7CC;}
+.stree-t { text-align:left; padding-left: 5px;}
+.stree-t li ul { padding:0px 0px 0px 18px;}
+.stree-t li div { padding-left:14px;}
+.stree-t li span.node-text{ display:inline-block; height:24px;  line-height:24px; vertical-align:middle;}
+.stree-t li span.button{ display:inline-block; height:18px; width:14px; background-image:url(../images/icon_tree.gif); background-repeat:no-repeat; outline:none; border:none; vertical-align:middle; cursor:pointer;}
+.stree-t2 li ul { padding:0px;}
+.stree-t2 li div { padding-right:10px;}

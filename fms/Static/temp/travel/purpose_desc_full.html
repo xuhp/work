@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <script id="purpose_desc_full_temp" type="text/html">
+        <div class="box_header mt10 clearfix" >
+            <h3>出差目的描述</h3>
+        </div>
+        <table class="allEditTable fms-table ellip-table" id="purpose_desc">
+            <thead>
+                <tr>
+                    <th style="width:5%;">序号</th>
+                    <th style="width:25%;">出差目的</th>
+                    <th style="width:13.5%">联系客户单位</th>
+                    <th style="width:6.75%;">姓名</th>
+                    <th style="width:13.5%;">职务</th>
+                    <th style="width:11.25%;">电话</th>
+                    <%if(purposesdata[0].Completion){%>
+                    <th style="width:25%">完成情况</th> 
+                    <%}%>
+                </tr>
+            </thead>
+            <tbody>
+                <%for(var i=0;i<purposesdata.length;i++){%>
+                    <tr>
+                    <td><%=i+1%></td>
+                    <td title="<%=purposesdata[i].PurposeDesc%>"><%=purposesdata[i].PurposeDesc%></td>
+                    <td class="client_contact_name" title="<%=purposesdata[i].ContactName%>" nodeid="<%=purposesdata[i].ContactID%>"><%=purposesdata[i].ContactName%></td>
+                    <td class="client_customer_name " title="<%=purposesdata[i].CusName%>" nodeid="<%=purposesdata[i].CusID%>"><%=purposesdata[i].CusName%></td>
+                    <td class="client_duty ellipsis" title="<%=purposesdata[i].Duty%>"><%=purposesdata[i].Duty%></td>
+                    <td class="client_phone ellipsis"><%=purposesdata[i].Phone%></td>
+                    <%if(purposesdata[i].Completion){%>
+                    <td class="client_Completion ellipsis" title="<%=purposesdata[i].Completion%>"><%=purposesdata[i].Completion%></td>
+                    <%}%>
+                 </tr>
+                <%}%>
+            </tbody>
+        </table>
+    </script>
+</body>
+</html>

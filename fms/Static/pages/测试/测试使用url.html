@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <style>
+        input
+        {
+            width: 50px;
+        }
+    </style>
+    <script>
+        $(function () {
+            //业务流程
+            $('button').click(function () {
+                //添加链接地址
+                url = $(this).attr('link');
+                //获取参数
+                //操作button的同辈input元素
+                $(this).parent('p').find('input').each(function (index, el) {
+                    //第一个参数的连接符为?
+                    if (index == 0) {
+                        url += '?' + $(this).attr('para') + '=' + $(this).val();
+                    } else {
+                        url += '&' + $(this).attr('para') + '=' + $(this).val();
+                    }
+                });
+                //页面跳转
+                window.open(url);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>业务流程</h2>
+
+    <p style="margin-top: 150px;">
+        <label>任务ID(taskid)</label>
+        <input type="text" para="taskid" />
+        <label>订单ID(orderid)</label>
+        <input type="text" para="orderid" />
+        <label>审核状态(mode=r)</label>
+        <input type="text" para="mode" />
+        <button link="audit.html">审核</button>
+        <button link="borrow_appF.html">借款申请</button>
+        <button link="borrow.html">借款</button>
+        <button link="applyFor.html">报销申请</button>
+        <button link="check.html">核定</button>
+        <button link="cashier.html">出纳</button>
+    </p>
+    <a href="expenseIndex.html" target="_blank">经费申请页面</a>
+    <h2>历史详情</h2>
+    <p>
+        <label>订单ID(orderid)</label>
+        <input type="text" para="orderid" />
+       <button link="order_detail.html">历史详情</button>
+    </p>
+</body>
+</html>

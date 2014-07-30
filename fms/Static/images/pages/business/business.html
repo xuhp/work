@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1//Static/assets/style/business.cssDTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>业务-财务管理系统</title>
+<link type="text/css" rel="stylesheet" href="/Static/assets/style/common/base.css" />
+<link type="text/css" rel="stylesheet" href="/Static/assets/style/business.css">
+</head>
+<body>
+<!--roleKeys BENIN-->
+<input type="hidden" id="roleKeys" value="BusinessHandler_Add,BusinessHandler_Edit,BusinessHandler_Delete,BusinessHandler_Transfer" />
+<!--roleKeys END-->
+<!--busTree BENIN-->
+<div class="bus-tree fl">
+	<h2 class="tree_til"><strong>业务管理</strong><a id="addBtn_bus_0" class="addbtn">添加</a></h2>
+	<div id="busTreeWrap" class="stree-wrap scroll-pane">
+    	<ul id="busMainTree" class="stree clearfix"></ul>
+    </div>
+</div>
+<!--busTree END-->
+<!--busFrame BENIN-->
+<div id="busFrameWrap" class="content pr">
+	<div class="loadWrap"><div class="loading"><img src="/Static/images/base/loader-big.gif" /><p>拼命加载中......</p></div></div>
+    <iframe id="busFrame" name="busFrame" class="" width="100%" height="100%" frameborder="0" border="0" src=""></iframe>
+</div>
+<!--busFrame END-->  	
+<script type="text/javascript" src="/Static/assets/seajs/2.1.1/sea-debug.js"></script>
+<script type="text/javascript">
+//配置
+seajs.config({
+	//别名配置
+   	alias: {
+    	"jquery": "/Static/src/plugin/jquery/1.7.2/jquery.js",
+		"business": "/Static/src/business/business.js"
+    }
+});
+seajs.use(['jquery','business'], function ($,business ) {
+	business($);
+	$(function(){
+		$(document).business({Url:"http://localhost:1234/Static/pages/business/business_main.html?"});
+	});	
+});
+</script>
+
+</body>
+</html>

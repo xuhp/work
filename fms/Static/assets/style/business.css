@@ -1,0 +1,38 @@
+html,body { height:100%; border:none; overflow:hidden;}
+.bus-tree { width:280px; height:100%; background-color:#FCFCFC;}
+.stree-wrap { width:280px; overflow:auto; }
+/*stree*/
+.stree li a { padding-right:92px;}
+.stree li a.inherit { padding-right:15px;}
+.stree li div.selected { background-color:#EBEBEB!important;}
+.stree li p { right:10px;}
+/*tree_til*/
+.tree_til { height:26px; background-color:#007ACC; position:relative;}
+.tree_til strong { float:left; line-height:14px; color:#FFF; font-weight:bold; padding:6px 20px; }
+/*form*/
+.formwrap .buttonWrap { padding-left:110px;}
+/*子页面*/
+.content { min-width:500px; float:right; overflow:hidden;}
+.budget-top { height:24px; line-height:24px; padding:5px 10px 2px;}
+.budget-top .addBtn { background-position:15px 7px;}
+.budget-top .addBtn:hover { background-position:15px 7px;}
+.budget-til,.budget-til2 {display:inline-block; color:#555; vertical-align: top; margin-right:5px;}
+.budget-til { max-width:250px;}
+.modify { display:inline-block; width:12px; height:14px; padding:0px 5px; background:url(../../images/base/icon/editNormal.png) no-repeat 5px 0px; cursor:pointer; text-indent:-999px; overflow:hidden; vertical-align:middle; }
+.budget-table tr { cursor:pointer;}
+.budget-log { height:114px;}
+.budget-tr.selected,.fineBudget-tr.selected{background-color:#D1ECF4!important;}
+.budget-tr.selected td,.fine-budget-tr.selected td { color: #222;}
+.pw2 { width:2%;}
+.pw4 { width:4%;}
+.pw6 { width:6%;}
+.pw12 { width:12%;}
+.pw13 { width:13%;}
+.pw15 { width:15%;}
+.pw20 { width:20%;}
+#tipsBudget b { display:inline-block; height:24px; line-height:24px; vertical-align:middle;}
+.addFineBudget { text-decoration: underline; color: #000099;}
+.addFineBudget:hover { color: #FF3300;}
+#budgetTab { overflow: hidden;}
+
+

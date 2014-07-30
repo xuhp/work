@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/common/base.css" />
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/general_expense/flow_log.css" />
+    <title>日志</title>
+</head>
+<body>
+    <div id="content">
+
+    </div>
+    <script type="text/javascript" src="/Static/assets/seajs/2.1.1/sea-debug.js"></script>
+    <script type="text/javascript">
+        //配置
+        seajs.config({
+            //别名配置
+            alias: {
+                "jquery": "/Static/src/plugin/jquery/1.7.2/jquery.js"
+            },
+            //加时间戳
+            map: [
+                [/^(.*\.(?:css|js))(.*)$/i, '$1?20140424']
+            ]
+        });
+        seajs.use('/Static/src/travel_expense/travel_log', function (daily) {
+            daily.init();
+        });
+    </script>
+</body>
+</html>

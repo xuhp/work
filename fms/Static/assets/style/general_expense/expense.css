@@ -1,0 +1,192 @@
+﻿/*
+ *@Description: expense.css
+ *@Version:	    v1.0(2013-08-6 9:00)
+ *@Website:	    
+ *@Author:      xuhp
+ *@Update:      xuhp(2013-08-28 21:44)
+ */
+
+html, body {
+    height: 100%;
+}
+/*费用报销首页*/
+.ei-container
+{
+    width:875px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.expenseType
+{
+    float:left;
+    width:225px;
+    overflow:hidden;
+}
+.expense_text a
+{
+    display:block;
+    width:225px;
+    text-align:center;
+    height:150px;
+    line-height:150px;
+    font-size:34px;
+    font-family:"微软雅黑","黑体";
+    font-weight:bold;
+    background:#DFDFDF;
+    color:#333;
+}
+.expense_text a:hover
+{
+    background:#206F96;
+    color:#fff;
+    text-decoration:none;
+}
+.expense_explain
+{
+    margin-top:15px;
+    line-height:20px;
+}
+/*费用报销表单填写功能*/
+.expense-form .mutate-table-wrapper
+{
+}
+.expense-form .mutate-table td
+{
+}
+.mutate-table .fms-select
+{
+    width:90%;
+    min-width:108px;
+}
+.mutate-table .form-text
+{
+
+    width:90%;
+    min-width:100px;
+    border-color:#ddd;
+}
+.expenseForm-allEditTable .allEditTab-txtInput
+{
+    width:90%;
+}
+.jdpicker_w .allEditTab-txtInput
+{
+    width:100%;
+}
+.expenseForm-allEditTable th
+{
+    height:0;
+    line-height:0;
+    overflow:hidden;
+}
+#expenseHead th
+{
+    height:34px;
+    line-height:34px;
+}
+.ef-allTab-wrapper
+{
+    position:relative;
+}
+#expenseFormMain
+{
+    padding-bottom:34px;
+    height:100px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+    overflow-style:scrollbar;
+}
+.expenseForm-allEditTable
+{
+    border:none;
+}
+.expenseForm-allEditTable td
+{
+}
+#expense_sureBtn
+{
+    padding-top:14px;
+    height:26px;
+    text-align:center;
+}
+#expense_sureBtn label
+{
+    font-weight:bold;
+    font-size:16px;
+}
+#expenseFoot
+{
+}
+#expenseFoot tr
+{
+    border:1px solid #ccc;
+    border-top:none;
+}
+/*地区选择样式*/
+
+
+/*tooltip提示文本*/
+.tooltip
+{
+    background:#3FA7E8;
+    min-width:200px;
+    text-align:left;
+    padding:5px 0;
+    color:#fff;
+}
+.tooltip p
+{
+    padding:0 5px; 
+    white-space:nowrap;
+}
+.paidFor_pos
+{
+    position:relative;
+    width:100%;
+}
+#expense-loader
+{
+    position:absolute;
+    z-index:999;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:#fff;
+    text-align:center;
+}
+#expense-loader .loader-big
+{
+    margin-top:100px;
+}
+/*二次确认页面*/
+#artBody thead th,#footer_artBody thead th
+{
+    height:0px;
+    line-height:0px;
+    overflow:hidden;
+}
+
+#artBody, #header_artBody, #footer_artBody
+{
+    width:870px;
+}
+#artBody
+{
+    border-right:1px solid #ccc;
+    border-left:1px solid #ccc;
+    height:150px;
+    overflow:auto;
+    width:868px;
+}
+#artBody table,#header_artBody,#footer_artBody
+{
+    border:none;
+}
+#header_artBody, #footer_artBody
+{
+    border-right:1px solid #ccc;
+    border-left:1px solid #ccc;
+}

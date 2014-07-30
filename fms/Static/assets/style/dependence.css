@@ -1,0 +1,165 @@
+﻿html,body
+{
+    height:100%;
+}
+.user_wrapper
+{
+    width:600px;
+    margin:0 auto;
+    background:#F5F5F5;
+    position:relative;
+}
+.user_inner_wrapper
+{
+    padding-bottom:10px;
+    margin-bottom:30px;
+    overflow:auto;
+}
+.user_ul > li
+{
+    padding-bottom:10px;
+}
+.user_head
+{
+    padding-left:30px;
+    background:url(/Static/images/dependence/staff_top.png) 5px no-repeat; 
+    font-weight:bold;
+}
+.dep_til span
+{
+    float: left;
+    line-height: 14px;
+    color: #FFF;
+    font-weight: bold;
+    padding: 6px 20px;
+}
+.addbtn
+{
+    display: block;
+    width: 50px;
+    height: 26px;
+    line-height: 26px;
+    color: #FFF;
+    text-indent: 20px;
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    background: url(../../images/base/icon/addNormal.png) 0px 8px no-repeat;
+}
+.user_ul
+{
+    padding:10px;
+}
+.user_ul ul
+{
+    margin: 0;
+    padding: 0 0 0 1.5em;
+}
+.user_ul >li> ul
+{
+    margin: 0;
+    padding: 0 0 0 0.5em;
+}
+.user_ul .about_user
+{
+    height:22px;
+    line-height:22px;
+    position:relative;
+    cursor: pointer;
+    margin:1px 0;
+}
+.collapsed
+{
+    display:inline-block; 
+    height:22px;
+    width:20px; 
+    cursor:pointer;
+    float:left;
+}
+.expanded
+{
+    display:inline-block; 
+    height:22px;
+    width:20px; 
+    cursor:pointer;
+    float:left;
+}
+.current
+{
+    background:#fff;
+}
+.has_ul >.about_user> .expanded
+{
+    background:url(/Static/images/dependence/collapsed.png) no-repeat 7px 6px; 
+}
+.has_ul>.about_user> .collapsed
+{
+    background:url(/Static/images/dependence/expanded.png) no-repeat 6px 7px; 
+}
+.usr_name
+{
+    padding-left:20px;
+    background:url(/Static/images/dependence/staff.png) no-repeat ; 
+}
+.user_opera
+{
+    float:right;
+    height:22px;
+}
+.add_user,.del_user,.editor_user
+{
+    width:20px;
+    height:22px;
+    line-height:22px;
+    background:url(/Static/images/base/icon/addHover.png) no-repeat 5px 6px; 
+    display:inline-block;
+}
+.add_user:hover, .del_user:hover,.editor_user:hover
+{
+    background-color:#ddd;
+}
+.del_user
+{
+    background:url(/Static/images/base/icon/reduce.png) no-repeat 6px 10px ; 
+}
+.editor_user
+{
+    background:url(/Static/images/base/icon/editNormal.png) no-repeat 3px 4px ; 
+}
+.btn_wrapper
+{
+    position:absolute;
+    bottom:0;
+    left:0;
+    height:26px;
+    width:100%;
+    background:#E0E0E0;
+}
+.btn_wrapper .blueBtn
+{
+    width:80px;
+    margin-left:260px;
+}
+.tree_opera
+{
+    
+    position:absolute;
+    right:-18px;
+    top:100px;
+}
+.tree_opera span
+{
+    width:14px;
+    padding:5px 2px;
+    text-align:center;
+    display:block;
+    background:#3FA7E8;
+    margin-top:3px;
+    color:#FFF;
+}
+.tree_opera span:hover
+{
+     background: #0d354e;
+    color:#3fa7e8;
+    cursor:pointer;
+}

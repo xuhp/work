@@ -1,0 +1,85 @@
+﻿/*
+ *@Description: 用于差旅报销页面，包括首页、列表页和成功页
+ *@date:        2014-04-17
+ *@Version:	    v1.0
+ *@Author:      xuhp
+ *@e-mail:      xuhp@ct108.com
+ */
+
+html, body {
+    height: 100%;
+}
+/*差旅报销首页*/
+.height_per50
+{
+    height: 50%;
+}
+.ei_container
+{
+    width:500px;
+    margin:0 auto;
+    overflow:hidden;
+    margin-top:-165px;
+}
+.container_inner
+{
+    width:550px;
+}
+.travel_type
+{
+    display:inline-block;
+    float:left;
+    margin-right:50px;
+    margin-top:30px;
+}
+.travel_type a
+{
+    display:block;
+    width:225px;
+    text-align:center;
+    height:120px;
+    line-height:120px;
+    font-size:34px;
+    font-family:"微软雅黑","黑体";
+    font-weight:bold;
+    background:#DFDFDF;
+    color:#333;
+}
+.travel_type a:hover
+{
+    background:#206F96;
+    color:#fff;
+    text-decoration:none;
+}
+/*差旅报销表单页*/
+.allEditTab-txtInput
+{
+    width:98%;
+}
+.fms-select
+{
+    width:98%;
+}
+.desc_wrapper label
+{
+    top:9px;
+}
+.submit_btn_wrap
+{
+   text-align:center;
+   padding-top:10px;
+   height:40px;
+   line-height:40px;
+}
+.focus_change_height
+{
+    text-align:left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border:1px solid #DFDFDF;
+}
+.finance_decmal
+{
+    text-align:left;
+}

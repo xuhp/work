@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>人员配置首页</title>
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/common/base.css" />
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/staffing.css" />
+</head>
+<body>
+    <div class="h_percent50"></div>
+    <div class="staffingIndex clearfix">
+    </div>
+    <script type="text/javascript" src="/Static/assets/seajs/2.1.1/sea-debug.js"></script>
+    <script type="text/javascript">
+        //配置
+        seajs.config({
+            //别名配置
+            alias: {
+                "jquery": "/Static/src/plugin/jquery/1.7.2/jquery.js"
+            }
+        });
+        seajs.use('jquery', function ($) {
+            $.ajax({
+                type: "post",
+                url: 'http://fms.ct108.org:1403/Ashx/Common/CompanyHandler.ashx?method=GetEffectiveCompanys',
+                async: false,
+                dataType: "json",
+                success: function (data) {
+                    if (data.error) {
+                        errorMsg(data.msg)
+                        return false;
+                    }
+                    $('.staffingIndex').append(creat_company(data));
+                    setTimeout(function () {
+                        setP();
+                    }, 100);
+                },
+                error: function (error) {
+                    window.location.href = error.responseText;
+                }
+            });
+            //创建公司列表
+            function creat_company(data) {
+                var company = '';
+                var num = 0;
+                for (var i = 0; i < data.length; i++) {
+                    num = i % 6;
+                    company += '<a href="staffingForm.html" class="staffing_color_' + num + '" companyId="' + data[i].CompanyID + '">'+data[i].CompanyName+'</a>'
+                }
+                return company;
+            };
+            $(function () {
+                /*
+                * 关于公司列表位置
+                */
+                //加载后马上执行公司列表设置
+                setP();
+                //设置公司列表位置
+                function setP() {
+                    //获取窗体高度
+                    var win_h = $('body').height();
+                    //获取公司列表高度
+                    var height = $('.staffingIndex').height();
+                    if (win_h > height) {
+                        $('.staffingIndex').css('margin-top', -height / 2 + 'px');
+                    } else {
+                        $('.staffingIndex').css('margin-top', -(win_h / 2) + 10 + 'px');
+                    }
+                }
+                //窗体大小改变时执行
+                $(window).resize(setP);
+
+                /*
+                * 关于URL
+                */
+                $('.staffingIndex a').click(function () {
+                    var loadsrc = $(this).attr('href');
+                    var companyId = $(this).attr('companyId');
+                    var companyName = $(this).text();
+                    url = encodeURI(loadsrc + '?companyid=' + companyId + '&companyName=' + companyName);
+                    window.location.href = url;
+                    return false;
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>

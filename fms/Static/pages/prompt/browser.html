@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>浏览器版本检测</title>
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/common/base.css" />
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/prompt/error.css" />
+</head>
+<body>
+    <div class="height_pre50"></div>
+    <div class="browser">
+        <div class="b_warning">
+            <h1><b>警告：</b>您的浏览器暂不支持本系统，请使用以下浏览器</h1>
+            <ul>
+                <li><b>chrome浏览器：</b>此浏览器为目前最高效最稳定的浏览器，<span style="color:#ff6a00;font-weight:bold;">强烈推荐使用</span>。
+                <li><b>ie浏览器：</b>只支持ie9及以上版本，请勿使用兼容模式</li>
+            </ul>
+            <p>友情提醒：360最新版本浏览器也支持喽！</p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="/Static/src/plugin/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	if(($.browser.msie&&($.browser.version=="9.0")) || ($.browser.msie&&($.browser.version=="10.0"))){
+	    window.location.href = "http://fms.ct108.net";                      
+	}else if(($.browser.mozilla&&($.browser.version=="11.0")) || $.browser.webkit){
+	    window.location.href = "http://fms.ct108.net";   
+	}	
+});
+</script>
+</html>

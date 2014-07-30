@@ -1,0 +1,159 @@
+﻿html,body
+{
+    height:100%;
+}
+/*预算相关*/
+#budget_table th
+{
+    height:0px;
+    line-height:0px;
+    overflow:hidden;
+}
+#budget_table,#budget_head
+{
+    border:0px;
+}
+.top_sum
+{
+    height:20px;
+    line-height:20px;
+    font-size:14px;
+    font-weight:bold;
+    padding-bottom:5px;
+    border-bottom:2px solid #3BA4B9;
+    margin-bottom:10px;
+}
+.top_sum span
+{
+    margin-right:20px;
+}
+.finance_decmal
+{
+    font-size:13.3px;
+}
+.con_budget
+{
+    height:200px;
+    width:100%;
+    overflow:auto;
+}
+#budget_table
+{
+    overflow:hidden;
+}
+#budget_table td
+{
+   border-right:1px solid #ddd;
+}
+#budget_head th
+{
+    border-right:1px solid #ddd;
+}
+#budget_table .finance_decmal 
+{
+    text-align:right;
+}
+.budget_extend
+{
+    width:20px;
+    height:28px;
+    background:url(/Static/images/base/icon/addHover.png) no-repeat 5px 8px;
+    display:block;
+}
+.budget_shrink
+{
+    width:20px;
+    height:28px;
+    background:url(/Static/images/base/icon/reduce.png)  no-repeat 5px 12px;
+    display:block;
+}
+.none td
+{
+    display:none;
+}
+.father_tr td
+{
+    background:#efefef;
+    cursor:pointer;
+}
+#total_tr td
+{
+    font-weight:900;
+}
+/*框架样式*/
+.container
+{
+    padding:10px 0;
+}
+.footer
+{
+    text-align:center;
+    padding:5px 0;
+    height:26px;
+    line-height:26px;
+}
+.loaded
+{
+    color:#f00;
+}
+
+.moreWrapper
+{
+    display: block;
+    width: 50px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    background: #e2f4f8;
+    padding: 2px;
+    color: #07B7D7;
+    margin-top:10px;
+}
+.moreWrapper:hover
+{
+    background:#07B7D7;
+    color:#fff;
+}
+/*通过*/
+.agreeAgain
+{
+    text-align:center;
+    width:350px;
+}
+.agreeAgain p
+{
+    margin-bottom:10px;
+}
+
+/*拒绝*/
+.refuse_reason
+{
+    text-align:center;
+    width:350px;
+}
+.refuse_reason .form-textarea
+{
+    height:60px;
+    width:350px;
+    display:block;
+    margin-bottom:10px;
+}
+.state_red
+{
+    font-size:16px;color:#f00;font-weight:bold;
+}
+.state_blue
+{
+    font-size:16px;color:#3FA7E8;font-weight:bold;
+}
+#outer_info
+{
+    float:right;
+    position:absolute ;
+    right:10px;
+    top:10px;
+}
+#outer_info span
+{
+    margin-right:20px;
+}
+

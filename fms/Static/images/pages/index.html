@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页-财务管理系统</title>
+<link type="text/css" rel="stylesheet" href="/Static/assets/style/common/base.css" />
+<link type="text/css" rel="stylesheet" href="/Static/assets/style/index.css" />
+</head>
+<body>
+    <div id="index-page-outer">
+        <div id="index-page-inner">
+            <div id="header" class="maskwrap">
+                <div class="toplogin">您好，<span id="lblUsername" class="fb">宋秋菊</span></div>
+                <a id="topLogo" class="logo" href="default.html" title="财务管理系统">财务管理系统</a>
+                <ul class="top-nav">
+                    <li class="top-nav-li"><a class="top-item top-item_1" href="general_expense/expenseIndex.html"></a></li>
+                    <li class="top-nav-li"><a class="top-item top-item_2" href="travel_expense/travelIndex.html"></a></li>
+                    <li class="top-nav-li"><a class="top-item top-item_3" href="http://shop.uc108.com/"></a></li>
+                </ul>
+            </div>
+            <div id="main" class="clearfix">
+                <div id="mainLeft" class="main_left">
+                    <ul class="slide-nav">
+                        <li class="slide-nav-li pr"><a id="taskItem" class="slide-item slide-item_1" href="task.html">任务</a><b id="taskTip" class="task-tip">0</b></li>
+                        <li class="slide-nav-li"><a class="slide-item slide-item_2" href="history.html">历史</a></li>
+                        <li class="slide-nav-li"><a class="slide-item slide-item_3" href="daily.html">日志</a></li>
+                        <li class="slide-nav-li"><a class="slide-item slide-item_4" href="business/business.html">业务</a></li>
+                        <li class="slide-nav-li"><a class="slide-item slide-item_5" href="subject.html">科目</a></li>
+                        <li class="slide-nav-li"><a class="slide-item slide-item_6" href="appoint.html">指派</a></li>
+                        <li class="slide-nav-li"><a class="slide-item slide-item_7" href="staffingIndex.html">角色</a></li>
+                        <li class="slide-nav-li"><a class="slide-item slide-item_8" href="dependence.html">从属</a></li>
+                        <li class="slide-nav-li slide-quit"><a id="slideQuit" class="slide-item-quit" href="/Logout.aspx">退出</a></li>
+                    </ul>        
+                </div>
+                <div id="mainRight" class="main_right maskwrap">
+                    <div id="fFrameWrap">
+                        <div class="loadWrap"><div class="loading"><img src="/Static/images/base/loader-big.gif" /><p>玩命加载中......</p></div></div>
+                        <iframe id="fFrame" name="fFrame" width="100%" height="100%" frameborder="0" border="0" src="prompt/default.html"></iframe>
+                    </div>
+                    <div id="dFrameWrap">
+                        <div class="loadWrap"><div class="loading"><img src="/Static/images/base/loader-big.gif" /><p>玩命加载中......</p></div></div> 
+                        <iframe id="dFrame" name="dFrame" width="100%" height="100%" frameborder="0" border="0" src=""></iframe>
+                    </div>
+                </div>                  
+            </div>
+            <div id="footer" class="maskwrap">
+                <p class="tc">畅唐科技 版权所有 Copyright © 2013 All Rights Reserved </p>
+            </div>
+            <div id="version" class="fixed-r"><a title="版本">版&nbsp;本</a></div>
+            <div id="admin" class="fixed-r"><a title="管理后台" href="https://admin.ct108.net:777/" target="_blank">管&nbsp;理后&nbsp;台</a></div>
+            <div id="vFrameWrap" class="s-frame-wrap">
+                <div class="s-frame-til">
+                    <span>历史版本</span>
+                    <a id="closeA" class="s-frame-close" title="关闭"></a>
+                </div>
+                <div class="s-frame-con">
+                    <iframe id="vFrame" name="vFrame" class="" width="100%" height="100%" frameborder="0" border="0" src="http://www.baidu.com"></iframe>   
+                </div>                
+            </div>  
+        </div>
+    </div>
+    <div id="loadCon" class="loadWrap" style="display:block;"><div class="loading"><img src="/Static/images/base/loader-big.gif" /><p>正在加载中...</p></div><div>
+</body>
+<script type="text/javascript" src="/Static/assets/seajs/2.1.1/sea-debug.js"></script>
+<script type="text/javascript">
+seajs.config({
+	//别名配置
+   	alias: {
+    	"jquery": "/Static/src/plugin/jquery/1.7.2/jquery.js",
+		"index": "/Static/src/index.js"
+    }	
+});
+seajs.use(['jquery','index'],function($,index){
+    if(($.browser.msie&&($.browser.version=="9.0")) || ($.browser.msie&&($.browser.version=="10.0"))){
+        index($);
+        $(function(){
+            $(document).index();
+        });                      
+    }else if(($.browser.mozilla&&($.browser.version=="11.0")) || $.browser.webkit){
+        index($);
+        $(function(){
+            $(document).index();
+        });  
+    }else{
+        window.location.href = "browser.html"; 
+    }
+});
+</script>
+</html>

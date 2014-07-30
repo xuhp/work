@@ -1,0 +1,25 @@
+html,body { height:100%; border:none; overflow:hidden;}
+.task-side { width:220px; height:100%; background-color:#F0F0F0;}
+.scroll-pane { width:100%; overflow:auto;}
+.task-list { width:200px;}
+.task-list .task-li{height:78px; margin-bottom:2px; overflow:hidden;}
+.task-list .task-item { display:block; height:72px; padding:2px 5px; background-color:#FFF; border:1px solid #FFF;}
+.task-list .task-item:hover { text-decoration:none;}
+.task-list .task-item.task-n { border-left:3px solid #04C242;}
+.task-list .task-item.task-n .formname { font-size:14px; font-weight:bold; color:#323232;}
+.task-list .task-item.task-n:hover,.task-list .task-item.task-n.selected { border:1px solid #B3B3B3; border-left:3px solid #04C242;}
+.task-list .task-item.selected { background-color:#ECFBF1!important;}
+.task-list .task-item.task-y { padding-left:7px;}
+.task-list .task-item.task-y:hover,.task-list .task-item.task-y.selected { border:1px solid #B3B3B3;}
+.task-list .task-item .task-info { height:24px;}
+.task-list .task-item .task-info span { display:inline-block;height:24px; line-height:24px; overflow:hidden;}
+
+.searchbox { width:340px; height:224px; }
+.task-more,.task-more-s { font-size:14px; font-size:14px; color:#0088CA; text-decoration:underline; cursor:pointer;}
+.task-more { display:none;}
+.more-wrap { height:24px; line-height:24px; text-align:center; background-color:#FFF;}
+.loader-small  { margin-top:6px;}
+.searchBtn,.refreshBtn{width:92px;}
+
+/*子页面*/
+.content { min-width:500px; float:right; overflow:hidden;}

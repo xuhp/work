@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <script id="travel_desc_noActual_temp" type="text/html">
+        <div class="box_header mt10 clearfix" >
+            <h3>行程描述</h3>
+        </div>
+        <div class="travel_desc">
+            <table class="allEditTable fms-table travel_start ellip-table">
+                <thead>
+                    <tr>
+                        <th style="width:8%;">行程</th>
+                        <th style="width:14%;">出发地</th>
+                        <th style="width:14%;">出发时间</th>
+                        <th style="width:10%;">市内交通费</th>
+                        <th style="width:10%;"></th>
+                        <th style="width:10%;">长途交通费</th>
+                        <th style="width:10%;">长途交通工具</th>
+                        <th style="width:24%;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%for(var i=0;i<travel_start.length;i++){%>
+                        <tr>
+                            <td><b>预计</b>出发</td>
+                            <td title="<%=travel_start[i].AreaName%>"><%=travel_start[i].AreaName%></td>
+                            <td title="<%=travel_start[i].StartDate%>"><%=travel_start[i].StartDate%></td>
+                            <td class="finance_decmal"><%=travel_start[i].IncityTrafficFee%></td>
+                            <td></td>
+                            <td class="finance_decmal"><%=travel_start[i].LongDistancTrafficFee%></td>
+                            <td><%=travel_start[i].LongDistancTransportation%></td>
+                            <td></td>
+                        </tr>
+                        <tr>       
+                            <td><b>实际</b>出发</td>
+                            <td title="<%=travel_start[i].AreaName%>"><%=travel_start[i].AreaName%></td>
+                            <td title="<%=travel_start[i].StartDate%>"><%=travel_start[i].StartDate%></td>
+                            <td class="finance_decmal"><%=travel_start[i].IncityTrafficFee%></td>
+                            <td></td>
+                            <td class="finance_decmal"><%=travel_start[i].LongDistancTrafficFee%></td>
+                            <td><%=travel_start[i].LongDistancTransportation%></td>
+                            <td></td>
+                        </tr> 
+                        <tr id="travel_detail_leave">       
+                            <td><b>核定</b>出发</td>
+                            <td title="<%=travel_start[i].AreaName%>" areaid="<%=travel_start[i].AreaID%>"  class="areaPicker"><%=travel_start[i].AreaName%></td>
+                            <td title="<%=travel_start[i].StartDate%>" class="start_time"><%=travel_start[i].StartDate%></td>
+                            <td>
+                                <input type="text" class="allEditTab-txtInput finance_decmal city_traffic_cost subcost" value="<%=travel_start[i].IncityTrafficFee%>" />
+                            </td>
+                            <td></td>
+                            <td>
+                                <input type="text" class="allEditTab-txtInput finance_decmal long_traffic_cost subcost" value="<%=travel_start[i].LongDistancTrafficFee%>">
+                            </td>
+                            <td class="long_traffic_tool"><%=travel_start[i].LongDistancTransportation%></td>
+                            <td></td>
+                        </tr> 
+                    <%}%>
+                </tbody>
+            </table>
+            <table class="allEditTable fms-table travel_detail ellip-table">
+            <thead>
+                <tr>
+                    <th style="width:8%;">行程</th>
+                    <th style="width:14%;">出差地</th>
+                    <th style="width:14%;">到达时间</th>
+                    <th style="width:10%;">市内交通费</th>
+                    <th style="width:10%;">住宿费</th>
+                    <th style="width:10%;">长途交通费</th>
+                    <th style="width:10%;">长途交通工具</th>
+                    <th style="width:14%;">离开时间</th>
+                    <th style="width:10%;">费用小计</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <%for(var i=0;i<travel_detail.purpose.length;i++){%>
+                        <tr>
+                              <td><b>预计</b>行程<%=i+1%></td>
+                            <td title="<%=travel_detail.purpose[i].AreaName%>"><%=travel_detail.purpose[i].AreaName%></td>
+                            <td title="<%=travel_detail.purpose[i].ArrivalTime%>"><%=travel_detail.purpose[i].ArrivalTime%></td>
+                            <td class="finance_decmal"><%=travel_detail.purpose[i].IncityTrafficFee%></td>
+                            <td class="finance_decmal"><%=travel_detail.purpose[i].LodgingFee%></td>
+                            <td class="finance_decmal"><%=travel_detail.purpose[i].LongDistancTrafficFee%></td>
+                            <td><%=travel_detail.purpose[i].LongDistancTransportation%></td>
+                            <td title="<%=travel_detail.purpose[i].LeaveTime%>"><%=travel_detail.purpose[i].LeaveTime%></td>
+                            <td class="finance_decmal fb"><%=travel_detail.purpose[i].Total%></td>
+                        </tr>
+                        <tr>
+                            <td><b>实际</b>行程<%=i+1%></td>
+                            <td title="<%=travel_detail.purpose[i].AreaName%>"><%=travel_detail.purpose[i].AreaName%></td>
+                            <td title="<%=travel_detail.purpose[i].ArrivalTime%>"><%=travel_detail.purpose[i].ArrivalTime%></td>
+                            <td class="finance_decmal"><%=travel_detail.purpose[i].IncityTrafficFee%></td>
+                            <td class="finance_decmal"><%=travel_detail.purpose[i].LodgingFee%></td>
+                            <td class="finance_decmal"><%=travel_detail.purpose[i].LongDistancTrafficFee%></td>
+                            <td><%=travel_detail.purpose[i].LongDistancTransportation%></td>
+                            <td title="<%=travel_detail.purpose[i].LeaveTime%>"><%=travel_detail.purpose[i].LeaveTime%></td>
+                            <td class="finance_decmal fb"><%=travel_detail.purpose[i].Total%></td>
+                        </tr>
+                        <tr id="travel_detail_row_<%=i+1%>" class="travel_detail_row">
+                            <td><b>核定</b>行程<%=i+1%></td>
+                            <td title="<%=travel_detail.purpose[i].AreaName%>" areaid="<%=travel_detail.purpose[i].AreaID%>"  class="areaPicker"><%=travel_detail.purpose[i].AreaName%></td>
+                            <td title="<%=travel_detail.purpose[i].ArrivalTime%>" class="arrival_time"><%=travel_detail.purpose[i].ArrivalTime%></td>
+                            <td><input type="text" class="allEditTab-txtInput finance_decmal city_traffic_cost subcost" value="<%=travel_detail.purpose[i].IncityTrafficFee%>"></td>
+                            <td><input type="text" class="allEditTab-txtInput finance_decmal stay_cost subcost" value="<%=travel_detail.purpose[i].LodgingFee%>"></td>
+                            <td><input type="text" class="allEditTab-txtInput finance_decmal long_traffic_cost subcost" value="<%=travel_detail.purpose[i].LongDistancTrafficFee%>"></td>
+                            <td class="long_traffic_tool"><%=travel_detail.purpose[i].LongDistancTransportation%></td>
+                            <td title="<%=travel_detail.purpose[i].LeaveTime%>" class="leave_time"><%=travel_detail.purpose[i].LeaveTime%></td>
+                            <td class="finance_decmal subtotal fb"><%=travel_detail.purpose[i].Total%></td>
+                        </tr>
+                    <%if(i!=travel_detail.purpose.length-1)%>
+                        <tr>
+                            <td colspan="9" style="height:2px;line-height:2px;border:none;background:#0094ff;"></td>
+                        </tr>
+                    <%%>
+                <%}%>
+            </tbody>
+        </table>
+            <table class="allEditTable fms-table travel_end ellip-table">
+            <thead>
+                <tr>
+                    <th style="width:8%;">行程</th>
+                    <th style="width:14%;">返回地</th>
+                    <th style="width:14%;">到达时间</th>
+                    <th style="width:10%;">市内总交通费</th>
+                    <th style="width:10%;">总住宿费</th>
+                    <th style="width:10%;">总长途交通费</th>
+                    <th style="width:10%;">总出差天数</th>
+                    <th style="width:14%;">平均费用</th>
+                    <th style="width:10%;">费用总计</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%for(var i=0;i<travel_end.length;i++){%>
+                    <tr>
+                        <td><b>预计</b>结束</td>
+                        <td title="<%=travel_end[i].AreaName%>"><%=travel_end[i].AreaName%></td>
+                        <td title="<%=travel_end[i].ArrivalTime%>"><%=travel_end[i].ArrivalTime%></td>
+                        <td class="finance_decmal fb"><%=travel_end[i].IncityTrafficFeeSum%></td>
+                        <td class="finance_decmal fb"><%=travel_end[i].LodgingFeeSum%></td>
+                        <td class="finance_decmal fb"><%=travel_end[i].LongDistancTrafficFeeSum%></td>
+                        <td><%=travel_end[i].SumDays%></td>
+                        <td class="finance_decmal fb"><%=travel_end[i].AvgFee%></td>
+                        <td class="finance_decmal fb"><%=travel_end[i].SumFee%></td>
+                    </tr>
+                    <tr>
+                        <td><b>实际</b>结束</td>
+                        <td title="<%=travel_end[i].AreaName%>"><%=travel_end[i].AreaName%></td>
+                        <td title="<%=travel_end[i].ArrivalTime%>"><%=travel_end[i].ArrivalTime%></td>
+                        <td class="finance_decmal fb"><%=travel_end[i].IncityTrafficFeeSum%></td>
+                        <td class="finance_decmal fb"><%=travel_end[i].LodgingFeeSum%></td>
+                        <td class="finance_decmal fb"><%=travel_end[i].LongDistancTrafficFeeSum%></td>
+                        <td><%=travel_end[i].SumDays%></td>
+                        <td class="finance_decmal fb"><%=travel_end[i].AvgFee%></td>
+                        <td class="finance_decmal fb"><%=travel_end[i].SumFee%></td>
+                    </tr>
+                    <tr id="travel_detail_end">
+                        <td><b>核定</b>结束</td>
+                        <td title="<%=travel_end[i].AreaName%>"  areaid="<%=travel_end[i].AreaID%>"  class="areaPicker"><%=travel_end[i].AreaName%></td>
+                        <td title="<%=travel_end[i].ArrivalTime%>" class="end_time"><%=travel_end[i].ArrivalTime%></td>
+                        <td class="finance_decmal city_traffic_cost_total fb "><%=travel_end[i].IncityTrafficFeeSum%></td>
+                        <td class="finance_decmal stay_cost_total fb"><%=travel_end[i].LodgingFeeSum%></td>
+                        <td class="finance_decmal long_traffic_cost_total fb"><%=travel_end[i].LongDistancTrafficFeeSum%></td>
+                        <td class="total_days"><%=travel_end[i].SumDays%></td>
+                        <td class="finance_decmal average_cost fb"><%=travel_end[i].AvgFee%></td>
+                        <td class="finance_decmal alltotal fb"><%=travel_end[i].SumFee%></td>
+                    </tr>
+                <%}%>
+            </tbody>
+        </table>
+        </div>
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SortTable2</title>
+<link type="text/css" rel="stylesheet" href="/Static/assets/style/common/base.css" />
+<link type="text/css" rel="stylesheet" href="/Static/assets/style/business.css">
+</head>
+<body>
+ <table id="treeTitle" class="fms-table allEditTable tree-table">
+    <thead>
+        <tr>
+            <th class="nopadding">科目</th>
+            <th class="pw20 nopadding">冻结</th>
+            <th class="pw20 nopadding">实扣</th>
+        </tr>
+    </thead>
+</table>
+<div id="treeTab" class="tree-tab scroll-pane">
+    <table id="treeTable" class="fms-table allEditTable tree-table">
+        <tbody>
+            <tr>
+                    <td class="nopadding"><ul id="tableTree_0" class="stree-t"></ul></td>
+                    <td class="pw20 tr nopadding"><ul id="tableTree_1" class="stree-t2"></ul></td>
+                    <td class="pw20 tr nopadding"><ul id="tableTree_2" class="stree-t2"></ul></td>
+            </tr>
+        </tbody>
+    </table>
+</div>   
+<table id="budgetTitle" class="fms-table allEditTable budget-table">
+    <thead>
+        <tr>
+            <th>科目<span class="icon icon-sort" datatype="string" otype="2"></span></th>
+            <th class="pw15 sorttil">部门<span class="icon icon-sort" datatype="string" otype="0"></span></th>
+            <th class="pw12">静态预算<span class="icon icon-sort" datatype="float" otype="1"></span></th>
+            <th class="pw12">动态预算<span class="icon icon-sort" datatype="float" otype="2"></span></th>
+            <th class="pw12">冻结</th>
+            <th class="pw12">实扣</th>
+            <th class="pw12">剩余可申请</th>
+        </tr>
+    </thead>
+</table>
+<div id="budgetTab" class="budget-tab scroll-pane">
+    <table id="budgetTable" class="fms-table allEditTable budget-table" sortCol="-1">
+        <tbody>
+			<tr id="tr_9" class="budget-tr odd" order="0" dbid="9"><td>12332</td><td class="pw15">市场部</td><td class="pw12"><span class="monetary">1.00</span></td><td class="dynamic pw12" order="0"><span class="monetary">1.00</span></td><td class="pw12"><span class="monetary">0.00</span></td><td class="pw12"><span class="monetary">0.00</span></td><td class="pw12"><span class="monetary">1.00</span></td></tr>
+            <tr id="tr_8" class="budget-tr selected" order="1" dbid="8"><td>12233</td><td class="pw15">市场部</td><td class="pw12"><span class="monetary">10.00</span></td><td class="dynamic pw12" order="1"><span class="monetary">10.00</span></td><td class="pw12"><span class="monetary">0.00</span></td><td class="pw12"><span class="monetary">0.00</span></td><td class="pw12"><span class="monetary">10.00</span></td></tr>
+            <tr id="tr_7" class="budget-tr odd" order="2" dbid="7"><td>12332</td><td class="pw15">游戏开发部</td><td class="pw12"><span class="monetary">100.00</span></td><td class="dynamic pw12" order="2"><span class="monetary">100.00</span></td><td class="pw12"><span class="monetary">0.00</span></td><td class="pw12"><span class="monetary">0.00</span></td><td class="pw12"><span class="monetary">100.00</span></td></tr>
+        </tbody>
+    </table>
+</div>
+<table id="budgetTitle2" class="fms-table allEditTable budget-table">
+    <thead>
+        <tr>
+            <th>科目<span class="icon icon-sort" datatype="string" otype="2"></span></th>
+            <th class="pw15 sorttil">部门<span class="icon icon-sort" datatype="string" otype="0"></span></th>
+            <th class="pw12">静态预算<span class="icon icon-sort" datatype="float" otype="1"></span></th>
+            <th class="pw12">动态预算<span class="icon icon-sort" datatype="float" otype="2"></span></th>
+            <th class="pw12">冻结</th>
+            <th class="pw12">实扣</th>
+            <th class="pw12">剩余可申请</th>
+        </tr>
+    </thead>
+</table>
+<div id="budgetTab2" class="budget-tab scroll-pane">
+    <table id="budgetTable2" class="fms-table allEditTable budget-table" sortcol="-1">
+        <tbody>
+            <tr id="tr_26" class="budget-tr odd" order="0" dbid="26"><td>请客请客11</td><td class="pw15">游戏开发部</td><td class="pw12"><span class="monetary">0.00</span></td><td class="dynamic pw12" order="0"><span class="monetary">2,222.00</span><span class="modify" title="修改"></span></td><td class="pw12"><span class="monetary">0.00</span></td><td class="pw12"><span class="monetary">0.00</span></td><td class="pw12"><span class="monetary">2,222.00</span></td></tr>
+            <tr id="tr_21" class="budget-tr" order="1" dbid="21"><td>12332</td><td class="pw15">wry_test</td><td class="pw12"><span class="monetary">1.00</span></td><td class="dynamic pw12" order="1"><span class="monetary">103.00</span><span class="modify" title="修改"></span></td><td class="pw12"><span class="monetary">0.00</span></td><td class="pw12"><span class="monetary">0.00</span></td><td class="pw12"><span class="monetary">103.00</span></td></tr>
+            <tr id="tr_18" class="budget-tr odd" order="2" dbid="18"><td>12233</td><td class="pw15">网站二部</td><td class="pw12"><span class="monetary">1,222.00</span></td><td class="dynamic pw12" order="2"><span class="monetary">1,222.00</span><span class="modify" title="修改"></span></td><td class="pw12"><span class="monetary">0.00</span></td><td class="pw12"><span class="monetary">0.00</span></td><td class="pw12"><span class="monetary">1,222.00</span></td></tr>
+            <tr id="tr_17" class="budget-tr" order="3" dbid="17"><td>12233</td><td class="pw15">游戏二部</td><td class="pw12"><span class="monetary">1.00</span></td><td class="dynamic pw12" order="3"><span class="monetary">3.00</span><span class="modify" title="修改"></span></td><td class="pw12"><span class="monetary">0.00</span></td><td class="pw12"><span class="monetary">0.00</span></td><td class="pw12"><span class="monetary">3.00</span></td></tr>
+            <tr id="tr_12" class="budget-tr odd" order="4" dbid="12"><td>12233</td><td class="pw15">wry_test</td><td class="pw12"><span class="monetary">1.00</span></td><td class="dynamic pw12" order="4"><span class="monetary">1.00</span><span class="modify" title="修改"></span></td><td class="pw12"><span class="monetary">0.00</span></td><td class="pw12"><span class="monetary">0.00</span></td><td class="pw12"><span class="monetary">1.00</span></td></tr>
+            <tr id="tr_11" class="budget-tr" order="5" dbid="11"><td>12233</td><td class="pw15">生活服务事业部</td><td class="pw12"><span class="monetary">0.00</span></td><td class="dynamic pw12" order="5"><span class="monetary">0.00</span><span class="modify" title="修改"></span></td><td class="pw12"><span class="monetary">0.00</span></td><td class="pw12"><span class="monetary">0.00</span></td><td class="pw12"><span class="monetary">0.00</span></td></tr>
+        </tbody>
+    </table>
+</div>
+        <div id="appBus1" class="fl mr80 app-wrap-d mt15"><label for="app_Bus1" class="fms-label w45">业务：</label><input id="app_Bus1" type="text" class="app-bus form-text form-normal w150" readonly /></div>
+        <div id="appBus2" class="fl mr80 app-wrap-d mt15"><label for="app_Bus2" class="fms-label w45">业务：</label><input id="app_Bus2" type="text" class="app-bus form-text form-normal w150" readonly /></div>
+        <div id="nodeSub" class="fl mr80 app-wrap-d mt15"><label for="node_Sub" class="fms-label w45">科目：</label><input id="node_Sub" name="node_Sub" type="text" class="form-text form-normal w150" readonly /></div>
+</body>
+<script type="text/javascript" src="/Static/assets/seajs/2.1.1/sea-debug.js"></script>
+<script type="text/javascript">
+seajs.config({
+	//别名配置
+   	alias: {
+    	"jquery": "/Static/src/plugin/jquery/1.7.2/jquery.js",
+		"sortT": "/Static/src/sortT.js"				
+    }
+});
+seajs.use(['jquery','sortT'],function($,sortT){
+	sortT($);
+	$(function(){			
+		$(document).sortT();	
+	});
+});
+</script>
+</html>

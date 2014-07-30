@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>浏览器版本检测</title>
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/common/base.css" />
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/prompt/error.css" />
+</head>
+<body>
+    <div class="height_pre50"></div>
+    <div class="browser">
+        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" title="点击下载最新浏览器" target="_blank"><img src="/Static/images/error/ie.png" alt="404页面未找到图片" /></a>
+        <p class="b_warning">请更新浏览器至IE9及以上版本</p>
+        <p>如果您已经升级浏览器至IE9及以上版本，却仍显示此页面，麻烦<span class="CA">清除一下缓存</span>哦！</p>
+    </div>
+</body>
+<script type="text/javascript" src="/Static/src/plugin/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	if(($.browser.msie&&($.browser.version=="9.0")) || ($.browser.msie&&($.browser.version=="10.0"))){
+	    window.location.href = "http://fms.ct108.net";                      
+	}else if(($.browser.mozilla&&($.browser.version=="11.0")) || $.browser.webkit){
+	    window.location.href = "http://fms.ct108.net";   
+	}	
+});
+</script>
+</html>

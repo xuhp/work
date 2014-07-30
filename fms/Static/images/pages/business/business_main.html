@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>动态-业务管理-财务管理系统</title>
+<link type="text/css" rel="stylesheet" href="/Static/assets/style/common/base.css" />
+<link type="text/css" rel="stylesheet" href="/Static/assets/style/business.css">
+</head>
+
+<body>
+<input type="hidden" id="roleKeys" value="BudgetHandler_Add,BudgetHandler_AddAmount,BudgetHandler_UpdateAmountDynamic,BudgetHandler_UpdateUpdateDynamic" />
+<!--budgetTop BENIN-->
+<div id="budgetTop" class="budget-top tabBg-gray">
+    <div id="busName" class="fl fb mr15" title="地方棋牌预算业务"><span class="budget-til ellipsis">地方棋牌预算 </span>业务</div>
+    <div class="fl mr15">
+        <label for="budgetCycle" class="fms-label w85 tr">当前预算周期：</label>
+        <select id="budgetCycle" name="budgetCycle" type="text" class="fms-select w220">
+        <option value="20140101">2014年01月01-2014年06年30</option>
+        <option value="20140701">2014年07月01-2014年12年31</option>
+    </select>
+    </div>
+    <span id="budgetCycle" class="budget-cycle"></span>
+    <button id="creatCycle" class="redBtn w82 h24 fl">创建新周期</button>       
+    <button id="addBudget" class="addBtn blueBtn w120 h24 pl10 fr">新增详细预算</button>
+</div>
+<!--budgetTop END-->
+<!--budget BENIN-->
+<div class="outer-title mt5">
+    <table class="innerTable budget-title ellip-table">
+        <thead>
+            <tr>
+                <th class="w20 nopadding"></th>
+                <th>科目</th>
+                <th class="pw13">静态预算</th>
+                <th class="pw15">动态预算</th>
+                <th class="pw12">冻结</th>
+                <th class="pw12">实扣</th>
+                <th class="pw12">剩余可申请</th>
+                <th class="w60 last nopadding">精细预算</th>
+            </tr>
+        </thead>
+    </table>    
+</div>
+<div id="budgetTab" class="outer-content scroll-pane">
+    <table id="budgetTableA" class="innerTable budget-table ellip-table">
+        <tbody>
+            <tr id="tr_0" class="budget-tr" order="-1" dbid="0" name="总预算"></tr>           
+        </tbody>
+    </table>
+    <table id="budgetTableD" class="innerTable budget-table ellip-table">
+        <tbody>           
+        </tbody>
+    </table>
+</div>
+<!--budget END-->
+<!--logs BENIN-->
+<div class="budget-top tabBg-gray pr mt5">
+    <div id="subName" class="fl fb" title="总预算"><span class="budget-til ellipsis">总预算</span>变更日志</div>
+    <button id="viewMoney" class="redBtn w140 h24 fr">查看所有冻结实扣情况</button>
+</div>
+<div class="outer-title mt5">
+    <table class="innerTable ellip-table">
+        <thead>
+            <tr>
+                <th class="pw20">日期</th>
+                <th class="w100">操作类型</th>
+                <th class="pw15">金额</th>
+                <th class="last">理由</th>
+            </tr>
+        </thead>
+    </table>    
+</div> 
+ 
+<div id="budgetLogTab" class="outer-content budget-log scroll-pane">
+    <table id="budgetLogTable" class="innerTable budget-table ellip-table">
+        <tbody>
+        </tbody>
+    </table>
+</div>
+<!--logs END-->  
+<script type="text/javascript" src="/Static/assets/seajs/2.1.1/sea-debug.js"></script>
+<script type="text/javascript">
+seajs.config({
+	//别名配置
+   	alias: {
+    	"jquery": "/Static/src/plugin/jquery/1.7.2/jquery.js",
+    	"budget": "/Static/src/business/budget.js"
+				
+    }
+});
+seajs.use(['jquery','budget'],function($,budget){
+	budget($);
+	$(function(){				
+		var bid = getUrlParam("bid");
+		var period = getUrlParam("period");
+		var operateid = getUrlParam("operateid");
+		var ob  = judge();
+		$(document).budget({
+			subUrl:"http://localhost:1234/Static/pages/business/business_main.html?",
+			bid:bid,
+			period:period,
+			operateid: operateid,
+            busName:ob.busName,
+			isCreat:ob.isCreat,
+            isInherit:ob.isInherit
+		});
+		//获取request
+		function getUrlParam(name) {
+    		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    		var r = window.location.search.substr(1).match(reg);
+    		if (r != null) return unescape(r[2]); return null;
+		}
+		//判断
+		function judge(){
+            var ob = {};
+			var $selDIV = $(window.parent.document.getElementById("busMainTree")).find("div.selected");
+            ob.busName = $selDIV.attr("creepname");
+            ob.isCreat = ($selDIV.siblings().length==0);
+            ob.isInherit = ($selDIV.find("a.inherit").length>0);     
+			return ob;				
+		}
+	});
+});
+</script>
+</body>
+</html>

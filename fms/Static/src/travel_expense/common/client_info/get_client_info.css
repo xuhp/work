@@ -1,0 +1,66 @@
+﻿.client_info
+{
+    height: 22px;
+    line-height:22px;
+    padding:0;
+}
+.client_con
+{
+    width:650px;
+}
+.client_info span
+{
+    display:inline-block;
+}
+#client_organization, #client_contact
+{
+    margin-right:20px;
+}
+.client_info_wrap
+{
+    height: 220px;
+    overflow: auto;
+    border: 1px solid #ccc;
+    border-top: 0px;
+    width:99.7%;
+}
+.client_info_body thead
+{
+    display:none;
+    height:0;
+    line-height:0px;
+    font-size:0px;
+    overflow:hidden;
+}
+.client_info_top th
+{
+    background: #808080;
+}
+.client_info_body
+{
+    border:none;
+}
+.client_info_parent
+{
+    cursor:pointer;
+}
+.client_info_parent td {
+    background: #e3f5fb;
+}
+.client_info_opearte{
+    float: left;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+    width: 10px;
+    height: 10px;
+    background: url("/Static/images/base/icon/reduce.png") 1px 4px no-repeat;
+}
+.selected .client_info_opearte {
+    background: url("/Static/images/base/icon/addHover.png") top left no-repeat;
+}
+
+.cusInfo_opearte, .cusInfo_name, .cusInfo_type {
+}

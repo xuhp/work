@@ -1,0 +1,13 @@
+html,body { height:100%; border:none;}
+.sub-tree { width:49%; height:100%; background-color:#FCFCFC;}
+.stree-wrap { width:100%; overflow:auto; }
+/*stree*/
+.sub-tree .stree {padding:20px 0px 20px 20px; }
+.stree li {  white-space:nowrap;}
+.stree li a { padding-right:74px; }
+/*tree_til*/
+.tree_til { height:26px; background-color:#007ACC; position:relative;}
+.tree_til strong { float:left; line-height:14px; color:#FFF; font-weight:bold; padding:6px 20px; }
+
+/*form*/
+.formwrap .buttonWrap { padding-left:120px;}

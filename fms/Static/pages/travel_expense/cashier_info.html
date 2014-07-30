@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/common/base.css" />
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/general_expense/detail.css" />
+</head>
+<body class="over_hidden">
+    <table class="allEditTable fms-table expenseForm-allEditTable ellips-table" id="expenseHead">
+        <thead>
+            <tr>
+                <th style="width: 20%">日期</th>
+                <th style="width: 20%">付款对象</th>
+                <th style="width: 15%">操作类型</th>
+                <th style="width: 15%">金额</th>
+                <th style="width: 30%">备注</th>
+            </tr>
+        </thead>
+    </table>
+    <div id="expenseFormMain"   class="scroll-pane">
+        <table class="allEditTable fms-table expenseForm-allEditTable ellips-table" id="expenseBody">
+            <thead>
+                <tr>
+                <th style="width: 20%">日期</th>
+                <th style="width: 20%">付款对象</th>
+                <th style="width: 15%">操作类型</th>
+                <th style="width: 15%">金额</th>
+                <th style="width: 30%">备注</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <table class="allEditTable fms-table expenseForm-allEditTable ellips-table" id="expenseFoot">
+        <thead>
+            <tr>
+                <th style="width: 20%">日期</th>
+                <th style="width: 20%">付款对象</th>
+                <th style="width: 15%">操作类型</th>
+                <th style="width: 15%">金额</th>
+                <th style="width: 30%">备注</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="2" class="tr">
+                    合计:
+                </td>
+                <td></td>
+                <td id="expenseSum">0.00</td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+    <script type="text/javascript" src="/Static/assets/seajs/2.1.1/sea-debug.js"></script>
+    <script type="text/javascript">
+        //配置
+        seajs.config({
+            //别名配置
+            alias: {
+                "jquery": "/Static/src/plugin/jquery/1.7.2/jquery.js"
+            }
+        });
+        seajs.use('/Static/src/travel_expense/cashier_info', function (cashier_info) {
+            cashier_info.init();
+        });
+    </script>
+</body>
+</html>

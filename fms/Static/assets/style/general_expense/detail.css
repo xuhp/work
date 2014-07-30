@@ -1,0 +1,121 @@
+﻿
+.detailTop
+{
+    padding:10px ;
+    line-height:25px;
+}
+.paidFor
+{
+    width:100%;
+}
+.paidFor_pos {
+    position: relative;
+    width: 100%;
+}
+.paidFor_pos>span
+{
+    display:block;
+}
+.tooltip {
+    background: #3FA7E8;
+    min-width:200px;
+    text-align: left;
+    padding: 5px 0;
+    color: #fff;
+    display:block;
+}
+.tooltip p {
+    padding: 0 5px;
+    white-space: nowrap;
+}
+.detailTop span.label
+{
+    font-weight:bold;
+    margin-right:2px;
+}
+.finance_decmal,.moneyBorrow
+{
+    font-size:13px;
+    font-weight:bold;
+}
+.apply_fd
+{
+    width:90%;
+}
+/*表格布局*/
+html, body
+{
+    height:100%;
+}
+#expenseFoot
+{
+    position:absolute;
+    bottom:0px;
+    left:0px;
+}
+#expenseBody th ,#expenseFoot th{
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+.fms-table
+{
+    border:none;
+}
+#expenseFormMain
+{
+    overflow:auto;
+}
+/*#expenseFoot td{
+    border-top:none;
+}*/
+.allEditTab-txtInput
+{
+    width:90%;
+}
+.description
+{
+    height: 40px;
+    margin-top: 5px;
+    border-color: #E9E7E7;
+}
+.operateType_10 .moneyBorrow,.type_10
+{
+    color:#efae53;
+} 
+.operateType_20 .moneyBorrow,.type_20
+{
+    color:#f00;
+} 
+.operateType_30 .moneyBorrow,.type_30
+{
+    color:#3FA7E8;
+}
+.over_hidden
+{
+    overflow:hidden;
+}
+.mainWrapper
+{
+    padding:10px 0px 0px;
+}
+/*小导航*/
+.fms-tab-item a {
+    height:20px;
+    line-height:20px;
+}
+.tabBg-gray {
+    background: #fbfbfb;
+    border-bottom: 1px solid #3693CB;
+}
+.expenseBody th,.expenseFoot th
+{
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+.top_td
+{
+    margin-right:10px;
+    float:left;
+}

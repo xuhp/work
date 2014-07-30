@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>费用报销首页</title>
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/common/base.css" />
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/general_expense/expense.css" />
+</head>
+<body>
+    <div class="ei-container clearfix pr">
+        <div class="expenseType">
+            <div class="expense_text">
+                <a href="expenseForm.html" ApplyCase="1">我要借款</a>
+            </div>
+            <p class="expense_explain">
+                这里是说明文本这里是说明文本
+            </p>
+        </div>
+        <div class="expenseType ml100">
+            <div class="expense_text">
+                <a  href="expenseForm.html" ApplyCase="2">自己垫付</a>
+            </div>
+            <p class="expense_explain">
+                这里是说明文本这里是说明文本
+            </p>
+        </div>
+        <div class="expenseType ml100">
+            <div class="expense_text">
+                <a href="expenseForm.html" ApplyCase="3">先有发票</a>
+            </div>
+            <p class="expense_explain">
+                这里是说明文本这里是说明文本这里是说
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="/Static/assets/seajs/2.1.1/sea-debug.js"></script>
+    <script type="text/javascript">
+        //配置
+        seajs.config({
+            //别名配置
+            alias: {
+                "jquery": "/Static/src/plugin/jquery/1.7.2/jquery.js"
+            }
+        });
+        seajs.use('jquery', function ($) {
+            $(function () {
+                setTimeout(function () {
+                    frame_style();
+                }, 100);
+                $('.expense_text a').click(function () {
+                    var loadsrc = $(this).attr('href');
+                    var ApplyCase = $(this).attr('ApplyCase');
+                    window.location.href = loadsrc+'?formid=1&applycase='+ApplyCase;
+                    return false;
+                });
+            })
+
+            $(window).resize(frame_style);
+
+            function frame_style() {
+                //获取页面的高度
+                var $h = $(window).height();
+                //获取显示元素的高度
+                var $eh = $('.ei-container').height();
+                var $mt = ($h - $eh) / 2;
+                $('.ei-container').css('top', $mt + 'px');
+            }
+        });
+    </script>
+</body>
+</html>

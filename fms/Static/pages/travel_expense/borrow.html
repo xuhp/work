@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>借款页面</title>
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/common/base.css" />
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/general_expense/audit.css" />
+</head>
+<body>
+    <!-- 头部切换样式 开始 -->
+    <div class="top_tab fms-tab tabBg-gray">
+        <ul class="fms-tab-items clearfix pr">
+            <li class="fms-tab-item fms-tab-item-current">
+                <a href="/Static/pages/travel_expense/borrow_inner.html">借款</a>
+            </li>
+            <li class="fms-tab-item">
+                <a href="/Static/pages/travel_expense/detail_inner.html">订单详情</a>
+            </li>
+            <li class="fms-tab-item">
+                <a href="/Static/pages/travel_expense/travel_log.html">日志</a>
+            </li>
+        </ul>
+        <p class="budget pa">预算相关</p>
+    </div>
+    <!-- 头部切换样式 结束 -->
+    <!-- 主要内容 开始 -->
+    <div class="container">
+        <div class="dataList pr">
+            <div class="loading"><img src="/Static/images/base/loader-big.gif" /><p>正在加载内容，请稍后......</p></div>
+            <iframe id="borrowFrame" name="borrowFrame" width="100%" height="100%" frameborder="0" border="0" src=""></iframe>
+        </div>
+        <div class="dataList pr" style="display:none">
+            <div class="loading"><img src="/Static/images/base/loader-big.gif" /><p>正在加载内容，请稍后......</p></div>
+            <iframe id="about_detail" name="about_detail" width="100%" height="100%" frameborder="0" border="0" src=""></iframe>
+        </div>
+        <div class="dataList pr" style="display:none">
+            <div class="loading"><img src="/Static/images/base/loader-big.gif" /><p>正在加载内容，请稍后......</p></div>
+            <iframe id="flow_log" name="flow_log" width="100%" height="100%" frameborder="0" border="0" src=""></iframe>
+        </div>
+    </div>
+    <!-- 主要内容 结束 -->
+    <div class="footer">
+    </div>
+    <script type="text/javascript" src="/Static/assets/seajs/2.1.1/sea-debug.js"></script>
+    <script type="text/javascript">
+        //配置
+        seajs.config({
+            //别名配置
+            alias: {
+                "jquery": "/Static/src/plugin/jquery/1.7.2/jquery.js"
+            }
+        });
+        seajs.use('/Static/src/travel_expense/borrow', function (borrow) {
+            borrow.init();
+        });
+    </script>
+</body>
+</html>

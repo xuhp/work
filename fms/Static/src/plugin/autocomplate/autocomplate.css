@@ -1,0 +1,23 @@
+﻿.popup_ul
+{
+    position:absolute;
+    min-width:140px;
+    padding: 0px 0px;
+    background:#3FA7E8;
+    max-height:200px;
+    overflow:auto;
+    z-index:9999;
+}
+.popup_ul li
+{
+    cursor:pointer;
+    height:20px;
+    line-height:20px;
+    color:#fff;
+    padding:0 5px;
+    overflow:hidden;
+}
+.selected_li
+{
+    background:#206F96;
+}

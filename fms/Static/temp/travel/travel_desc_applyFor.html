@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <script id="travel_desc_applyFor_temp" type="text/html">
+        <div class="box_header mt10 clearfix" >
+            <h3>实际行程描述</h3>
+            <button class="blueBtn h22 w100 fr travel_desc_add_row">新增一行</button>
+        </div>
+        <div class="travel_desc">
+            <table class="allEditTable fms-table travel_start">
+                <thead>
+                    <tr>
+                        <th style="width:6%;">行程</th>
+                        <th style="width:13%;">出发地</th>
+                        <th style="width:15%;">出发时间</th>
+                        <th style="width:8%;">市内交通费</th>
+                        <th style="width:8%;"></th>
+                        <th style="width:8%;">长途交通费</th>
+                        <th style="width:10%;">长途交通工具</th>
+                        <th style="width:33%;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="travel_detail_leave">
+                        <td>出发</td>
+                        <td><input type="text" class="allEditTab-txtInput areaPicker" readonly="true" areaid="<%=traveldata[1].AreaID%>" value="<%=traveldata[1].AreaName%>"></td>
+                        <td><input type="text" class="allEditTab-txtInput start_time  jdpicker" readonly="true" value="<%=traveldata[1].StartDate%>"></td>
+                        <td><input type="text" class="allEditTab-txtInput finance_decmal city_traffic_cost subcost" value="<%=traveldata[1].IncityTrafficFee%>"></td>
+                        <td></td>
+                        <td><input type="text" class="allEditTab-txtInput finance_decmal long_traffic_cost subcost" value="<%=traveldata[1].LongDistancTrafficFee%>"></td>
+                        <td><select class="fms-select long_traffic_tool">
+                            <option>-选择交通工具-</option>
+                        </select>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="allEditTable fms-table travel_detail">
+            <thead>
+                <tr>
+                    <th style="width:6%;">行程</th>
+                    <th style="width:13%;">出差地</th>
+                    <th style="width:15%;">到达时间</th>
+                    <th style="width:8%;">市内交通费</th>
+                    <th style="width:8%;">住宿费</th>
+                    <th style="width:8%;">长途交通费</th>
+                    <th style="width:10%;">长途交通工具</th>
+                    <th style="width:15%;">离开时间</th>
+                    <th style="width:10%;">费用小计</th>
+                    <th style="width:8%;">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%for(var i=2;i<traveldata.length;i++){%>
+                    <tr id="travel_detail_row_<%=i-2%>">
+                        <td>行程<%=i-1%></td>
+                        <td><input type="text" class="allEditTab-txtInput areaPicker" readonly="true" areaid="<%=traveldata[i].AreaID%>" value="<%=traveldata[i].AreaName%>" /></td>
+                        <td><input type="text" class="allEditTab-txtInput jdpicker arrival_time" readonly="true" title="<%=traveldata[i].ArrivalTime%>" value="<%=traveldata[i].ArrivalTime%>"></td>
+                        <td><input type="text" class="allEditTab-txtInput finance_decmal city_traffic_cost subcost" value="<%=traveldata[i].IncityTrafficFee%>" /></td>
+                        <td><input type="text" class="allEditTab-txtInput finance_decmal stay_cost subcost" value="<%=traveldata[i].LodgingFee%>" /></td>
+                        <td><input type="text" class="allEditTab-txtInput finance_decmal long_traffic_cost subcost" value="<%=traveldata[i].LongDistancTrafficFee%>"></td>
+                        <td>
+                            <select class="fms-select long_traffic_tool">
+                                <option>-选择交通工具-</option>
+                            </select>
+                        </td>
+                        <td><input type="text" class="allEditTab-txtInput jdpicker leave_time" readonly="true" title="<%=traveldata[i].LeaveTime%>" value="<%=traveldata[i].LeaveTime%>"></td>
+                        <td class="finance_decmal subtotal fb"><%=traveldata[i].Total%></td>
+                        <td><span class="redBtn h22 w45 travel_desc_del_btn">删除</span></td>
+                    </tr>
+                <%}%>
+            </tbody>
+        </table>
+            <table class="allEditTable fms-table travel_end">
+            <thead>
+                <tr>
+                    <th style="width:6%;">行程</th>
+                    <th style="width:13%;">返回地</th>
+                    <th style="width:15%;">到达时间</th>
+                    <th style="width:8%;">市内总交通费</th>
+                    <th style="width:8%;">总住宿费</th>
+                    <th style="width:8%;">总长途交通费</th>
+                    <th style="width:10%;">总出差天数</th>
+                    <th style="width:15%;">平均费用</th>
+                    <th style="width:10%;">费用总计</th>
+                    <th style="width:8%;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>结束</td>
+                    <td><input type="text" class="allEditTab-txtInput areaPicker" readonly="true" areaid="<%=traveldata[0].AreaID%>" value="<%=traveldata[0].AreaName%>"></td>
+                    <td><input type="text" class="allEditTab-txtInput end_time jdpicker" readonly="true" title="<%=traveldata[0].ArrivalTime%>" value="<%=traveldata[0].ArrivalTime%>"></td>
+                    <td class="finance_decmal city_traffic_cost_total fb "><%=traveldata[0].IncityTrafficFeeSum%></td>
+                    <td class="finance_decmal stay_cost_total fb"><%=traveldata[0].LodgingFeeSum%></td>
+                    <td class="finance_decmal long_traffic_cost_total fb"><%=traveldata[0].LongDistancTrafficFeeSum%></td>
+                    <td><input type="text" class="allEditTab-txtInput total_days" value="<%=traveldata[0].SumDays%>"></td>
+                    <td class="finance_decmal average_cost fb"><%=traveldata[0].AvgFee%></td>
+                    <td class="finance_decmal alltotal fb"><%=traveldata[0].SumFee%></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </script>
+</body>
+</html>

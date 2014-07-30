@@ -1,0 +1,123 @@
+html,body { height:100%; border:none;}
+html{overflow: auto;}
+body { overflow:hidden; }
+#index-page-outer,#index-page-inner{width:100%; height:100%;}
+#index-page-outer { overflow: auto;}
+#index-page-inner {  position: relative; }
+/*********** 头部 ************/
+#header{ width:100%; min-width:1100px; height:30px; position:relative;  background-color:#0A456A;box-shadow:0 1px 5px #999;padding-top:10px; }
+#header .toplogin { font-size:12px; color:#FFF; height:22px; line-height:22px; text-align:right;padding-top:5px;float:right;}
+#header .menu { display: block; cursor:pointer;float:left;padding:5px;border-radius:0 5px 5px 0;position:relative;z-index:999;}
+#header .menu:hover{background:#ffffff;}
+.menu img{float:left;}
+.menu span{width: 0;height: 0;border-left: 5px solid transparent;border-right:5px solid transparent;border-top: 6px solid #3FA7E8;float:left;margin:8px 0 0 10px;}
+.menu .menu_list
+{
+    position:absolute;
+    left:0;
+    top:29px;
+    background:#fff;
+    width:200px;
+    background:#F9F9F9;
+    border:1px solid #ccc;
+    line-height:35px;
+    box-shadow:1px 1px 10px #999 ;  
+    padding:5px 2px;
+}
+.menu .menu_list li
+{
+   padding-left:15px;
+}
+    
+.menu .menu_list li:hover
+{
+    background:#3FA7E8;
+    color:#fff;
+}
+.menu .menu_list li a
+{
+    width:100%;
+    height:100%;
+    display:block;
+}
+.menu .menu_list li a:hover
+{
+    color:#fff;
+    text-decoration:none;
+}
+.menu .menu_list li.menu_line
+{
+   line-height:1px;
+   height:1px;
+   background:#e9e9e9;
+   margin:1px 0;
+}
+#header #home{margin-left:20px;float:left;margin-top:5px;position:relative;z-index:999;}
+#header .top-nav { display:block; height:29px; float:right;margin:0 50px 0 30px;}
+.top-nav-li { width:110px; height:29px; float:left;}
+.top-item, .slide-item,.slide-item-quit{ display:block;background-repeat:no-repeat; }
+.top-item  { width:110px; height:29px; }
+.top-item:hover,.top-nav .on { background-color:#FFF;border-top:3px solid #3FA7E8;}
+.top-item_1 { background-image:url(/Static/images/base/nav_01.png);}
+.top-item_2 { background-image:url(/Static/images/base/nav_02.png);}
+.top-item_3 { background-image:url(/Static/images/base/nav_03.png);}
+.top-item_4 { background-image:url(/Static/images/base/nav_04.png);}
+/*********** 主体 ************/
+#main { width:100%; min-width:1100px; position:relative; overflow:hidden;}
+#main .main_left{ width:100px; min-height:510px;  float:left; background-color:#DFDFDF; position:relative;}
+#main .main_right { float:right;min-width:995px; min-height:510px; position:relative; overflow:hidden;}
+/*********** 侧边栏 ************/
+.slide-nav-li { height:50px;}
+.slide-item,.slide-item-quit { height:50px; text-indent:-999px; overflow:hidden; }
+.slide-nav-li a.on {}
+.slide-item_1 { background-image:url(/Static/images/base/sideImg_01.png);}
+.slide-item_2 { background-image:url(/Static/images/base/sideImg_02.png);}
+.slide-item_3 { background-image:url(/Static/images/base/sideImg_03.png);}
+.slide-item_4 { background-image:url(/Static/images/base/sideImg_04.png);}
+.slide-item_5 { background-image:url(/Static/images/base/sideImg_05.png);}
+.slide-item_6 { background-image:url(/Static/images/base/sideImg_06.png);}
+.slide-item_7 { background-image:url(/Static/images/base/sideImg_07.png);}
+.slide-item_8 { background-image:url(/Static/images/base/sideImg_08.png);}
+.slide-item-quit{ background-image:url(/Static/images/base/sideImg_09.png); cursor:pointer;}
+.slide-item_1:hover,.slide-item_1.on { background-image:url(/Static/images/base/slideNav_01.png);}
+.slide-item_2:hover,.slide-item_2.on { background-image:url(/Static/images/base/slideNav_02.png);}
+.slide-item_3:hover,.slide-item_3.on { background-image:url(/Static/images/base/slideNav_03.png);}
+.slide-item_4:hover,.slide-item_4.on { background-image:url(/Static/images/base/slideNav_04.png);}
+.slide-item_5:hover,.slide-item_5.on { background-image:url(/Static/images/base/slideNav_05.png);}
+.slide-item_6:hover,.slide-item_6.on { background-image:url(/Static/images/base/slideNav_06.png);}
+.slide-item_7:hover,.slide-item_7.on { background-image:url(/Static/images/base/slideNav_07.png);}
+.slide-item_8:hover,.slide-item_8.on { background-image:url(/Static/images/base/slideNav_08.png);}
+.slide-quit { position:absolute; left:0px; bottom:0px;}
+.task-tip { display:inline-block; height:16px; line-height:16px; padding:3px 4px 0px 4px; font-size:12px; color:#FFF; position:absolute; right:-4px; bottom:-4px; background:url(/Static/images/base/taskTip.png) no-repeat right top; display:none;}
+/*********** 框架栏 ************/
+#fFrameWrap { padding:5px 10px 5px 5px; position:relative;}
+#dFrameWrap { padding:5px 5px 5px 0px; background-color:#FFF; position:absolute; z-index:400; top:0px; left:0px; display:none;}
+.maskLayer { width:100%; height:100%; background-color:#000; -moz-opacity: 0.5; opacity:0.5; filter: alpha(opacity=30); position:absolute; z-index:300; left:0px; top:0px; }
+.btn_close {  width:54px; height:20px; line-height:20px; text-indent:21px; color:#FFF; background:#EA4609 url(/Static/images/base/icon/cancelNormal.png) no-repeat 5px 5px; position:absolute; cursor:pointer; }
+#closeD { z-index:400; right:10px; bottom:0px; }
+.div_frame { width:100%; height:100%; position:absolute; z-index:400; background-color:#FFF;}
+/*********** 底部 ************/
+#footer { width:100%; min-width:1100px; height:30px; position: absolute; bottom: 0px; background-color:#ccc;}
+#footer p { line-height:30px; color:#333;}
+/*********** 右固定框 ************/
+.fixed-r { width:10px; padding: 2px 0px; position: fixed; right: 0px; background-color:#3FA7E8; overflow:hidden; }
+.fixed-r a { display: block; width:30px; line-height: 22px; padding: 0px 10px; font-size: 14px; color: #FFF; text-align:center; cursor: pointer;}
+.fixed-r a:hover { text-decoration: none;}
+#admin { height:44px; bottom:40px;}
+#admin a { height:44px; }
+/*********** 弹出框架 ************/
+.s-frame-wrap { padding: 28px 0px 0px 0px; position:absolute; z-index:400; top:50%; left:50%; display: none;box-shadow:0px 0px 20px 4px #222;}
+.s-frame-til {width: 100%; height: 28px; line-height:28px; margin-top:-28px; color:#FFF; text-indent:10px; position: relative; background-color:#328ABE;}
+.s-frame-close { display:block; width:20px; height:20px; background: url(/Static/images/base/icon/cancelNormal.png) no-repeat 5px 5px; position:absolute; right:4px; top:4px; cursor:pointer;  z-index:1000;}
+.s-frame-close:hover { background-color:#C72015;}
+.s-frame-con {width: 100%; height: 100%; background-color:#FFF; }
+#vFrameWrap { width: 500px; height: 300px; margin-left: -250px; margin-top: -164px;}
+.maskLayer { width:100%; height:100%; background-color:#000; -moz-opacity: 0.5; opacity:0.5; filter: alpha(opacity=30); position:absolute; z-index:300; left:0px; top:0px; }
+/*********** 右侧导航伸缩 ************/
+.flexible {
+	position:absolute;
+	bottom:10px;
+	padding-left:15px;
+	cursor:pointer;
+	width:100px;
+}

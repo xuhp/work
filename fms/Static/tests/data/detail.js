@@ -1,0 +1,64 @@
+{
+	"PeriodID":32,
+	"headData":{
+		"CompanyID":"1",
+		"BusiID":"191",
+		"FormID":"1",
+		"Installment":"True",
+		"ApplyCase":"1",
+		"DeptID":"4",
+		"UserID":"274",
+		"TrueName":"陈栋",
+		"Phone":"15262010641",
+		"Description":"1111111111111",
+		"CompanyName":"杭州逍遥网络有限公司",
+		"FormName":"普通费用申请报销单",
+		"BusName":"秋菊秋菊",
+		"CaseName":"我要借款",
+		"DeptName":"网站客服二部"
+	},
+	"bodyData":[
+		{
+			"Date":"2013-9-4",
+			"Area":"03",
+			"CusName":"李二",
+			"CusType":"0",
+			"CusID":"171",
+			"AccountHolder":"sd",
+			"CardNo":"1231231231231232",
+			"BankName":" 工行收到",
+			"SubID":"65",
+			"MoneyApply":"66666.00",
+			"AreaName":"上海",
+			"SubName":"12312eee"
+		},
+		{
+			"Date":"2013-9-11",
+			"Area":"080506",
+			"CusName":"李刚",
+			"CusType":"0",
+			"CusID":"169",
+			"AccountHolder":"徐华平",
+			"CardNo":"1233426262634858690",
+			"BankName":" 中国招商银行",
+			"SubID":"65",
+			"MoneyApply":"66.00",
+			"AreaName":"福建 - 漳州 - 长泰县",
+			"SubName":"12312eee"
+		},
+		{
+			"Date":"2013-9-19",
+			"Area":"070506",
+			"CusName":"李二",
+			"CusType":"0",
+			"CusID":"171",
+			"AccountHolder":"sd",
+			"CardNo":"1231231231231232",
+			"BankName":" 工行收到",
+			"SubID":"104",
+			"MoneyApply":"66.00",
+			"AreaName":"安徽 - 安庆 - 潜山县",
+			"SubName":"123321"
+		}
+	]
+}

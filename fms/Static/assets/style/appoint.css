@@ -1,0 +1,22 @@
+html,body { height:100%; border:none; overflow: hidden;}
+/*app-top*/
+.status { width:240px; height:22px; line-height:22px; font-size: 14px; position:absolute; top:47px; right:15px; text-align:right; }
+/*app_til*/
+.app_til { height:26px; background-color:#007ACC; position:relative;}
+.app_til strong { float:left; line-height:14px; color:#FFF; font-weight:bold; padding:6px 20px; }
+.operatype b { font-weight:bold!important; font-size:14px;}
+.app-tips { display:inline-block; height:16px; line-height:16px; vertical-align:middle; color:#F00;}
+.tips { display:inline-block; vertical-align:middle; color:#F00; font-size:14px;}
+/*app_content*/
+.app_content { padding:10px 0px;}
+.app_felid { padding:5px 0px;}
+.app_felid.bb { border-bottom: 1px dashed #DADADA; padding-bottom:10px; margin-bottom:5px;}
+/*app_tab*/
+.app-tab { border:1px solid #DADADA; border-top:none; overflow-x:hidden; overflow-y:auto;}
+.app-tab .app-table { border:none;}
+.app-table { position:relative; overflow:auto;}
+.pw20 { width:20%;}
+.pw30 { width:30%;}
+.add-wrap { height:26px; padding:5px; margin-top: -1px; background-color:#F9F9F9; border:1px solid #E4E4E4;}
+/*save-wrap*/
+.save-wrap { width:100%; height:26px; padding:5px 0px;position:absolute; bottom:0px;}

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <script id="header" type="text/html">
+        <div class="mutate-table-wrapper detailTop"  periodid="<%=periodid%>">
+            <table style="width: 100%;" class="ellip-table">
+                <tbody>
+                    <tr>
+                        <td colspan="6">
+                            <div class="top_td">
+                                <span class="label">公司: </span><span class="mr20" title="<%=headdata.CompanyName%>"><%=headdata.CompanyName%></span>
+                            </div>
+                             <div class="top_td">
+                                <span class="label">姓名: </span><span class="mr20" title="<%=headdata.TrueName%>"><%=headdata.TrueName%></span>
+                            </div>
+                            <div class="top_td">
+                                <span class="label">手机: </span><span class="mr20" title="<%=headdata.Phone%>"><%=headdata.Phone%></span>
+                            </div>
+                            <div class="top_td">
+                                <span class="label">部门: </span><span class="mr20" id="deptName" title="<%=headdata.DeptName%>" deptid="<%=headdata.DeptID%>"><%=headdata.DeptName%></span>
+                            </div>
+                            <div class="top_td">
+                                <span class="label">业务类型: </span><span class="mr20" title="<%=headdata.BusName%>"><%=headdata.BusName%></span>
+                            </div>
+                            <div class="top_td">
+                                <span class="label">出差类型: </span><span class="mr20 travel_type"  nodeid="<%=headdata.ApplyCase%>"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="break-word"><span class="label">申请说明: </span><span><%=headdata.Description%></span></td>
+                    </tr>
+                    <%if(headdata.ClaimDesc){%>
+                        <tr>
+                        <td colspan="6" class="break-word"><span class="label">报销说明: </span><span><%=headdata.ClaimDesc%></span></td>
+                    </tr>
+                    <%}%>
+                    <%if(headdata.VerifDesc){%>
+                        <tr>
+                        <td colspan="6" class="break-word"><span class="label">核定说明: </span><span><%=headdata.VerifDesc%></span></td>
+                    </tr>
+                    <%}%>
+                </tbody>
+            </table>
+        </div>
+    </script>
+</body>
+</html>

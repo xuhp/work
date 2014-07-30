@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>委托-财务管理系统</title>
+<link type="text/css" rel="stylesheet" href="/Static/assets/style/common/base.css" />
+<link type="text/css" rel="stylesheet" href="/Static/assets/style/appoint.css">
+</head>
+<body>
+<div class="fms-tab tabBg-gray">
+    <ul id="appTop" class="fms-tab-items clearfix">
+        <li id="set" class="fms-tab-item fms-tab-item-current">
+            <a href="javascript:;">设置</a>
+        </li>
+        <li id="all" class="fms-tab-item">
+            <a href="javascript:;">全部委托信息</a>
+        </li>
+    </ul>
+</div>
+<div class="app-main">
+    <div id="appSet" class="app-item">
+        <div class="status">当前委托状态：<span id="appStatusDes"></span><span id="appStatus"></span></div>
+        <ul class="app_content">
+            <li class="app_felid bb clearfix">
+                <div class="fl operatype">
+                    <span class="pr5 pt4 fl"><b>我要进行</b></span>
+                </div>
+                <div class="w140 fl operatype">
+                    <label for="app_All" class="pr10 pt4 fl"> <input name="app_Type" type="radio" id="app_All" class="app-type" value="1"/> <b>所有业务委托</b></label>
+                </div>
+                <div class="w140 fl operatype">
+                    <label for="app_Detail" class="pr10 pt4 fl"> <input name="app_Type" type="radio" id="app_Detail" class="app-type" value="2" /> <b>详细业务委托</b></label>
+                </div>
+            </li>
+            <li id="app-wrap-a" class="app_felid clearfix">
+                <div class="fl mr80"><label for="app_Person_A" class="fms-label w70 pl5">委托对象：</label><input id="app_Person_A" name="app_Person_A" type="text" class="form-text form-normal w150"/></div>
+            </li>
+        </ul>
+        <div id="appTabWrap">
+            <table id="appTitle" class="fms-table allEditTable app-table ellip-table">
+                <thead>
+                    <tr>
+                        <th>业务</th>
+                        <th class="pw30">委托对象</th>
+                        <th class="pw20">操作</th>
+                    </tr>
+                </thead>
+            </table>
+            <div id="appTab" class="app-tab">
+                <table id="appTable" class="fms-table allEditTable app-table ellip-table">
+                    <tbody>
+                    </tbody>
+                </table>
+            </div> 
+            <div class="add-wrap"><button class="addBtn blueBtn  h26 pl10 w100" id="addBtn">增加一行</button></div>
+        </div>
+        <div class="save-wrap tc">
+            <button class="blueBtn  h26 w120 mr15" id="saveBtn">保存生效</button>
+            <button class="blueBtn  h26 w120" id="effectBtn">保存不生效</button>
+        </div>
+    </div>    
+    <div id="appAll" class="app-item" style="display:none;">
+        <div class="pt10">
+            <table id="appInfoTitle" class="fms-table allEditTable app-table ellip-table">
+                <thead>
+                    <tr>
+                        <th class="pw30">用户</th>
+                        <th>业务</th>
+                        <th class="pw20">委托对象</th>
+                    </tr>
+            </thead>
+            </table>
+            <div id="appInfoTab" class="app-tab scroll-pane">
+                <table id="appInfoTable" class="fms-table allEditTable app-table ellip-table">
+                    <tbody></tbody>
+                </table>
+            </div>              
+        </div>
+    </div>
+</div>
+<div id="loadCon" class="loadWrap" style="display:block;"><div class="loading"><img src="/Static/images/base/loader-big.gif" /><p>正在加载中...</p></div><div>
+<script type="text/javascript" src="/Static/assets/seajs/2.1.1/sea-debug.js"></script>
+<script type="text/javascript">
+//配置
+seajs.config({
+	//别名配置
+   	alias: {
+    	"jquery": "/Static/src/plugin/jquery/1.7.2/jquery.js",
+		"appoint": "/Static/src/appoint.js"
+    }
+});
+seajs.use(['jquery','appoint'], function ($,appoint ) {
+	appoint($);
+	$(function(){
+		$(document).appoint();
+	});	
+});
+</script>
+</body>
+</html>

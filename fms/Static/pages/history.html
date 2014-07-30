@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>历史-财务管理系统</title>
+<link type="text/css" rel="stylesheet" href="/Static/assets/style/common/base.css" />
+<link type="text/css" rel="stylesheet" href="/Static/assets/style/history.css">
+</head>
+<form method="post" action="" name="historyForm" id="historyForm">
+<ul class="his_content">
+    <li class="his_felid clearfix">
+        <div class="fl mr15 pr"><label for="node_Creat" class="fms-label w70 tr">创建日期：</label><input id="node_Creat_1" name="node_Creat_1" type="text" class="removeTxt form-text form-normal w100 jdpicker" readonly /></div>
+        <div class="fl pr"><input id="node_Creat_2" name="node_Creat_2" type="text" class="removeTxt form-text form-normal w100 jdpicker " readonly /></div>
+        <div class="fl"><label for="his_Company" class="fms-label w70 tr">公司：</label><select id="his_Company" name="his_Company" type="text" class="fms-select sw150"><option companyid="">请选择</option></select></div>
+        <div class="fl pr" id="hisBus"><label for="his_Bus" class="fms-label w70 tr">业务：</label><input id="his_Bus" name="his_Bus" type="text" class="form-text form-normal w150" readonly /><input type="hidden" id="his_BusID" name="his_BusID" value="" /></div>
+         <div class="fl" id="orderid"><label for="orderid" class="fms-label w70 tr">订单ID：</label><input id="orderid" name="orderid" type="text" class="form-text form-normal w100"/></div>            
+    </li>
+    <li class="his_felid bb clearfix">
+        <div class="fl mr15 pr"><label for="node_Close" class="fms-label w70 tr">关闭日期：</label><input id="node_Close_1" name="node_Close_1" type="text" class="form-text form-normal w100 jdpicker" value="" readonly /></div>       
+        <div class="fl pr"><input id="node_Close_2" name="node_Close_2" type="text" class="form-text form-normal w100 jdpicker " readonly /></div>
+        <div class="fl"><label for="his_Form" class="fms-label w70 tr">表单：</label><select id="his_Form" name="his_Form" type="text" class="fms-select sw150"><option formid="">请选择</option></select></div>
+        <div class="fl mr15"><label for="his_Person" class="fms-label w70 tr">申请人：</label><input id="his_Person" name="his_Person" type="text" class="form-text form-normal w120" uid="" /><input type="hidden" id="his_PersonID" name="his_PersonID" value="" /></div>
+        <div class="fl"><label for="his_Wrap" class="fms-label w70 tr">搜索范围：</label><select id="his_Wrap" name="his_Wrap" type="text" class="fms-select w120"><option formid="">请选择</option></select></div>
+    </li>
+</ul>
+<div class="searchWrap"><input type="submit" name="hisSearch" value="搜 索" id="hisSearch" class="blueBtn subBtn" /></div>
+<div id="hisTabWrap">
+    <table id="hisTitle" class="fms-table allEditTable his-table ellip-table">
+        <thead>
+            <tr>
+            	<th class="pw10">订单ID</th>
+                <th class="pw15">表单</th>               
+                <th class="pw8">申请人</th>
+                <th class="pw10">创建日期</th>
+                <th class="pw10">关闭日期</th>
+                <th class="pw8">状态</th>
+                <th>说明</th>
+                <th class="pw12">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div id="hisTab" class="his-tab">
+        <table id="hisTable" class="fms-table allEditTable his-table ellip-table">
+            <tbody>
+            	<tr>
+                	<td class="pw10 orderid">118</td>
+                    <td class="pw15">Form1</td>  
+                    <td class="pw8">徐华平</td>
+                    <td class="pw10">2013-06-04</td>
+                    <td class="pw10">2013-06-04</td>
+                    <td class="pw8">申请</td>
+                    <td class="tl" title="台生活|邢台团邢台生活|邢台团邢台生活|邢台团邢台生活|邢台团">邢台生活|邢台团邢台生活|邢台团邢台生活|邢台团邢台生活|邢台团</td>
+                    <td class="pw12"><a class="his-detail blueBtn h22 w45 mr15" orderid="118">详情</a><a class="his-report blueBtn h22 w45">报表</a></td>
+                </tr>
+                <tr>
+                	<td class="pw10 orderid">118</td>
+                    <td class="pw15">Form1</td>  
+                    <td class="pw8">徐华平</td>
+                    <td class="pw10">2013-06-04</td>
+                    <td class="pw10">2013-06-04</td>
+                    <td class="pw8">申请</td>
+                    <td class="tl">邢台生活|邢台团</td>
+                    <td class="pw12"><a class="his-detail blueBtn h22 w45 mr15" orderid="118">详情</a><a class="his-report blueBtn h22 w45">报表</a></td>
+                </tr>
+                <tr>
+                	<td class="pw10 orderid">118</td>
+                    <td class="pw15">Form1</td>  
+                    <td class="pw8">徐华平</td>
+                    <td class="pw10">2013-06-04</td>
+                    <td class="pw10">2013-06-04</td>
+                    <td class="pw8">申请</td>
+                    <td class="tl">邢台生活|邢台团</td>
+                    <td class="pw12"><a class="his-detail blueBtn h22 w45 mr15" orderid="118">详情</a><a class="his-report blueBtn h22 w45">报表</a></td>
+                </tr>
+                <tr>
+                	<td class="pw10 orderid">118</td>
+                    <td class="pw15">Form1</td>  
+                    <td class="pw8">徐华平</td>
+                    <td class="pw10">2013-06-04</td>
+                    <td class="pw10">2013-06-04</td>
+                    <td class="pw8">申请</td>
+                    <td class="tl">邢台生活|邢台团</td>
+                    <td class="pw12"><a class="his-detail blueBtn h22 w45 mr15" orderid="118">详情</a><a class="his-report blueBtn h22 w45">报表</a></td>
+                </tr>
+                <tr>
+                	<td class="pw10 orderid">118</td>
+                    <td class="pw15">Form1</td>  
+                    <td class="pw8">徐华平</td>
+                    <td class="pw10">2013-06-04</td>
+                    <td class="pw10">2013-06-04</td>
+                    <td class="pw8">申请</td>
+                    <td class="tl">邢台生活|邢台团</td>
+                    <td class="pw12"><a class="his-detail blueBtn h22 w45 mr15" orderid="118">详情</a><a class="his-report blueBtn h22 w45">报表</a></td>
+                </tr>
+                <tr>
+                	<td class="pw10 orderid">118</td>
+                    <td class="pw15">Form1</td>  
+                    <td class="pw8">徐华平</td>
+                    <td class="pw10">2013-06-04</td>
+                    <td class="pw10">2013-06-04</td>
+                    <td class="pw8">申请</td>
+                    <td class="tl">邢台生活|邢台团</td>
+                    <td class="pw12"><a class="his-detail blueBtn h22 w45 mr15" orderid="118">详情</a><a class="his-report blueBtn h22 w45">报表</a></td>
+                </tr>
+                <tr>
+                	<td class="pw10 orderid">118</td>
+                    <td class="pw15">Form1</td>  
+                    <td class="pw8">徐华平</td>
+                    <td class="pw10">2013-06-04</td>
+                    <td class="pw10">2013-06-04</td>
+                    <td class="pw8">申请</td>
+                    <td class="tl">邢台生活|邢台团</td>
+                    <td class="pw12"><a class="his-detail blueBtn h22 w45 mr15" orderid="118">详情</a><a class="his-report blueBtn h22 w45">报表</a></td>
+                </tr><tr>
+                	<td class="pw10 orderid">118</td>
+                    <td class="pw15">Form1</td>  
+                    <td class="pw8">徐华平</td>
+                    <td class="pw10">2013-06-04</td>
+                    <td class="pw10">2013-06-04</td>
+                    <td class="pw8">申请</td>
+                    <td class="tl">邢台生活|邢台团</td>
+                    <td class="pw12"><a class="his-detail blueBtn h22 w45 mr15" orderid="118">详情</a><a class="his-report blueBtn h22 w45">报表</a></td>
+                </tr>
+                <tr>
+                	<td class="pw10 orderid">118</td>
+                    <td class="pw15">Form1</td>  
+                    <td class="pw8">徐华平</td>
+                    <td class="pw10">2013-06-04</td>
+                    <td class="pw10">2013-06-04</td>
+                    <td class="pw8">申请</td>
+                    <td class="tl">邢台生活|邢台团</td>
+                    <td class="pw12"><a class="his-detail blueBtn h22 w45 mr15" orderid="118">详情</a><a class="his-report blueBtn h22 w45">报表</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div> 
+    <div class="f_pages tc pa"> <span class="paginationInfo"><b>1/3</b> 记录数:<b>22</b></span> &nbsp;<span><a href="javascript:void(0);">首页</a></span> <span><a class="PagerIcon" title="上一页" href="javascript:void(0);">上一页</a></span> <span class="currentPage">1</span> <span><a href="Default.aspx?page=2">2</a></span> <span><a href="Default.aspx?page=3">3</a></span><a class="PagerIcon" title="下一页" href="Default.aspx?page=2">下一页</a></div>
+</div>
+</form>
+<div id="dFrameWrap">
+    <button id="close" class="redBtn h26 w82">关闭</button>
+	<iframe id="dFrame" name="dFrame" class="" width="100%" height="100%" frameborder="0" border="0" src=""></iframe>
+</div>
+<body>
+<script type="text/javascript" src="/Static/assets/seajs/2.1.1/sea-debug.js"></script>
+<script type="text/javascript">
+//配置
+seajs.config({
+	//别名配置
+   	alias: {
+    	"jquery": "/Static/src/plugin/jquery/1.7.2/jquery.js",
+		"history": "/Static/src/history.js"
+    }
+});
+seajs.use(['jquery','history'], function ($,history ) {
+	history($);
+	$(function(){
+		$(document).history();
+	});	
+});
+</script>
+</body>
+</html>

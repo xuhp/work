@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>差旅报销-申请填写页面</title>
+    <link rel="stylesheet" type="text/css" href="/Static/assets/style/common/base.css" />
+    <link rel="stylesheet" type="text/css"  href="/Static/assets/style/travel_expense/travel_form.css"/>
+</head>
+<body>
+    <div class="container">
+        <!--面包屑导航开始-->
+        <div class="fms-navsite">
+            <a href="/Static/pages/travel_expense/travelIndex.html">费用报销列表</a>
+            <span class="songti">> </span>
+        </div>
+        <!--面包屑导航结束-->
+        <!--个人信息开始-->
+        <div class="mutate-table-wrapper mt10">
+                <table class="fms-table mutate-table ">
+                    <tr>
+                        <td>
+                            <label for="" class="mutate-label">
+                                公司:
+                            </label>
+                        </td>
+                        <td>
+                            <select class="choice_company fms-select">
+                                <option>— 请选择公司 —</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="" class="mutate-label">
+                                部门:
+                            </label>
+                        </td>
+                        <td>
+                            <input id="tree_department" type="text" value="" class="form-text form-normal tree_department"  readonly="true" />
+                        </td>
+                        <td>
+                            <label for="" class="mutate-label">
+                                业务类型:
+                            </label>
+                        </td>
+                        <td>
+                            <input type="text" class="form-text form-normal tree_business" readonly="true"/>
+                        </td>
+                        <td>
+                            <label for="" class="mutate-label" style="width:30px;">
+                                姓名:
+                            </label>
+                        </td>
+                        <td>
+                            <span class="mutate-td-span userName" style="width:50px;"></span>
+                        </td>
+                        <td>
+                            <label for="" class="mutate-label">
+                                手机:
+                            </label>
+                        </td>
+                        <td>
+                            <input type="text" value="" class="form-text form-normal pnone"  id="phone"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="" class="mutate-label" style="width:60px;">
+                                申请说明:
+                            </label>
+                        </td>
+                        <td colspan="9">
+                            <div class="desc_wrapper">
+                                <label for="description" style="display:block;">请输入不多于250个字符</label>
+                                <textarea id="description" class="form-textarea form-normal description"></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        <!-- 个人信息结束 -->
+        <!-- 出差目的描述开始 -->
+        <div class="box_header mt10 clearfix" >
+            <h3>出差目的描述</h3>
+            <button class="blueBtn h22 w100 fr" id="purpose_desc_add_row">新增一行</button>
+        </div>
+        <table class="allEditTable fms-table" id="purpose_desc">
+            <thead>
+                <tr>
+                    <th style="width:5%;">序号</th>
+                    <th style="width:35%;">出差目的</th>
+                    <th style="width:15%">联系客户单位</th>
+                    <th style="width:7.5%;">姓名</th>
+                    <th style="width:15%;">职务</th>
+                    <th style="width:12.5%;">电话</th>
+                    <th style="width:10%;">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><input type="text" class="allEditTab-txtInput focus_change_height" readonly="true" /></td>
+                    <td colspan="4"><p class="allEditTab-txtInput client_info"></p></td>
+                    <td><span class="redBtn h22 w45 purpose_del_btn">删除</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 出差目的描述结束 -->
+        <!-- 预计行程描述开始 -->
+        <div class="box_header mt10 clearfix" >
+            <h3>预计行程描述</h3>
+            <button class="blueBtn h22 w100 fr travel_desc_add_row">新增一行</button>
+        </div>
+        <div class="travel_desc">
+            <table class="allEditTable fms-table travel_start">
+                <thead>
+                    <tr>
+                        <th style="width:6%;">行程</th>
+                        <th style="width:14%;">出发地</th>
+                        <th style="width:10%;">出发时间</th>
+                        <th style="width:10%;">市内交通费</th>
+                        <th style="width:10%;"></th>
+                        <th style="width:10%;">长途交通费</th>
+                        <th style="width:10%;">长途交通工具</th>
+                        <th style="width:30%;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="travel_detail_leave">
+                        <td>出发</td>
+                        <td><input type="text" class="allEditTab-txtInput areaPicker" readonly="true"/></td>
+                        <td><input type="text" class="allEditTab-txtInput start_time  jdpicker" readonly="true" /></td>
+                        <td><input type="text" class="allEditTab-txtInput finance_decmal city_traffic_cost subcost" /></td>
+                        <td></td>
+                        <td><input type="text" class="allEditTab-txtInput finance_decmal long_traffic_cost subcost" /></td>
+                        <td><select class="fms-select long_traffic_tool">
+                            <option>-选择交通工具-</option>
+                        </select></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="allEditTable fms-table travel_detail">
+            <thead>
+                <tr>
+                    <th style="width:6%;">行程</th>
+                    <th style="width:14%;">出差地</th>
+                    <th style="width:10%;">到达时间</th>
+                    <th style="width:10%;">市内交通费</th>
+                    <th style="width:10%;">住宿费</th>
+                    <th style="width:10%;">长途交通费</th>
+                    <th style="width:10%;">长途交通工具</th>
+                    <th style="width:10%;">离开时间</th>
+                    <th style="width:12%;">费用小计</th>
+                    <th style="width:8%;">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="travel_detail_row_0">
+                    <td>行程1</td>
+                    <td><input type="text" class="allEditTab-txtInput areaPicker" readonly="true"/></td>
+                    <td><input type="text" class="allEditTab-txtInput jdpicker arrival_time" readonly="true" /></td>
+                    <td><input type="text" class="allEditTab-txtInput finance_decmal city_traffic_cost subcost" /></td>
+                    <td><input type="text" class="allEditTab-txtInput finance_decmal stay_cost subcost" /></td>
+                    <td><input type="text" class="allEditTab-txtInput finance_decmal long_traffic_cost subcost" /></td>
+                    <td><select class="fms-select long_traffic_tool">
+                            <option>-选择交通工具-</option>
+                        </select>
+                    </td>
+                    <td><input type="text" class="allEditTab-txtInput jdpicker leave_time" readonly="true"/></td>
+                    <td class="finance_decmal subtotal fb">0.00</td>
+                    <td><span class="redBtn h22 w45 travel_desc_del_btn">删除</span></td>
+                </tr>
+            </tbody>
+        </table>
+            <table class="allEditTable fms-table travel_end">
+            <thead>
+                <tr>
+                    <th style="width:6%;">行程</th>
+                    <th style="width:14%;">返回地</th>
+                    <th style="width:10%;">到达时间</th>
+                    <th style="width:10%;">市内总交通费</th>
+                    <th style="width:10%;">总住宿费</th>
+                    <th style="width:10%;">总长途交通费</th>
+                    <th style="width:10%;">总出差天数</th>
+                    <th style="width:10%;">平均费用</th>
+                    <th style="width:12%;">费用总计</th>
+                    <th style="width:8%;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>结束</td>
+                    <td><input type="text" class="allEditTab-txtInput areaPicker" readonly="true" /></td>
+                    <td><input type="text" class="allEditTab-txtInput end_time jdpicker" readonly="true" /></td>
+                    <td class="finance_decmal city_traffic_cost_total fb ">0.00</td>
+                    <td class="finance_decmal stay_cost_total fb">0.00</td>
+                    <td class="finance_decmal long_traffic_cost_total fb">0.00</td>
+                    <td><input type="text" class="allEditTab-txtInput total_days" /></td>
+                    <td class="finance_decmal average_cost fb"></td>
+                    <td class="finance_decmal alltotal fb">0.00</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <!-- 预计行程描述结束 -->
+        <div class="submit_btn_wrap">
+            <span class="blueBtn h26 w82 " id="submit_btn">提交申请</span>
+        </div>
+        
+    </div>
+    <script type="text/javascript" src="/Static/assets/seajs/2.2.1/sea.js"></script>
+    <script type="text/javascript">
+        //配置
+        seajs.config({
+            //别名配置
+            alias: {
+                "jquery": "/Static/src/plugin/jquery/1.7.2/jquery.js"
+            },
+            //缓存设置
+            map: [
+               [/^(.*\.(?:css|js))(.*)$/i, '$1?t=' + (+new Date())]
+            ]
+
+        });
+        seajs.use('/Static/src/travel_expense/application_form', function (a) {
+            a.init();
+        });
+    </script>
+</body>
+</html>
