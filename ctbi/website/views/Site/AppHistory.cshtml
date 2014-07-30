@@ -1,0 +1,52 @@
+﻿@{
+    Layout = null;
+}
+@using CT.BI.WEB.BASE
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>历史页面</title>
+    <link rel="stylesheet" type="text/css" href="/Static/style/common.css"/>
+    <link rel="stylesheet" type="text/css" href="/Static/style/site/app_history.css"/>
+</head>
+<body>
+    <table class="history_table">
+		<thead>
+			<tr>
+				<th style="width:56%;">应用名称</th>
+				<th style="width:22%;">访问时间</th>
+				<th style="width:10%;"></th>
+			</tr>
+		</thead>
+		<tbody>
+    @foreach (var history in ViewBag.Histories)
+    {
+         <tr class="@history.AppID ">
+				<td class="title">@history.AppTitle</td>
+				<td class="visit_time">@history.VisitTime</td>
+				<td>
+					@if(@history.Available){
+						<a class="add_nav_con" nodeid="@history.AppID" app_url="@history.AppUrl">访问</a>
+					}
+				</td>
+		</tr>
+    }
+    	</tbody>
+	</table>
+     @if (BaseController.IsResoucePack())
+    { 
+        @Scripts.Render("~/bundles/comlib/js")
+        @Scripts.Render("~/bundles/busilib/js")
+    }
+    else{
+	    <script src="/Static/plugins/jquery/1.11/jquery.min.js" ></script>
+	    <script src="/Static/js/config.js"></script>
+	    <script src="/Static/js/common.js"></script>
+         <script src="/Static/js/common/getdata/get_origin_data.js"></script>
+	    <script src="/Static/js/common/add_nav_con.js"></script>
+    }
+	<script src="/Static/js/site/app_history.js"></script>
+</body>
+</html>

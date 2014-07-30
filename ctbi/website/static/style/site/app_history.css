@@ -1,0 +1,29 @@
+html,body{
+	background:#5a5a5a;
+	height:100%;
+}
+.history_table{
+	width:100%;
+	text-align:left;
+}
+.history_table  th{
+	height: 35px;
+	background:#454545;
+	border:1px solid #595858;
+    border-bottom:none;
+	color:#fff;
+	font-weight:bold;
+	padding:0 2%;
+}
+.history_table td{
+	height:30px;
+	padding:0 2%;
+    color:#fff;
+}
+.add_nav_con
+{
+    color:#fff;
+}
+.add_nav_con:hover{
+	cursor: pointer;
+}

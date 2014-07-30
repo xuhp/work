@@ -1,0 +1,62 @@
+﻿@using CT.BI.WEB.BASE
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+     @if (BaseController.IsResoucePack())
+    { 
+        @Styles.Render("~/bundles/comlib/css")
+        @Scripts.Render("~/bundles/comlib/js")
+        @Scripts.Render("~/bundles/busilib/js")
+    }
+    else{
+        <link rel="stylesheet" href="/Static/style/common.css" />
+        <link rel="stylesheet" href="/Static/plugins/x_layout/layout.css" />
+        <link rel="stylesheet" href="/Static/plugins/x_table/table_little.css" />
+        <link rel="stylesheet" href="/Static/plugins/jdpicker/1.0/jdpicker.css" />
+         
+         <script src="/Static/plugins/jquery/1.11/jquery.min.js"></script>
+         <script src="/Static/js/config.js"></script>
+         <script src="/Static/js/common.js"></script>
+         <script src="/Static/plugins/jdpicker/1.0/jquery.jdpicker.js"></script>
+         <script src="/Static/plugins/select_month/DatePicker.js"></script>
+         <script src="/Static/plugins/x_layout/jquery.layout.js"></script>
+         <script src="/Static/plugins/x_adaption/adaption_w_h.js"></script>
+         <script src="/Static/plugins/x_table/jquery.table.js"></script>
+         <script src="/Static/plugins/x_clearValue/jquery.clearValue.js"></script>
+         <script src="/Static/plugins/x_labelTip/jquery.label_tip.js"></script>
+         <script src="/Static/js/common/getdata/get_origin_data.js"></script>
+         <script src="/Static/js/common/getdata/get_table_data.js"></script>
+         <script src="/Static/js/common/pay_attention.js"></script>
+         <script src="/Static/js/common/download_search_table.js"></script>
+    }
+    
+    <link rel="stylesheet" href="/Static/plugins/x_layout/layout.css" />
+    <link rel="stylesheet" href="/Static/plugins/x_table/table_little.css" />
+    <link href="/Static/style/apps/partial/search_charts_table.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="header clearfix">
+        @RenderBody()
+    </div>
+    <div class="container clearfix self_adaption_height">
+        <div class="data_show self_adaption_height">
+
+        </div>
+        <div class="choose_condition inherit_parent_width">
+            <p class="mr20 ml20"><label>时间：</label><select class="option_wrap"><option>全部</option></select></p>
+            <p class="checkbox_wrap">
+                <input type="checkbox" id="users1d1" name="users1d1" checked="checked" /><label>日登陆人数</label>
+                <input type="checkbox" id="times1d1" name="times1d1" checked="checked" /><label>日登陆次数</label>
+                <input type="checkbox" id="users7d1" name="users7d1" checked="checked" /><label>7天登陆人数</label>
+                <input type="checkbox" id="users21d1" name="users21d1" checked="checked" /><label>21天登陆1次人数</label>
+                <input type="checkbox" id="users21d2" name="users21d2" checked="checked" /><label>21天登陆2次人数</label>
+            </p>
+        </div>
+    </div>
+    @RenderSection("BottomResource", false)
+</body>
+</html>

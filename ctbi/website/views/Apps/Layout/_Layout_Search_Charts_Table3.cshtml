@@ -1,0 +1,87 @@
+﻿@* 在充值走势中使用 *@
+
+@using CT.BI.WEB.BASE
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+      @if (BaseController.IsResoucePack())
+    { 
+        @Styles.Render("~/bundles/comlib/css")
+        @Scripts.Render("~/bundles/comlib/js")
+        @Scripts.Render("~/bundles/busilib/js")
+    }
+    else{
+        <link rel="stylesheet" href="/Static/style/common.css" />
+        <link rel="stylesheet" href="/Static/plugins/x_layout/layout.css" />
+        <link rel="stylesheet" href="/Static/plugins/x_table/table_little.css" />
+        <link rel="stylesheet" href="/Static/plugins/jdpicker/1.0/jdpicker.css" />
+        <link href="/Static/plugins/select/select2.css" rel="stylesheet" />
+         
+         <script src="/Static/plugins/jquery/1.11/jquery.min.js"></script>
+         <script src="/Static/js/config.js"></script>
+         <script src="/Static/js/common.js"></script>
+         <script src="/Static/plugins/jdpicker/1.0/jquery.jdpicker.js"></script>
+         <script src="/Static/plugins/select_month/DatePicker.js"></script>
+         <script src="/Static/plugins/x_layout/jquery.layout.js"></script>
+         <script src="/Static/plugins/x_adaption/adaption_w_h.js"></script>
+         <script src="/Static/plugins/x_table/jquery.table.js"></script>
+         <script src="/Static/plugins/x_clearValue/jquery.clearValue.js"></script>
+         <script src="/Static/plugins/x_labelTip/jquery.label_tip.js"></script>
+         <script src="/Static/js/common/getdata/get_origin_data.js"></script>
+         <script src="/Static/js/common/getdata/get_table_data.js"></script>
+         <script src="/Static/js/common/pay_attention.js"></script>
+         <script src="/Static/js/common/download_search_table.js"></script>
+         <script src="/Static/plugins/select/select2.min.js"></script>
+    }
+    <link rel="stylesheet" href="/Static/style/apps/partial/search_charts_table.css" />
+    <link href="/Static/style/apps/partial/search_charts_table3.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="header clearfix">
+        @RenderBody()
+</div>
+    </div>
+    <div class="container clearfix self_adaption_height">
+        <div class="total_data inherit_parent_height">
+            <ul>
+                <li>
+                    <label>充值总额：</label>
+                    <span>853839390.00</span>
+                </li>
+                <li>
+                    <label>充值总额：</label>
+                    <span>853839390.00</span>
+                </li>
+            </ul>
+        </div>
+        <div class="data_wrap inherit_parent_height">
+            <div class="wrap_charts inherit_parent_height inherit_parent_width">
+                
+            </div>
+            <div class="wrap_table inherit_parent_height inherit_parent_width">
+                
+            </div>
+        </div>
+        <div class="inherit_parent_height show_nav">
+            <a id="nav_charts" class="cur">走势图</a>
+            <a id="nav_table">表格</a>
+        </div>
+    </div>
+    @RenderSection("Info", false)
+    @RenderSection("BottomResource", false)
+    <script>
+        $(function () {
+            $('.container').delegate('.show_nav a', 'click', function () {
+                var cur_name = $(this).attr('id').substring(4);
+                $('.wrap_' + cur_name).fadeIn(100)
+                    .siblings().fadeOut(300);
+                $(this).addClass('cur').siblings('a').removeClass('cur');
+            })
+        })
+    </script>
+</body>
+</html>

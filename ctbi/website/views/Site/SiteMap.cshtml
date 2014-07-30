@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+@using CT.BI.WEB.BASE
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>网站地图导航</title>
+    <link rel="stylesheet" type="text/css" href="/Static/style/common.css" />
+    <link rel="stylesheet" type="text/css" href="/Static/style/site/site_map_navigation.css" />
+</head>
+<body>
+	<div class="header clearfix">
+		<label for="app_search" class="label_pos search_label">请键入搜索内容</label>
+        <b class="search_icon"></b>
+		<input type="text" class="big_input" id="app_search" name="app_search" />
+	</div>
+	<div class="container">
+		
+	</div>
+	<div class="navsite">
+		<span>网站地图导航</span>
+	</div>
+      @if (BaseController.IsResoucePack())
+    { 
+        @Scripts.Render("~/bundles/comlib/js")
+        @Scripts.Render("~/bundles/busilib/js")
+    }
+    else{
+         <script src="/Static/plugins/jquery/1.11/jquery.min.js" ></script>
+	    <script src="/Static/js/config.js"></script>
+	    <script src="/Static/js/common.js"></script>
+	    <script src="/Static/js/common/add_nav_con.js"></script>
+	    <script src="/Static/plugins/x_labelTip/jquery.label_tip.js"></script>
+        <script src="/Static/js/common/getdata/get_origin_data.js"></script>
+        <script src="/Static/plugins/x_clearValue/jquery.clearValue.js"></script>
+    }
+	<script src="/Static/js/site/site_map_navigation.js"></script>
+</body>
+</html>

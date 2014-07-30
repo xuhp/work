@@ -1,0 +1,49 @@
+﻿@{
+    Layout = "~/Views/Apps/Layout/_Layout_Search_Charts_Table1.cshtml";
+}
+<div class="search_condition clearfix">
+<p class="fl">
+	<label>日期范围：</label>
+	<input type="text" id="start_time" name="start_time" class="normal_input add_clear_btn " /> —
+    <input type="text" id="end_time" name="end_time" class="normal_input add_clear_btn mr20" />
+</p>
+<p class="fl pr">
+    <label for="channeltype">充值渠道：</label>
+    <input id="channeltype" name="channeltype" class="normal_input add_clear_btn"/>
+</p>
+<p class="fl">
+    <a class="data_search_btn fl pos_btn normal_btn ml20">搜索</a>
+</p>
+</div>
+<div class="attention_help_wrap">
+    <a class="app_help">Info</a>
+    @* 帮助信息 *@
+    @Html.Raw(ViewBag.Desc)
+    <a class="download"><img src="/Static/image/common/icon/download.png" />表格数据下载</a>
+</div>
+
+@section BottomResource{
+  @if (CT.BI.WEB.BASE.BaseController.IsResoucePack())
+     { 
+        @Scripts.Render("~/bundles/loginusers/charts_table/js")
+     }
+     else
+     {
+        
+     }
+    @Scripts.Render("~/bundles/highstock")
+    <script src="/Static/js/apps/operate/paydata/common/common.js"></script>
+    <script src="/Static/js/apps/operate/paydata/tc_pcpay_type_ratio.js"></script>
+    <script>
+
+    </script>
+
+    <script src="/Static/js/layout/nations.js"></script>
+    <script>
+        $(function () {
+            var state = @ViewBag.AttentionState;
+            nations.init(state);
+        });
+    </script>
+}
+   

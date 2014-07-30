@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<scripts>
+		<bundles name="~/bundles/comlib/js">
+			<include>~/Static/plugins/jquery/1.11/jquery.min.js</include>
+			<include>~/Static/js/config.js</include>
+			<include>~/Static/js/common.js</include>
+			<include>~/Static/plugins/jdpicker/1.0/jquery.jdpicker.js</include>
+			<include>~/Static/plugins/select_month/DatePicker.js</include>
+      <include>~/Static/plugins/select/select2.min.js</include>
+			<include>~/Static/plugins/x_layout/jquery.layout.js</include>
+			<include>~/Static/plugins/x_adaption/adaption_w_h.js</include>
+			<include>~/Static/plugins/x_table/jquery.table.js</include>
+			<include>~/Static/plugins/x_clearValue/jquery.clearValue.js</include>
+			<include>~/Static/plugins/x_labelTip/jquery.label_tip.js</include>
+		</bundles>
+		
+		<bundles name="~/bundles/busilib/js">
+			<include>~/Static/js/common/getdata/get_origin_data.js</include>
+			<include>~/Static/js/common/getdata/get_table_data.js</include>
+			<include>~/Static/js/common/pay_attention.js</include>
+      <include>~/Static/js/common/download_search_table.js</include>
+      <include>~/Static/js/common/add_nav_con.js</include>
+      <include>~/Static/js/apps/partial/list/list_nav.js</include>
+		</bundles>
+    
+		<bundles name="~/bundles/highcharts">
+			<include>~/Static/plugins/highcharts/js/highcharts.js</include>
+			<include>~/Static/plugins/highcharts/js/modules/exporting.js</include>
+		</bundles>
+		<bundles name="~/bundles/highstock">
+			<include>~/Static/plugins/highstock/js/highstock.js</include>
+			<include>~/Static/plugins/highstock/js/modules/exporting.js</include>
+		</bundles>
+
+    <bundles name="~/bundles/registered/charts_table/js">
+      <include>~/Static/js/apps/partial/charts/registered_users/charts_bymonth.js</include>
+      <include>~/Static/js/apps/partial/table/registered_users/table_bymonth.js</include>
+      <include>~/Static/js/apps/partial/charts/registered_users/charts_byday.js</include>
+      <include>~/Static/js/apps/partial/table/registered_users/table_byday.js</include>
+    </bundles>
+
+    <bundles name="~/bundles/loginusers/charts_table/js">
+      <include>~/Static/js/apps/partial/charts/login_users/charts_byday.js</include>
+      <include>~/Static/js/apps/partial/charts/login_users/charts_perday.js</include>
+      <include>~/Static/js/apps/partial/table/login_users/table_byday.js</include>
+      <include>~/Static/js/apps/partial/table/login_users/table_perday.js</include>
+      <include>~/Static/js/apps/partial/table/login_users/table_compare.js</include>
+    </bundles>
+    
+	</scripts>
+    
+    
+	<styles>
+    <bundles name="~/bundles/comlib/css">
+      <include>~/Static/style/common.css</include>
+      <include>~/Static/plugins/x_layout/layout.css</include>
+      <include>~/Static/plugins/jdpicker/1.0/jdpicker.css</include>
+      <include>~/Static/plugins/x_table/table_little.css</include>
+      <include>~/Static/plugins/select/select2.css</include>
+    </bundles>
+	</styles>
+</root>

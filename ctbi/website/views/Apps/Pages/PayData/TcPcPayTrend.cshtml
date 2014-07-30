@@ -1,0 +1,96 @@
+﻿@{
+    Layout = "~/Views/Apps/Layout/_Layout_Search_Charts_Table3.cshtml";
+}
+<div class="search_condition clearfix">
+<p class="fl">
+	<label>日期范围：</label>
+	<input type="text" id="start_time" name="start_time" class="normal_input add_clear_btn " /> —
+    <input type="text" id="end_time" name="end_time" class="normal_input add_clear_btn" />
+</p>
+<p class="fl">
+	<label>累计充值额度：</label>
+	<input type="text" id="minamount" name="minamount" class="normal_input add_clear_btn " /> —
+    <input type="text" id="maxamount" name="maxamount" class="normal_input add_clear_btn" />
+</p>
+<p class="fl">
+    <label>地区:</label>
+    <select class="provinces  normal_select">
+        <option nodeid="all">所有省</option>
+    </select>
+    <select class="cities  normal_select">
+        <option nodeid="all">所有市</option>
+    </select>
+    <select class="districts  normal_select">
+        <option nodeid="all">所有县区</option>
+    </select>
+</p>
+<p class="fl pr">
+    <label for="channeltype">充值渠道：</label>
+    <input id="channeltype" name="channeltype" class="normal_input add_clear_btn"/>
+</p>
+<p class="fl">
+    <label for="firstpay">仅首充记录：</label>
+    <input type="checkbox" id="firstpay" name="firstpay" />
+</p>
+<p class="fl">
+     <label>注册时间：</label>
+	<select class="regtime normal_select">
+        <option>不限注册时间</option>
+        <option>注册30天内的用户</option>
+        <option>注册90天内的用户</option>
+	</select>
+</p>
+<p class="fl">
+    <label>充值方式:</label>
+    <select class="normal_select paytype">
+        <option nodeid="all">所有充值方式</option>
+    </select>
+</p>
+<p class="fl"> 
+    <a class="data_search_btn fl pos_btn normal_btn ml20">搜索</a>
+</p>
+    </div>
+<div class="attention_help_wrap clearfix">
+    <a class="app_help">Info</a>
+    @* 帮助信息 *@
+    @Html.Raw(ViewBag.Desc)
+    <a class="download"><img src="/Static/image/common/icon/download.png" />表格数据下载</a>
+</div>
+
+@section BottomResource{
+  @if (CT.BI.WEB.BASE.BaseController.IsResoucePack())
+     { 
+        @Scripts.Render("~/bundles/loginusers/charts_table/js")
+     }
+     else
+     {
+        
+     }
+    @Scripts.Render("~/bundles/highstock")
+    <script src="/Static/js/apps/operate/paydata/common/common.js"></script>
+    <script src="/Static/js/apps/operate/paydata/tc_pcpay_trend.js"></script>
+    <script>
+        var paytypes = @Html.Raw(ViewBag.PayTypes),
+            areadata=@Html.Raw(ViewBag.Areas),
+            channeldata=@Html.Raw(ViewBag.Channels);
+        console.log(channeldata);
+        tc_pcpay_trend.init({
+            'paytype':paytypes,
+            'areas':areadata,
+            'channels':{
+                'data':channeldata,
+                'id':'HallID',//创建select时用以区分手机和pc
+                'name':'HallName'//同上
+            }
+        });
+    </script>
+
+    <script src="/Static/js/layout/nations.js"></script>
+    <script>
+        $(function () {
+            var state = @ViewBag.AttentionState;
+            nations.init(state);
+        });
+    </script>
+}
+   

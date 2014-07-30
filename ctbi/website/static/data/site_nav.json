@@ -1,0 +1,185 @@
+{
+    "Groups": [
+        {
+            "ID": "grp01", 
+            "Title": "业务平台", 
+            "Sort": 10, 
+            "Navs": [
+                {
+                    "ID": "nav0101", 
+                    "Title": "同城游业务", 
+                    "Icon": "default.jpg", 
+                    "NavType": "nav", 
+                    "Allow": true, 
+                    "Url": "", 
+                    "Tooltip": "", 
+                    "Sort": 10, 
+                    "Groups": [
+                        {
+                            "ID": "grp010101", 
+                            "Title": "终端平台统计", 
+                            "Sort": 10, 
+                            "Navs": [
+                                {
+                                    "ID": "nav01010101", 
+                                    "Title": "PC端统计", 
+                                    "Icon": "default.jpg", 
+                                    "NavType": "nav", 
+                                    "Allow": true, 
+                                    "Url": "", 
+                                    "Tooltip": "", 
+                                    "Sort": 10, 
+                                    "Groups": [
+                                        {
+                                            "ID": "grp0101010101", 
+                                            "Title": "在线统计", 
+                                            "Sort": 10, 
+                                            "Navs": [
+                                                {
+                                                    "ID": "app1000100", 
+                                                    "Title": "游戏单日走势", 
+                                                    "Icon": "default.jpg", 
+                                                    "NavType": "app", 
+                                                    "Allow": true, 
+                                                    "Url": "", 
+                                                    "Tooltip": "PC端游戏单日在线人数走势", 
+                                                    "Sort": 10, 
+                                                    "Groups": [ ]
+                                                }, 
+                                                {
+                                                    "ID": "app1000101", 
+                                                    "Title": "游戏多日走势", 
+                                                    "Icon": "default.jpg", 
+                                                    "NavType": "app", 
+                                                    "Allow": true, 
+                                                    "Url": "", 
+                                                    "Tooltip": "PC端游戏多日在线人数走势", 
+                                                    "Sort": 20, 
+                                                    "Groups": [ ]
+                                                }, 
+                                                {
+                                                    "ID": "app1000102", 
+                                                    "Title": "游戏单日标准", 
+                                                    "Icon": "default.jpg", 
+                                                    "NavType": "app", 
+                                                    "Allow": true, 
+                                                    "Url": "", 
+                                                    "Tooltip": "PC端游戏单日标准在线人数查看", 
+                                                    "Sort": 30, 
+                                                    "Groups": [ ]
+                                                }, 
+                                                {
+                                                    "ID": "app1000103", 
+                                                    "Title": "游戏在线比例分布", 
+                                                    "Icon": "default.jpg", 
+                                                    "NavType": "app", 
+                                                    "Allow": true, 
+                                                    "Url": "", 
+                                                    "Tooltip": "PC端游戏在线人数比例分布查看", 
+                                                    "Sort": 40, 
+                                                    "Groups": [ ]
+                                                }, 
+                                                {
+                                                    "ID": "app1000200", 
+                                                    "Title": "大厅单日走势", 
+                                                    "Icon": "default.jpg", 
+                                                    "NavType": "app", 
+                                                    "Allow": true, 
+                                                    "Url": "", 
+                                                    "Tooltip": "PC端大厅单日在线人数走势", 
+                                                    "Sort": 50, 
+                                                    "Groups": [ ]
+                                                }
+                                            ]
+                                        }, 
+                                        {
+                                            "ID": "grp0101010102", 
+                                            "Title": "注册统计", 
+                                            "Sort": 20, 
+                                            "Navs": [ ]
+                                        }, 
+                                        {
+                                            "ID": "grp0101010103", 
+                                            "Title": "登录统计", 
+                                            "Sort": 30, 
+                                            "Navs": [ ]
+                                        }, 
+                                        {
+                                            "ID": "grp0101010104", 
+                                            "Title": "充值统计", 
+                                            "Sort": 40, 
+                                            "Navs": [ ]
+                                        }
+                                    ]
+                                }, 
+                                {
+                                    "ID": "nav01010102", 
+                                    "Title": "移动端统计", 
+                                    "Icon": "default.jpg", 
+                                    "NavType": "nav", 
+                                    "Allow": true, 
+                                    "Url": "", 
+                                    "Tooltip": "", 
+                                    "Sort": 20, 
+                                    "Groups": []
+                                }
+                            ]
+                        }, 
+                        {
+                            "ID": "grp010102", 
+                            "Title": "在线统计", 
+                            "Sort": 10, 
+                            "Navs": [ ]
+                        }, 
+                        {
+                            "ID": "grp010103", 
+                            "Title": "注册统计", 
+                            "Sort": 20, 
+                            "Navs": [ ]
+                        }, 
+                        {
+                            "ID": "grp010104", 
+                            "Title": "登录统计", 
+                            "Sort": 30, 
+                            "Navs": [ ]
+                        }, 
+                        {
+                            "ID": "grp010105", 
+                            "Title": "充值统计", 
+                            "Sort": 40, 
+                            "Navs": [ ]
+                        }
+                    ]
+                }, 
+                {
+                    "ID": "nav0102", 
+                    "Title": "108社区", 
+                    "Icon": "default.jpg", 
+                    "NavType": "nav", 
+                    "Allow": true, 
+                    "Url": "", 
+                    "Tooltip": "", 
+                    "Sort": 20, 
+                    "Groups": [ ]
+                }, 
+                {
+                    "ID": "nav0103", 
+                    "Title": "休闲游戏业务", 
+                    "Icon": "default.jpg", 
+                    "NavType": "nav", 
+                    "Allow": true, 
+                    "Url": "", 
+                    "Tooltip": "", 
+                    "Sort": 30, 
+                    "Groups": [ ]
+                }
+            ]
+        }, 
+        {
+            "ID": "grp02", 
+            "Title": "统计对象", 
+            "Sort": 20, 
+            "Navs": [ ]
+        }
+    ]
+}

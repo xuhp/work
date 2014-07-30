@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "~/Views/Apps/Layout/_Layout_Search_Charts_Table1.cshtml";
+}
+
+ <p class="fl">
+	<label for="start_time">开始月份：</label>
+	<input type="text" id="start_time" name="start_time"  onclick="setmonth(this)" class="big_input add_clear_btn " />
+</p>
+    <p class="fl ml20">
+	<label for="end_time">结束月份：</label>
+	<input type="text" id="end_time" name="end_time" onclick="setmonth(this)" class="big_input add_clear_btn " />
+</p>
+<a class="data_search_btn fl pos_btn big_btn ml20">搜索</a>
+<div class="attention_help_wrap">
+    <a class="app_help">Info</a>
+    @* 帮助信息 *@
+    @Html.Raw(ViewBag.Desc)
+    <a class="download"><img src="/Static/image/common/icon/download.png" />表格数据下载</a>
+</div>
+
+
+@section BottomResource{
+    @Scripts.Render("~/bundles/highstock")
+    <script src="/Static/js/apps/partial/charts/online_users/charts_bymonth.js"></script>
+    <script src="/Static/js/apps/partial/table/online_users/table_bymonth.js"></script>
+    <script src="/Static/js/apps/operate/online_users/op_nations_bymonth.js"></script>
+    <script src="/Static/js/layout/nations.js"></script>
+    <script>
+        $(function () {
+            var state = @ViewBag.AttentionState;
+            nations.init(state);
+        });
+    </script>
+}

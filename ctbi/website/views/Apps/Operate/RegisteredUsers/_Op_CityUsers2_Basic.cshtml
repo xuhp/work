@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "~/Views/Apps/Layout/_Layout_Search_Charts_Table1.cshtml";
+}
+
+<p class="fl condition">
+    按
+    <select class="big_input">
+        <option value="0">日</option>
+        <option value="1">月</option>
+    </select>
+    查询：
+</p>
+<p class="fl byday">
+    <label for="start_time_byday">开始日期：</label>
+	<input type="text" id="start_time_byday" name="start_time_byday" class="big_input add_clear_btn mr20" />
+    <label for="end_time_byday">结束日期：</label>
+	<input type="text" id="end_time_byday" name="end_time_byday" class="big_input add_clear_btn " />
+</p>
+<p class="fl bymonth" style="display:none;">
+    <label for="start_time_bymonth">开始月份：</label>
+	<input type="text" id="start_time_bymonth" name="start_time_bymonth" onclick="setmonth(this)" class="big_input add_clear_btn mr20" />
+    <label for="end_time_bymonth">结束月份：</label>
+	<input type="text" id="end_time_bymonth" name="end_time_bymonth" onclick="setmonth(this)" class="big_input add_clear_btn " />
+</p>
+<a class="data_search_btn fl pos_btn big_btn ml20">搜索</a>
+<a class="download"><img src="/Static/image/common/icon/download.png" />表格数据下载</a>
+
+@section BottomResource{
+     @if (CT.BI.WEB.BASE.BaseController.IsResoucePack())
+     { 
+        @Scripts.Render("~/bundles/registered/charts_table/js")
+     }
+     else
+     {
+         <script src="/Static/js/apps/partial/charts/registered_users/charts_bymonth.js"></script>
+         <script src="/Static/js/apps/partial/table/registered_users/table_bymonth.js"></script>
+         <script src="/Static/js/apps/partial/charts/registered_users/charts_byday.js"></script>
+         <script src="/Static/js/apps/partial/table/registered_users/table_byday.js"></script>
+     }
+    @Scripts.Render("~/bundles/highstock")
+    <script src="/Static/js/apps/operate/registered_users/op_citys2_basic.js"></script>
+}

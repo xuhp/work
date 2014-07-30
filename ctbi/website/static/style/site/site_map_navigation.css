@@ -1,0 +1,153 @@
+html,body {
+	width: 100%;
+	height:100%;
+	border: none;
+    overflow-y:auto;
+    overflow-x:hidden;
+    background:#595959;
+}
+/*header*/
+.header{
+	height: 35px;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	border-bottom:2px solid #000;
+	background:#282828;
+    padding-top:5px;
+    z-index:8;
+}
+#app_search{
+	width:90%;
+	margin-left:2%;
+    padding-left:3%;
+}
+.search_icon
+{
+    width:15px;
+    height:15px;
+    display:block;
+    background:url("/Static/image/common/icon/search.png");
+    position:absolute;
+	top:13px;
+	left:2.5%;
+	color:#bbb;
+    z-index:9;
+}
+.label_pos{
+	position:absolute;
+	top:14px;
+	left:5%;
+    z-index:9;
+}
+/*container*/
+.container{
+	padding:42px 0px 30px;
+    background:#595959;
+}
+.apps_wrapper{
+    padding-bottom:2px;
+}
+.category_title{
+	height:35px;
+	line-height:35px;
+	font-size:14px;
+	font-weight:bold;
+	cursor:pointer;
+	background:#454545;
+    color:#fff;
+	padding-left:10px;
+}
+.category_title:hover{
+}
+.category_title span{
+	margin-right:5px;
+}
+.category_title .triangle_top_white{
+	position:relative;
+	top:5px;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border-width: 7px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    display:inline-block;
+}
+.category_title .triangle_left_white
+{
+    position:relative;
+	top:0px;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    display:inline-block;
+}
+.app{
+	float:left;
+	width:160px;
+	padding-top:10px;
+	text-align: center;
+	margin:10px 0px 10px 10px;
+	border-radius:2px;
+    color:#fff;
+}
+.app>a{
+	display:inline-block;
+	margin:0 auto;
+	border-radius:3px;
+	overflow:hidden;
+    width:60px;
+    height:60px;
+}
+.app a img{
+	width:60px;
+	height:60px;
+}
+.app>a:active{
+	box-shadow: 1px 1px 5px #333;
+}
+.app a:active img{
+	width:58px;
+	height:58px;
+}
+.app a{
+	cursor:pointer;
+}
+.app p{
+	width:160px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	height:25px;
+	line-height: 25px;
+}
+.app_info a
+{
+    color:#fff;
+}
+/*面包屑导航*/
+.navsite{
+	background:#767676;
+	position:fixed;
+	bottom:0;
+	width:100%;
+	padding:8px 15px;
+}
+.navsite a{
+    color:#000;
+	cursor: pointer;
+}
+.navsite a:hover
+{
+    color:#000;
+}
+
+#app_search
+{
+    height:30px;
+}

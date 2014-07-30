@@ -1,0 +1,105 @@
+﻿@{
+    Layout = null;
+}
+@using CT.BI.WEB.BASE
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>GS系统首页GS系统首页GS系统首页GS系统首页GS系统首页GS系统首页</title>
+    <link rel="stylesheet" type="text/css" href="/Static/style/common.css" />
+    <link rel="stylesheet" type="text/css" href="/Static/style/site/index.css" />
+</head>
+<body class="bottom_frame">
+	<!--start header-->
+	<div id="header" class="clearfix">
+		<div class="logo fl clearfix">
+			<h1>GS系统<span class="top_triangle fr"></span>
+			</h1>
+			<ul class="menu_list">
+				<li class="site_nav_btn"><a>网站地图导航</a></li>
+				<li class="attention common_frame "><a>我的关注</a></li>
+				<li class="common_frame app_history"><a>历史足迹</a></li>
+				<li class="ul_split"></li>
+				<li class="common_frame attention_manage"><a>关注内容设置</a></li>
+				@*<li class="event_manage"><a>事件管理</a></li>*@
+				<li class="ul_split"></li>
+				<li class="version"><a>版本说明</a></li>
+				<li class="about_gs"><a>关于GS系统</a></li>
+				<li class="ul_split"></li>
+				<li class="login_to_system"><a>跳转到管理后台</a></li>
+				<li class="exit_system"><a>退出系统</a></li>
+			</ul>
+		</div><!--end logo-->
+		<div class="tab_nav">
+			<div class="tab_nav_btn_wrap">
+				<div class="tab_nav_btn_wrap_inner clearfix">
+					<a href="#" class="tab_nav_btn tab_nav_on home" name="tab_btn_0">home</a>
+				</div>
+			</div>
+			<div class="menu_nav">
+				<span class="menu_triangle fr"><img src="/Static/image/site/index/all_tab.png" /></span>
+				<ul class="menu_nav_ul  menu_ul">
+					<li name="menu_nav_0"><a>首页</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="welcome">
+            <span class="vertical_line"></span>
+			你好，<span>徐华平</span>
+		</div>
+	</div>
+	<!--end header-->
+	<!--start container-->
+	<div id="container" class="clearfix">
+		<div id="main_right">
+			<div class="frame_wrap" name="con_0">
+				<img src="/Static/image/common/index_bg.png" class="index_img" style="text-align:center;" />
+			</div>
+		</div><!--end #main-->
+		<div id="slideNav" class="fr">
+			<ul class="clearfix">
+				<li><a href="#" class="site_nav_btn"><span>导航<b></b></span></a></li>
+				<li><a href="#" class="attention common_frame"><span>关注<b></b></span></a></li>
+				<li><a href="#" class="app_history common_frame"><span>历史<b></b></span></a></li>
+				@*<li><a href="#" class="common_frame event"><span>事件<b></b></span></a></li>*@
+			</ul>
+		</div>
+		<div class="flexible">
+			<span class="close_btn"></span>
+		</div>
+	</div>
+	<!--end container-->
+	<div id="tab_menu" class="menu_ul">
+		<ul>
+			<li id="close_nav_con_current"><a>关闭</a></li>
+			<li id="close_nav_con_all"><a>关闭所有</a></li>
+			<li id="close_nav_con_other"><a>关闭其他</a></li>
+		</ul>
+	</div>
+	<div class="mask_layer">
+	</div>
+	<div class="slide_frame_wrap">
+		<span class="frame_loading"><b class="img_top"></b><img src="/Static/image/common/loading/frame_loading.gif" /></span>
+		<span class="close_slide_frame_btn circle_btn">X</span>
+		<iframe id="slide_frame" class="slide_frame" width="100%" height="100%" frameborder="0" border="0">您的浏览器不支持iframe</iframe>
+	</div>
+	<div class="site_map_frame_wrap">
+		<span class="frame_loading"><b class="img_top"></b><img src="/Static/image/common/loading/frame_loading.gif" /></span>
+		<span class="close_site_map_frame_btn ">X</span>
+		<iframe id="site_map_frame" class"site_map_frame" width="100%" height="100%" frameborder="0" border="0">您的浏览器不支持iframe</iframe>
+	</div>
+     @if (BaseController.IsResoucePack())
+    { 
+        @Scripts.Render("~/bundles/comlib/js")
+        @Scripts.Render("~/bundles/busilib/js")
+    }
+    else{
+	    <script src="/Static/plugins/jquery/1.11/jquery.min.js" ></script>
+	    <script src="/Static/js/config.js"></script>
+	    <script src="/Static/js/common.js"></script>
+    }
+    <script src="/Static/js/site/index.js"></script>
+</body>
+</html>

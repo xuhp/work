@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Apps/Layout/_Layout_List_Main1.cshtml";
+}
+
+<div class="op_con">
+	
+</div>
+
+@section List{
+    @Html.Partial("~/Views/Apps/Partial/_Partial_Halls_List.cshtml")
+}
+
+@* 帮助信息 *@
+@section Info{
+   @Html.Raw(ViewBag.Desc)
+}
+
+@section BottomResource{
+  <script src="/Static/js/layout/list_main.js"></script>
+	<script>
+	    $(function(){
+	        var state = @ViewBag.AttentionState;
+	        list_main.init(state);
+	    });
+	</script>
+}
+   

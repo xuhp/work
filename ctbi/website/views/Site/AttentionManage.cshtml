@@ -1,0 +1,65 @@
+﻿@{
+    Layout = null;
+}
+@using CT.BI.WEB.BASE
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>关注</title>
+     @if (BaseController.IsResoucePack())
+    { 
+        @Styles.Render("~/bundles/comlib/css")
+    }
+    else{
+        <link rel="stylesheet" type="text/css" href="/Static/style/common.css" />
+        <link rel="stylesheet" type="text/css" href="/Static/plugins/jdpicker/1.0/jdpicker.css" />
+     }
+    <link rel="stylesheet" type="text/css" href="/Static/style/site/attention_manage.css" />
+</head>
+<body>
+	<div class="header clearfix">
+		<p class="fl">
+			<label for="app_name" >应用名称:</label>
+			<input type="text" class="big_input add_clear_btn" id="app_name" name="app_name" />
+		</p>
+		<p class="fl">
+			<label for="attention_time">关注时间:</label>
+			<input type="text" id="attention_time" name="attention_time" class="big_input add_clear_btn" />
+		</p>
+		<a class="app_search_btn fl pos_btn big_btn">搜索</a>
+	</div><!--end .header-->
+	<div class="table_wrapper">
+		<table class="attention_table">
+			<thead>
+				<tr>
+					<th style="width:30%;">应用名称</th>
+					<th style="width:20%;">关注时间</th>
+					<th style="width:30%;">操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+			</tbody>
+		</table>
+	</div><!--end .table_wrapper-->
+	<div class="btn_wrapper">
+		<span class="save_btn pos_btn normal_btn">保存</span>
+	</div>
+      @if (BaseController.IsResoucePack())
+    { 
+        @Scripts.Render("~/bundles/comlib/js")
+        @Scripts.Render("~/bundles/busilib/js")
+    }
+    else{
+	    <script src="/Static/plugins/jquery/1.11/jquery.min.js" ></script>
+	    <script src="/Static/js/config.js"></script>
+	    <script src="/Static/js/common.js"></script>
+	    <script src="/Static/js/common/add_nav_con.js"></script>
+	    <script src="/Static/plugins/x_clearValue/jquery.clearValue.js"></script>
+	    <script src="/Static/plugins/jdpicker/1.0/jquery.jdpicker.js"></script>
+        <script src="/Static/js/common/getdata/get_origin_data.js"></script>
+    }
+	<script src="/Static/js/site/attention_manage.js"></script>
+</body>
+</html>

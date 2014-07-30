@@ -1,0 +1,27 @@
+﻿
+<link rel="stylesheet" type="text/css" href="/Static/style/apps/partial/list.css" />
+<link href="/Static/plugins/x_table/table_dark.css" rel="stylesheet" />
+<div class="slide_head">
+	<h1 class="ellipsis">未打开应用</h1>
+    <b class="right_triangle"></b>
+    <ul class="app_ul_nav">
+        <li class="split_line"></li>
+        <li class="total_close">关闭全部</li>
+    </ul>
+</div>
+<div class="table_wrap self_adaption_height">
+    
+</div>
+<div class="search_info">
+	<b class="search_icon"></b><input type="text" class="no_val add_clear_btn"/>
+</div>
+<div class="attention_help_wrap">
+    <a class="app_help fr">Info</a>
+</div>
+<script src="/Static/js/apps/partial/list/sites_list.js"></script>
+<script>
+$(function(){
+    var data = @Html.Raw(ViewBag.Sites);
+    list.init(data);
+})
+</script>

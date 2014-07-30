@@ -1,0 +1,48 @@
+﻿@*左右布局*@
+@using CT.BI.WEB.BASE
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    @if (BaseController.IsResoucePack())
+    { 
+         @Styles.Render("~/bundles/comlib/css")
+         @Scripts.Render("~/bundles/comlib/js")
+         @Scripts.Render("~/bundles/busilib/js")
+    }
+    else{
+        
+        <link rel="stylesheet" href="/Static/style/common.css" />
+        <link rel="stylesheet" href="/Static/plugins/x_layout/layout.css" />
+        
+        <script src="/Static/plugins/jquery/1.11/jquery.min.js"></script>
+        <script src="/Static/js/config.js"></script>
+        <script src="/Static/js/common.js"></script>
+        <script src="/Static/plugins/x_layout/jquery.layout.js"></script>
+        <script src="/Static/plugins/x_adaption/adaption_w_h.js"></script>
+        <script src="/Static/plugins/x_table/jquery.table.js"></script>
+        <script src="/Static/js/common/getdata/get_origin_data.js"></script>
+        <script src="/Static/plugins/x_clearValue/jquery.clearValue.js"></script>
+        <script src="/Static/js/common/getdata/get_table_data.js"></script>
+        <script src="/Static/js/common/pay_attention.js"></script>
+        <script src="/Static/js/apps/partial/list/list_nav.js"></script>
+    }
+    <link rel="stylesheet" href="/Static/plugins/x_layout/layout.css" />
+</head>
+<body>
+    <div class="containter clearfix inherit_parent_height">
+        <div class="pane ui_layout_west inherit_parent_height">
+            @RenderSection("List", false)
+        </div>
+        <div class="pane ui_layout_center inherit_parent_height">
+            @RenderBody()
+        </div>
+    </div>
+    @RenderSection("Info", false)
+  
+    @RenderSection("BottomResource", false)
+</body>
+</html>

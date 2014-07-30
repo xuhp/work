@@ -1,0 +1,54 @@
+﻿/*
+* /Static/style/apps/partial/search_table.css
+*/
+
+.container
+{
+    height:100px;
+    overflow:hidden;
+}
+.data_show
+{
+    height:100px;
+    overflow-y:hidden;
+}
+.header
+{
+    height:40px;
+    background:#157FCC;
+    border-bottom:4px solid #ADD2ED;
+    padding:10px 20px 0;
+}
+.header label
+{
+    font-size:13px;
+    font-weight:bold;
+    color:#ffffff;
+}
+.header input
+{
+    width:200px;
+}
+.choose_condition
+{
+    height:40px;
+    line-height:40px;
+    overflow:hidden;
+    background:#157FCC;
+    position:absolute;
+    bottom:0;
+    display:none;
+}
+.choose_condition p
+{
+    float:left;
+}
+.checkbox_wrap label
+{
+    margin-right:8px;
+}
+/*表格着色*/
+.table_con tr td.users1d1
+{
+   
+}

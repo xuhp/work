@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <desc appid="app1000100,app1000200,app1000300,app1000400,app1000500,app1000600">
+	  <div class="info_tip_wrap">
+		<div class="info_tip_bottom info_tip">
+		  <p>在线人数单日</p>
+		</div>
+	  </div>
+  </desc>
+  <desc  appid="app1000101,app1000201,app1000301,app1000401,app1000501,app1000601">
+    <div class="info_tip_wrap">
+		<div class="info_tip_bottom info_tip">
+		 <p>在线人数多日</p>
+		</div>
+	</div>
+  </desc>
+  
+	<desc appid="app1000102,app1000202,app1000302,app1000402,app1000502,app1000602">
+		<div class="info_tip_wrap">
+			<div class="info_tip_bottom info_tip">
+			 <p>在线人数多月</p>
+			</div>
+		</div>
+	</desc>
+	  
+	<desc appid="app1000700,app1000800,app1000900,app1001000,app1001100,app1001200,app1001300">
+		<div class="info_tip_wrap">
+			<div class="info_tip_bottom info_tip">
+			 <p>注册人数</p>
+			</div>
+		</div>
+  </desc>
+
+  <desc appid="app1001400,app1001500,app1001600,app1001700,app1001800">
+    <div class="info_tip_wrap">
+      <div class="info_tip_bottom info_tip">
+        <p>登陆人数单日</p>
+      </div>
+    </div>
+  </desc>
+  
+  
+  <desc appid="app1001401,app1001501,app1001601,app1001701,app1001801">
+	<div class="info_tip_wrap">
+		<div class="info_tip_bottom info_tip">
+		 <p>登陆人数多日</p>
+		</div>
+	</div>
+  </desc>
+  <desc appid="app1001402,app1001502,app1001602,app1001702,app1001802">
+	<div class="info_tip_wrap">
+		<div class="info_tip_bottom info_tip">
+		 <p>登陆人数同比环比</p>
+		</div>
+	</div>
+  </desc>
+  <desc appid="app1001900,app1002000,app1002100">
+    <div class="info_tip_wrap">
+      <div class="info_tip_bottom info_tip">
+        <p>多日充值走势</p>
+      </div>
+    </div>
+  </desc>
+  <!--<desc appid="app1001900,app1002000,app1002100">
+    <div class="info_tip_wrap">
+      <div class="info_tip_bottom info_tip">
+        <p>多日充值走势</p>
+      </div>
+    </div>
+  </desc>-->
+</root>

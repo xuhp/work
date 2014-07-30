@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "~/Views/Apps/Layout/_Layout_Search_Charts_Table1.cshtml";
+}
+
+<p class="fl">
+    <label for="selected_time">请选择日期：</label>
+    <input type="text" id="selected_time" name="selected_time" class="big_input add_clear_btn " />
+</p>
+<a class="data_search_btn fl pos_btn big_btn ml20">搜索</a>
+
+<a class="download"><img src="/Static/image/common/icon/download.png" />表格数据下载</a>
+
+@section BottomResource{
+    @Scripts.Render("~/bundles/highstock")
+    <script src="/Static/js/apps/partial/charts/online_users/charts_perday.js"></script>
+    <script src="/Static/js/apps/partial/table/online_users/table_perday.js"></script>
+    <script src="/Static/js/apps/operate/online_users/op_cities1_perday.js"></script>
+}

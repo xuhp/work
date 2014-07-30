@@ -1,0 +1,53 @@
+﻿@{
+    Layout = "~/Views/Apps/Layout/_Layout_Search_Charts_Table3.cshtml";
+}
+<div class="search_condition clearfix">
+<p class="fl">
+	<label>日期范围：</label>
+	<input type="text" id="start_time" name="start_time" class="normal_input add_clear_btn " /> —
+    <input type="text" id="end_time" name="end_time" class="normal_input add_clear_btn mr20" />
+</p>
+<p class="fl">
+	<label>累计充值额度：</label>
+	<input type="text" id="minamount" name="minamount" class="normal_input add_clear_btn " /> —
+     <input type="text" id="maxamount" name="maxamount" class="normal_input add_clear_btn mr20" />
+</p>
+<p class="fl">
+	<select class="regtime normal_select">
+        <option>不限注册时间</option>
+        <option>注册30天内的用户</option>
+        <option>注册90天内的用户</option>
+	</select>
+</p>
+<p class="fl">
+    <a class="data_search_btn fl pos_btn normal_btn ml20">搜索</a>
+</p>
+</div>
+<div class="attention_help_wrap">
+    <a class="app_help">Info</a>
+    @* 帮助信息 *@
+    @Html.Raw(ViewBag.Desc)
+    <a class="download"><img src="/Static/image/common/icon/download.png" />表格数据下载</a>
+</div>
+
+@section BottomResource{
+  @if (CT.BI.WEB.BASE.BaseController.IsResoucePack())
+     { 
+        @Scripts.Render("~/bundles/loginusers/charts_table/js")
+     }
+     else
+     {
+        
+     }
+    @Scripts.Render("~/bundles/highstock")
+    <script src="/Static/js/apps/operate/paydata/common/common.js"></script>
+    <script src="/Static/js/apps/operate/paydata/tc_pay_trend.js"></script>
+     <script src="/Static/js/layout/nations.js"></script>
+    <script>
+        $(function () {
+            var state = @ViewBag.AttentionState;
+            nations.init(state);
+        });
+    </script>
+}
+   
