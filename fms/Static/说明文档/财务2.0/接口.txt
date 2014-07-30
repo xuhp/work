@@ -1,0 +1,75 @@
+﻿##申请页面订单提交接口
+
+提交订单：/Ashx/Workflow/TravelExpenseHandler.ashx?method=AddOrder&headdata=&purposedata=&traveldata=
+
+headdata：{ "CompanyID", "BusiID", "FormID", "ApplyCase", "DeptID", "UserID", "TrueName", "Phone", "ApplyDesc" }
+purposedata：[{ "PurposeDesc", "CusID", "CusName", "ContactName", "ContactID", "Duty", "Phone" }]
+traveldata：[{ "Type", "TravelTag", "AreaID", "AreaName", "StartDate", "IncityTrafficFee", "LongDistancTrafficFee", "LongDistancTransportation" },{ "Type", "TravelTag", "AreaID", "A reaName", "ArrivalTime", "IncityTrafficFee", "LodgingFee", "LongDistancTrafficFee", "LongDistancTransportation", "LeaveTime", "Total" },{ "Type", "TravelTag", "AreaID", "AreaName", "ArrivalTime", "IncityTrafficFeeSum", "LodgingFeeSum", "LongDistancTransportationSum", "SumDays", "AvgFee", "SumFee" }]
+
+##客户信息接口
+http://fms.ct108.org:1403/Ashx/Common/CrmHandler.ashx?method=GetFinanceCustomerList&companyName=&customerName=
+
+##获取订单信息   last通过mode来判断
+/Ashx/Workflow/TravelExpenseHandler.ashx?method=GetOrder&taskid=&orderid=&last=
+
+
+##获取日志接口
+http://fms.ct108.org:1403/Ashx/Workflow/TravelExpenseHandler.ashx?method=GetFlowLog&orderID=
+
+
+##获取状态信息   
+http://fms.ct108.org:1403/Ashx/Workflow/TravelExpenseHandler.ashx?method=GetTaskInfo&taskID=
+
+ {Attitude: "False", Reason: ""，RefuseResult:""}    
+ 当mode=r,并且Attitude=True的时候，说明审核通过
+ RefuseResult,只有在报销申请和借款申请页面才会传入，用于判断是否需要显示弹出框
+
+##审核接口
+http://fms.ct108.org:1403/Ashx/Workflow/TravelExpenseHandler.ashx?method=CheckOrder&taskid=&orderid=attitude=&reason=
+
+##获取借款信息
+http://fms.ct108.org:1403/Ashx/Workflow/TravelExpenseHandler.ashx?method=GetCashierInfo
+//根据modeId的不同,使用不同的参数
+	var u_data;
+	if (modeId == 'r') {
+		u_data = { 'taskID': taskId, 'last': 'false' }
+	} else {
+		u_data = { 'taskID': taskId, 'last': 'true' }
+	}
+	
+##添加借款信息
+http://fms.ct108.org:1403/Ashx/Workflow/TravelExpenseHandler.ashx?method=AddCashierInfo
+data: {
+	'taskID': taskId,
+	'pfID': pfId,
+	'date':date,
+	'type':type,
+	'money': money,
+	'remark':remark
+}
+
+##删除借款信息
+http://fms.ct108.org:1403/Ashx/Workflow/TravelExpenseHandler.ashx?method=DelCashierInfo
+data: {
+	'taskID': taskId,
+	'CID': cId
+}
+
+##结束借款
+http://fms.ct108.org:1403/Ashx/Workflow/TravelExpenseHandler.ashx?method=CloseBorrowTask&taskID=
+
+##报销申请接口
+method=ClaimApply
+
+参数：taskID，claimDesc，purposedata，traveldata
+
+purposeJson中增加 Completion 字段
+
+##核定接口
+method=FinancialVerification
+参数：taskID、verifDesc、traveldata
+
+##关闭订单
+method=CloseOrder
+参数：teskID
+

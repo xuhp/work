@@ -1,0 +1,25 @@
+获取数据
+http://fms.ct108.org:1403/Ashx/Workflow/TravelExpenseHandler.ashx?method=GetOrder&taskid=1404&orderid=147&last=true
+#暂用网址
+
+##审核
+http://localhost:60320/Static/pages/travel_expense/detail_inner.html?taskid=1404&orderid=147&mode=r
+
+##日志
+http://fms.ct108.org:1403/Ashx/Workflow/TravelExpenseHandler.ashx?method=GetFlowLog&orderID=147
+
+
+##借款页面
+http://localhost:60320/Static/pages/travel_expense/borrow.html?taskid=1437&orderid=158&mode=
+
+jQuery.extend({
+        url_prefix: 'http://fms.ct108.org:1403',
+        general: '/Ashx/Workflow/CostReimbursementHandler.ashx?',
+        travel: '/Ashx/Workflow/TravelExpenseHandler.ashx?'
+
+    });
+	
+	
+	
+	
+	http://localhost:60320/Static/pages/travel_expense/check.html?orderid=162&taskid=1486
