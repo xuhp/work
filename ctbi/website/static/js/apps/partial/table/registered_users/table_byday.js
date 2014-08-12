@@ -29,7 +29,7 @@ function table_show_byday(data) {
         'row': '',
         'column_num': 2
     }
-    console.log(data);
+    log(data);
     var row_data = get_table_data(data, ['Date', 'Users']);
     table_data.row = row_data;
     $('.table_wrap').table(table_data);

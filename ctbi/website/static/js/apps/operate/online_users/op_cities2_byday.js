@@ -45,7 +45,8 @@ $(function () {
             $header.delegate('.data_search_btn', 'click', function () {
                 var bengin_origin = $start_time.val(),
                     end_origin = $end_time.val();
-                if (bengin_origin == 'undefined' || end_origin == 'undefined') {
+                //日期判断
+                if (!date_judgment.byday(bengin_origin, end_origin)) {
                     return false;
                 }
                 var begin = common.to_nosplit_date(bengin_origin),
@@ -116,11 +117,8 @@ $(function () {
             charts_show_byday.init(data);
             //表格展示
             download_origin_data=table_show_byday(data);
-            console.log(download_origin_data);
+            log(download_origin_data);
 
-            setTimeout(function () {
-                $(window).trigger('resize');
-            }, 10)
         }
     }
    

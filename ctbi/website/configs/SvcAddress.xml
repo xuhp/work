@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <svc name="TcManageCenter">
+    <debug>http://bizsyssvc.ct108.org:2047/TcManageCenter.asmx</debug>
+    <release>http://bizsyssvc.ct108.net/TcManageCenter.asmx</release>
+  </svc>
+  <svc name="IpAreaService">
+    <debug>http://ipas.tc108.org:1007/ipareaservice.asmx</debug>
+    <release>http://ipas.tc108.net/ipareaservice.asmx</release>
+  </svc>
+  <svc name="LogDBService">
+    <debug>http://grsvc.uc108.org:2305/LogDBService.asmx</debug>
+    <release>http://grsvc.uc108.net/LogDBService.asmx</release>
+  </svc>
+  <svc name="UserLogDBService">
+    <debug>http://grsvc.uc108.org:2305/UserLogDBService.asmx</debug>
+    <release>http://grsvc.uc108.net/UserLogDBService.asmx</release>
+  </svc>
+  <svc name="GameService">
+    <debug>http://gamewebsvc.uc108.org:1011/GameService.asmx</debug>
+    <release>http://gamewebsvc.uc108.net/GameService.asmx</release>
+  </svc>
+  <svc name="PromoteSysService">
+    <debug>http://promotesvc.uc108.org:2102/WebService/PromoteSys.asmx</debug>
+    <release>http://promotesvc.uc108.net/WebService/PromoteSys.asmx</release>
+  </svc>
+  <svc name="UserSearchService">
+    <debug>http://umquerysvc.uc108.org:1801/UserSearchService.asmx</debug>
+    <release>http://umquerysvc.uc108.net/UserSearchService.asmx</release>
+  </svc>
+  <svc name="PayCenterService">
+    <debug>http://paysvc.uc108.org:3088/paycenterservice.asmx</debug>
+    <release>http://paysvc.uc108.net/paycenterservice.asmx</release>
+  </svc>
+  <svc name="PayButtService">
+    <debug>http://paysvc.ct108.org:3092/pay/paybuttservice.asmx</debug>
+    <release>http://paysvc.ct108.net/pay/paybuttservice.asmx</release>
+  </svc>
+  <svc name="UserService">
+    <debug>http://usersvc.ct108.org:1904/UserService.asmx</debug>
+    <release>http://usersvc.ct108.net/UserService.asmx</release>
+  </svc>
+</root>
+

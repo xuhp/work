@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <cmd code="1000100">onlineusers_game_perday</cmd>
+  <cmd code="1000101">onlineusers_game_byday</cmd>
+  <cmd code="1000102">standardonline_game_bymonth</cmd>
+  <cmd code="1000103">onlineusers_games_byday</cmd>
+  <cmd code="1000104">standardonline_games_bymonth</cmd>
+  
+  <cmd code="1000200">onlineusers_hall_perday</cmd>
+  <cmd code="1000201">onlineusers_hall_byday</cmd>
+  <cmd code="1000202">standardonline_hall_bymonth</cmd>
+  
+  <cmd code="1000300">onlineusers_nation_perday</cmd>
+  <cmd code="1000301">onlineusers_nation_byday</cmd>
+  <cmd code="1000302">standardonline_nation_bymonth</cmd>
+
+  <cmd code="1000400">onlineusers_district_perday</cmd>
+  <cmd code="1000401">onlineusers_district_byday</cmd>
+  <cmd code="1000402">standardonline_district_bymonth</cmd>
+
+  <cmd code="1000500">onlineusers_city_district_perday</cmd>
+  <cmd code="1000501">onlineusers_city_district_byday</cmd>
+  <cmd code="1000502">standardonline_city_district_bymonth</cmd>
+  <cmd code="1000503">onlineusers_cities_district_byday</cmd>
+  <cmd code="1000504">standardonline_cities_district_bymonth</cmd>
+
+  <cmd code="1000600">onlineusers_city_perday</cmd>
+  <cmd code="1000601">onlineusers_city_byday</cmd>
+  <cmd code="1000602">standardonline_city_bymonth</cmd>
+
+  <cmd code="1000700">registeredusers_mobilegame_byday</cmd>
+  <cmd code="1000701">registeredusers_mobilegame_bymonth</cmd>
+
+  <cmd code="1000800">registeredusers_hall_byday</cmd>
+  <cmd code="1000801">registeredusers_hall_bymonth</cmd>
+
+  <cmd code="1000900">registeredusers_nation_byday</cmd>
+  <cmd code="1000901">registeredusers_nation_bymonth</cmd>
+
+  <cmd code="1001000">registeredusers_district_byday</cmd>
+  <cmd code="1001001">registeredusers_district_bymonth</cmd>
+
+  <cmd code="1001100">registeredusers_city_district_byday</cmd>
+  <cmd code="1001101">registeredusers_city_district_bymonth</cmd>
+
+  <cmd code="1001200">registeredusers_city_byday</cmd>
+  <cmd code="1001201">registeredusers_city_bymonth</cmd>
+
+  <cmd code="1001300">registeredusers_site_byday</cmd>
+  <cmd code="1001301">registeredusers_site_bymonth</cmd>
+
+  <cmd code="1001400">tc_loginusers_hall_perday</cmd>
+  <cmd code="1001401">tc_loginusers_hall_byday</cmd>
+  <cmd code="1001402">tc_loginusers_hall_compare</cmd>
+  <cmd code="1001403">tc_loginusers_hall_peruser</cmd>
+
+  <cmd code="1001500">tc_loginusers_nation_perday</cmd>
+  <cmd code="1001501">tc_loginusers_nation_byday</cmd>
+  <cmd code="1001502">tc_loginusers_nation_compare</cmd>
+
+  <cmd code="1001600">tc_loginusers_district_perday</cmd>
+  <cmd code="1001601">tc_loginusers_district_byday</cmd>
+  <cmd code="1001602">tc_loginusers_district_compare</cmd>
+
+  <cmd code="1001700">tc_loginusers_city_district_perday</cmd>
+  <cmd code="1001701">tc_loginusers_city_district_byday</cmd>
+  <cmd code="1001702">tc_loginusers_city_district_compare</cmd>
+
+  <cmd code="1001800">tc_loginusers_city_perday</cmd>
+  <cmd code="1001801">tc_loginusers_city_byday</cmd>
+  <cmd code="1001802">tc_loginusers_city_compare</cmd>
+
+  <cmd code="1001900">tc_paytrend_byday</cmd>
+
+  <cmd code="1002000">tcpc_paytrend_byday</cmd>
+  <cmd code="1002001">tcpc_payratio_byday</cmd>
+
+  <cmd code="1002100">tcmobile_paytrend_byday</cmd>
+  <cmd code="1002101">tcmobile_payratio_byday</cmd>
+
+  <cmd code="1002200">tc_loginusers_existsusers_indate</cmd>
+</root>

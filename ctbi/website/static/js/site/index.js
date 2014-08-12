@@ -45,7 +45,7 @@ $(function(){
 			this._dialog();
 		},
 		//页面布局计算
-		_resize:function(){
+		_resize: function () {
 			//页面加载时马上触发，以后每次resize的时候重新计算
 			$win.bind('resize',function(){
 				//计算container宽度
@@ -53,9 +53,10 @@ $(function(){
 					$body_h=$body.outerHeight(true);
 					$container.height($body_h-$header_h);
 				//计算tab_nav_btn_wrap的宽度
-				var $header_h=$header.width();
-				$('.tab_nav_btn_wrap').width($header_h-240);
-				$('.tab_nav_btn_wrap_inner').width($header_h-240-30);
+					var $header_w = $header.width(),
+                        $logo_w = $('.logo').outerWidth(true),
+                        $welcome_w = $('.welcome').outerWidth(true);
+					$('.tab_nav').width($header_w - $logo_w - $welcome_w);
 				//tab_nav_on对应的nodeid
 				var nodeid=$tab_nav.find('.tab_nav_on').attr('name').substring(7);
 				common.tab_nav_btn_layout(nodeid)
@@ -286,6 +287,18 @@ $(function(){
 				var this_url=url.domain+url.port+src.attention_manage;
 				common.frame_loading('slide_frame',this_url)
 			});
+
+		    //版本说明
+			$('.version').click(function () {
+			    var this_url = url.domain + url.port + src.version;
+			    common.frame_loading('slide_frame', this_url)
+			});
+
+		    //关于GS系统 
+			$('.about_gs').click(function () {
+			    var this_url = url.domain + url.port + src.about;
+			    common.frame_loading('slide_frame', this_url)
+            })
 		}
 	
 	};
@@ -315,3 +328,23 @@ $(function(){
 	//初始化页面
 	index.init();
 });
+
+///*******************************
+///定时判断用户的登录状态
+///如果登出状态，则跳转到登陆页面
+///*******************************
+
+//检查登录状态
+var check_login_status = function () {
+    $.ajax({
+        type: "post",
+        url: url.domain + url.port + src.loginstatus,
+        success: function (res) {
+            if (!res.error && !res.data) {
+                var url = $("#exit_system a").attr('href');
+                window.location.href = url;
+            }
+        }
+    })
+};
+setInterval(check_login_status, 10000);

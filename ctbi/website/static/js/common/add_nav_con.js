@@ -52,7 +52,7 @@ function add_nav_con(opts) {
 		$con.append(con_str);
 		common.frame_loading('con_' + opts.id, opts.url + '?appid=' + opts.id );
 	}
-	console.log(opts.id);
+	log(opts.id);
 	//当前页面获得焦点
 	common.show_tabNav_con('_' + opts.id);
 	common.tab_nav_btn_layout('_' + opts.id);

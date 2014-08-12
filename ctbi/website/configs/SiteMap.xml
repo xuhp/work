@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <apps>
+    <!--同城游游戏在线人数app模块-->
+    <app id="app1000100" name="同城游游戏单日在线走势" tooltip="同城游游戏单日在线人数走势" icon="online_perday_trend.png" url="/app/onlineusers//page/gameusers_perday" status="1"></app>
+    <app id="app1000101" name="同城游游戏多日在线走势" tooltip="同城游游戏多日在线人数走势" icon="online_byday_trend.png" url="/app/onlineusers/page/gameusers_byday" status="1"></app>
+    <app id="app1000102" name="同城游游戏多月标准走势" tooltip="同城游游戏多月标准在线人数查看" icon="online_standard_trend.png"  url="/app/onlineusers/page/gamestandard_bymonth" status="1"></app>
+    <app id="app1000103" name="同城游游戏在线月度报表" tooltip="同城游游戏在线月度报表下载" icon="report.png" url="/app/onlineusers/page/gamesmonthreport" status="1"></app>
+    <app id="app1000104" name="同城游游戏在线比例分布" tooltip="同城游游戏在线人数比例分布查看" icon="default.png" url="" status="0"></app>
+
+    <!--同城游大厅在线人数app模块-->
+    <app id="app1000200" name="同城游大厅单日在线走势" tooltip="同城游大厅单日在线人数走势" icon="online_perday_trend.png" url="/app/onlineusers/page/hallusers_perday" status="1"></app>
+    <app id="app1000201" name="同城游大厅多日在线走势" tooltip="同城游大厅多日在线人数走势" icon="online_byday_trend.png" url="/app/onlineusers/page/hallusers_byday" status="1"></app>
+    <app id="app1000202" name="同城游大厅多月标准走势" tooltip="同城游大厅多月标准在线人数查看" icon="online_standard_trend.png"  url="/app/onlineusers/page/hallstandard_bymonth" status="1"></app>
+    <app id="app1000203" name="同城游大厅在线比例分布" tooltip="同城游大厅在线人数比例分布查看" icon="default.jpg" url="" status="0"></app>
+
+    <!--同城游全国在线人数app模块-->
+    <app id="app1000300" name="同城游全国单日在线走势" tooltip="同城游全国单日在线人数走势" icon="online_perday_trend.png" url="/app/onlineusers/page/nationusers_perday" status="1"></app>
+    <app id="app1000301" name="同城游全国多日在线走势" tooltip="同城游全国多日在线人数走势" icon="online_byday_trend.png" url="/app/onlineusers/page/nationusers_byday" status="1"></app>
+    <app id="app1000302" name="同城游全国多月标准走势" tooltip="同城游全国多月标准在线人数查看" icon="online_standard_trend.png"  url="/app/onlineusers/page/nationstandard_bymonth" status="1"></app>
+
+    <!--同城游县区在线人数app模块-->
+    <app id="app1000400" name="同城游县区单日在线走势" tooltip="同城游县区单日在线人数走势" icon="online_perday_trend.png" url="/app/onlineusers/page/districtusers_perday" status="1"></app>
+    <app id="app1000401" name="同城游县区多日在线走势" tooltip="同城游县区多日在线人数走势" icon="online_byday_trend.png" url="/app/onlineusers/page/districtusers_byday" status="1"></app>
+    <app id="app1000402" name="同城游县区多月标准走势" tooltip="同城游县区多月标准在线人数查看" icon="online_standard_trend.png"  url="/app/onlineusers/page/districtstandard_bymonth" status="1"></app>
+    <app id="app1000403" name="同城游县区在线比例分布" tooltip="同城游县区在线人数比例分布查看" icon="default.jpg" url="" status="0"></app>
+
+    <!--同城游地级市（不包含县区）在线人数app模块-->
+    <app id="app1000500" name="同城游地级市(不含县区)单日在线走势" tooltip="同城游地级市(不含县区)单日在线人数走势" icon="online_perday_trend.png" url="/app/onlineusers/page/cityusers1_perday" status="1"></app>
+    <app id="app1000501" name="同城游地级市(不含县区)多日在线走势" tooltip="同城游地级市(不含县区)多日在线人数走势" icon="online_byday_trend.png" url="/app/onlineusers/page/cityusers1_byday" status="1"></app>
+    <app id="app1000502" name="同城游地级市(不含县区)多月标准走势" tooltip="同城游地级市(不含县区)多月标准在线人数查看" icon="online_standard_trend.png"  url="/app/onlineusers/page/citystandard1_bymonth" status="1"></app>
+    <app id="app1000503" name="同城游地级市(不含县区)在线比例分布" tooltip="同城游地级市(不含县区)在线人数比例分布查看" icon="default.jpg" url="" status="0"></app>
+
+    <!--同城游地级市（包含县区）在线人数app模块-->
+    <app id="app1000600" name="同城游地级市(含县区)单日在线走势" tooltip="同城游地级市(含县区)单日在线人数走势" icon="online_perday_trend.png" url="/app/onlineusers/page/cityusers2_perday" status="1"></app>
+    <app id="app1000601" name="同城游地级市(含县区)多日在线走势" tooltip="同城游地级市(含县区)多日在线人数走势" icon="online_byday_trend.png" url="/app/onlineusers/page/cityusers2_byday" status="1"></app>
+    <app id="app1000602" name="同城游地级市(含县区)多月标准走势" tooltip="同城游地级市(含县区)多月标准在线人数查看" icon="online_standard_trend.png"  url="/app/onlineusers/page/citystandard2_bymonth" status="1"></app>
+    <app id="app1000603" name="同城游地级市(含县区)在线月度报表" tooltip="同城游地级市(含县区)在线月度报表下载" icon="report.png" url="/app/onlineusers/page/citiesmonthreport2" status="1"></app>
+    <app id="app1000604" name="同城游地级市(含县区)在线比例分布" tooltip="同城游地级市(含县区)在线人数比例分布查看" icon="default.jpg" url="" status="0"></app>
+  
+    <!--注册人数app模块-->
+    <app id="app1000700" name="手游注册人数走势" tooltip="手机游戏注册人数基础走势" icon="registered_users_trend.png" url="/app/registeredusers/page/mobilegameusers_basic" status="1"></app>
+    <app id="app1000800" name="同城游大厅注册人数走势" tooltip="同城游大厅游戏注册人数基础走势" icon="registered_users_trend.png" url="/app/registeredusers/page/hallusers_basic" status="1"></app>
+    <app id="app1000900" name="全国注册人数走势" tooltip="全国注册人数基础走势" icon="registered_users_trend.png" url="/app/registeredusers/page/nationusers_basic" status="1"></app>
+    <app id="app1001000" name="地级市(不含县区)注册人数走势" tooltip="地级市(不含县区)注册人数基础走势" icon="registered_users_trend.png" url="/app/registeredusers/page/cityusers1_basic" status="1"></app>
+    <app id="app1001100" name="地级市(含县区)注册人数走势" tooltip="地级市(含县区)注册人数基础走势" icon="registered_users_trend.png" url="/app/registeredusers/page/cityusers2_basic" status="1"></app>
+    <app id="app1001200" name="县区注册人数走势" tooltip="县区注册人数基础走势" icon="registered_users_trend.png" url="/app/registeredusers/page/districtusers_basic" status="1"></app>
+    <app id="app1001300" name="网站注册人数走势" tooltip="网站注册人数基础走势" icon="registered_users_trend.png" url="/app/registeredusers/page/siteusers_basic" status="1"></app>
+  
+    <!--同城游大厅登录人数app模块-->
+    <app id="app1001400" name="同城游大厅单日登录走势" tooltip="同城游大厅单日登录人数走势" icon="login_perday_trend.png" url="/app/loginusers/page/tchallusers_perday" status="1"></app>
+    <app id="app1001401" name="同城游大厅多日登录走势" tooltip="同城游大厅多日登录人数走势" icon="login_byday_trend.png" url="/app/loginusers/page/tchallusers_byday" status="1"></app>
+    <app id="app1001402" name="同城游大厅登录同比环比" tooltip="同城游大厅登录人数同比环比" icon="login_compare_trend.png" url="/app/loginusers/page/tchallusers_compare" status="1"></app>
+    <app id="app1001403" name="同城游大厅用户登陆情况分析" tooltip="同城游大厅用户登陆情况分析" icon="table.png" url="/app/loginusers/page/tchallusers_peruser" status="1"></app>
+
+    <!--同城游全国登录人数app模块-->
+    <app id="app1001500" name="同城游全国单日登录走势" tooltip="同城游全国单日登录人数走势" icon="login_perday_trend.png" url="/app/loginusers/page/tcnationusers_perday" status="1"></app>
+    <app id="app1001501" name="同城游全国多日登录走势" tooltip="同城游全国多日登录人数走势" icon="login_byday_trend.png" url="/app/loginusers/page/tcnationusers_byday" status="1"></app>
+    <app id="app1001502" name="同城游全国登录同比环比" tooltip="同城游全国登录人数同比环比" icon="login_compare_trend.png" url="/app/loginusers/page/tcnationusers_compare" status="1"></app>
+  
+    <!--同城游地级市(含县区)登录人数app模块-->
+    <app id="app1001600" name="同城游地级市(含县区)单日登录走势" tooltip="同城游地级市(含县区)单日登录人数走势" icon="login_perday_trend.png" url="/app/loginusers/page/tccityusers2_perday" status="1"></app>
+    <app id="app1001601" name="同城游地级市(含县区)多日登录走势" tooltip="同城游地级市(含县区)多日登录人数走势" icon="login_byday_trend.png" url="/app/loginusers/page/tccityusers2_byday" status="1"></app>
+    <app id="app1001602" name="同城游地级市(含县区)登录同比环比" tooltip="同城游地级市(含县区)登录人数同比环比" icon="login_compare_trend.png" url="/app/loginusers/page/tccityusers2_compare" status="1"></app>
+  
+    <!--同城游地级市(不含县区)登录人数app模块-->
+    <app id="app1001700" name="同城游地级市(不含县区)单日登录走势" tooltip="同城游地级市(不含县区)单日登录人数走势" icon="login_perday_trend.png" url="/app/loginusers/page/tccityusers1_perday" status="1"></app>
+    <app id="app1001701" name="同城游地级市(不含县区)多日登录走势" tooltip="同城游地级市(不含县区)多日登录人数走势" icon="login_byday_trend.png" url="/app/loginusers/page/tccityusers1_byday" status="1"></app>
+    <app id="app1001702" name="同城游地级市(不含县区)登录同比环比" tooltip="同城游地级市(不含县区)登录人数同比环比" icon="login_compare_trend.png" url="/app/loginusers/page/tccityusers1_compare" status="1"></app>
+  
+    <!--同城游县区登录人数app模块-->
+    <app id="app1001800" name="同城游县区单日登录走势" tooltip="同城游县区单日登录人数走势" icon="login_perday_trend.png" url="/app/loginusers/page/tcdistrictusers_perday" status="1"></app>
+    <app id="app1001801" name="同城游县区多日登录走势" tooltip="同城游县区多日登录人数走势" icon="login_byday_trend.png" url="/app/loginusers/page/tcdistrictusers_byday" status="1"></app>
+    <app id="app1001802" name="同城游县区登录同比环比" tooltip="同城游县区登录人数同比环比" icon="login_compare_trend.png" url="/app/loginusers/page/tcdistrictusers_compare" status="1"></app>
+
+    <!--同城游充值app模块-->
+    <app id="app1001900" name="同城游多日充值走势" tooltip="同城游多日充值走势统计" icon="pay_platform_byday_trend.png" url="/app/paydata/page/tcpaytrend" status="1"></app>
+    
+    <!--同城游PC充值app模块-->
+    <app id="app1002000" name="同城游PC端多日充值走势" tooltip="同城游PC端多日充值走势统计" icon="pay_pc_byday_trend.png" url="/app/paydata/page/tcpcpaytrend" status="1"></app>
+    <app id="app1002001" name="同城游PC端多日充值方式分析" tooltip="同城游PC端多日充值方式占比分析" icon="pay_pc_recharge.png" url="/app/paydata/page/tcpcpaytyperatio" status="1"></app>
+
+    <!--同城游移动端充值app模块-->
+    <app id="app1002100" name="同城游移动端多日充值走势" tooltip="同城游移动端多日充值走势统计" icon="pay_mb_byday_trend.png" url="/app/paydata/page/tcmobilepaytrend" status="1"></app>
+    <app id="app1002101" name="同城游移动端多日充值方式分析" tooltip="同城游移动端多日充值方式占比分析" icon="pay_mb_recharge.png" url="/app/paydata/page/tcmobilepaytyperatio" status="1"></app>
+  </apps>
+  <navs>
+    <group id="grp01" title="业务平台" sort="10">
+      <nav id="nav0101" title="同城游业务" type="nav" status="1" sort="10" icon="tc.png">
+        <group id="grp010101" title="终端平台统计" sort="10" status="1">
+          <nav id="nav01010101" title="PC端统计" type="nav" status="1" sort="10" icon="tc_pc.png">
+            <group id="grp0101010101" title="充值统计" sort="10">
+              <nav id="app1002000" title="充值走势" type="app" sort="100"></nav>
+              <nav id="app1002001" title="充值方式分析" type="app" sort="200"></nav>
+            </group>
+          </nav>
+          <nav id="nav01010102" title="移动端统计" type="nav" status="1" sort="20" icon="tc_mb.png">
+            <group id="grp0101010201" title="注册统计" sort="10">
+              <nav id="app1000700" title="手游注册走势" type="app" sort="100"></nav>
+            </group>
+            <group id="grp0101010202" title="充值统计" sort="10">
+              <nav id="app1002100" title="充值走势" type="app" sort="100"></nav>
+              <nav id="app1002101" title="充值方式分析" type="app" sort="200"></nav>
+            </group>
+          </nav>
+        </group>
+        <group id="grp010102" title="在线统计" sort="10">
+          <nav id="app1000100" title="游戏单日走势" type="app" sort="100"></nav>
+          <nav id="app1000101" title="游戏多日走势" type="app" sort="101"></nav>
+          <nav id="app1000102" title="游戏多月标准" type="app" sort="102"></nav>
+          <nav id="app1000103" title="游戏月度报表" type="app" sort="103"></nav>
+          
+          <nav id="app1000200" title="大厅单日走势" type="app" sort="200"></nav>
+          <nav id="app1000201" title="大厅多日走势" type="app" sort="201"></nav>
+          <nav id="app1000202" title="大厅多月标准" type="app" sort="202"></nav>
+          
+          <nav id="app1000300" title="全国单日走势" type="app" sort="300"></nav>
+          <nav id="app1000301" title="全国多日走势" type="app" sort="301"></nav>
+          <nav id="app1000302" title="全国多月标准" type="app" sort="302"></nav>
+          
+          <nav id="app1000400" title="县区单日走势" type="app" sort="400"></nav>
+          <nav id="app1000401" title="县区多日走势" type="app" sort="401"></nav>
+          <nav id="app1000402" title="县区多月标准" type="app" sort="402"></nav>
+
+          <nav id="app1000500" title="市(不含县区)单日走势" type="app" sort="500"></nav>
+          <nav id="app1000501" title="市(不含县区)多日走势" type="app" sort="501"></nav>
+          <nav id="app1000502" title="市(不含县区)多月标准" type="app" sort="502"></nav>
+
+          <nav id="app1000600" title="市(含县区)单日走势" type="app" sort="600"></nav>
+          <nav id="app1000601" title="市(含县区)多日走势" type="app" sort="601"></nav>
+          <nav id="app1000602" title="市(含县区)多月标准" type="app" sort="602"></nav>
+          <nav id="app1000603" title="市(含县区)月度报表" type="app" sort="603"></nav>
+        </group>
+        <group id="grp010103" title="注册统计" sort="20">
+          <nav id="app1000800" title="大厅注册走势" type="app" sort="100"></nav>
+        </group>
+        <group id="grp010104" title="登录统计" sort="30">
+          <nav id="app1001500" title="全国单日走势" type="app" sort="100"></nav>
+          <nav id="app1001501" title="全国多日走势" type="app" sort="101"></nav>
+          <nav id="app1001502" title="全国同比环比" type="app" sort="102"></nav>
+
+          <nav id="app1001800" title="县区单日走势" type="app" sort="200"></nav>
+          <nav id="app1001801" title="县区多日走势" type="app" sort="201"></nav>
+          <nav id="app1001802" title="县区同比环比" type="app" sort="202"></nav>
+
+          <nav id="app1001700" title="市(不含县区)单日走势" type="app" sort="300"></nav>
+          <nav id="app1001701" title="市(不含县区)多日走势" type="app" sort="301"></nav>
+          <nav id="app1001702" title="市(不含县区)同比环比" type="app" sort="302"></nav>
+
+          <nav id="app1001600" title="市(含县区)单日走势" type="app" sort="400"></nav>
+          <nav id="app1001601" title="市(含县区)多日走势" type="app" sort="401"></nav>
+          <nav id="app1001602" title="市(含县区)同比环比" type="app" sort="402"></nav>
+
+          <nav id="app1001400" title="大厅单日走势" type="app" sort="500"></nav>
+          <nav id="app1001401" title="大厅多日走势" type="app" sort="501"></nav>
+          <nav id="app1001402" title="大厅同比环比" type="app" sort="502"></nav>
+          <nav id="app1001403" title="大厅用户登陆情况分析" type="app" sort="503"></nav>
+        </group>
+        <group id="grp010105" title="充值统计" sort="30">
+          <nav id="app1001900" title="同城游平台充值走势" type="app" sort="100"></nav>
+        </group>
+      </nav>
+    </group>
+    <group id="grp02" title="统计对象" sort="20">
+      <nav id="nav0201" title="在线人数" type="nav" status="1" sort="10" icon="online_users.png">
+        <group id="grp020101" title="按市场统计" sort="10">
+          <nav id="app1000300" title="全国单日走势" type="app" sort="100"></nav>
+          <nav id="app1000301" title="全国多日走势" type="app" sort="101"></nav>
+          <nav id="app1000302" title="全国多月标准" type="app" sort="102"></nav>
+          
+          <nav id="app1000400" title="县区单日走势" type="app" sort="200"></nav>
+          <nav id="app1000401" title="县区多日走势" type="app" sort="201"></nav>
+          <nav id="app1000402" title="县区多月标准" type="app" sort="202"></nav>
+
+          <nav id="app1000500" title="市(不含县区)单日走势" type="app" sort="300"></nav>
+          <nav id="app1000501" title="市(不含县区)多日走势" type="app" sort="301"></nav>
+          <nav id="app1000502" title="市(不含县区)多月标准" type="app" sort="302"></nav>
+
+          <nav id="app1000600" title="市(含县区)单日走势" type="app" sort="400"></nav>
+          <nav id="app1000601" title="市(含县区)多日走势" type="app" sort="401"></nav>
+          <nav id="app1000602" title="市(含县区)多月标准" type="app" sort="402"></nav>
+          <nav id="app1000603" title="市(含县区)月度报表" type="app" sort="403"></nav>
+        </group>
+        <group id="grp020102" title="按大厅统计" sort="20">
+          <nav id="app1000200" title="大厅单日走势" type="app" sort="100"></nav>
+          <nav id="app1000201" title="大厅多日走势" type="app" sort="201"></nav>
+          <nav id="app1000202" title="大厅多月标准" type="app" sort="302"></nav>
+        </group>
+        <group id="grp020103" title="按游戏统计" sort="30">
+          <nav id="app1000100" title="游戏单日走势" type="app" sort="100"></nav>
+          <nav id="app1000101" title="游戏多日走势" type="app" sort="101"></nav>
+          <nav id="app1000102" title="游戏多月标准" type="app" sort="102"></nav>
+          <nav id="app1000103" title="游戏月度报表" type="app" sort="103"></nav>
+        </group>
+      </nav>
+      <nav id="nav0202" title="注册人数" type="nav" status="1" sort="20" icon="registered_users.png">
+        <group id="grp020201" title="按市场统计" sort="10">
+          <nav id="app1000900" title="全国注册人数走势" type="app" sort="100"></nav>
+          <nav id="app1001000" title="市(不含县区)注册人数走势" type="app" sort="200"></nav>
+          <nav id="app1001100" title="市(含县区)注册人数走势" type="app" sort="300"></nav>
+          <nav id="app1001200" title="县区注册人数走势" type="app" sort="400"></nav>
+        </group>
+        <group id="grp020202" title="按其他统计" sort="20">
+          <nav id="app1000700" title="手游注册走势" type="app" sort="100"></nav>
+          <nav id="app1000800" title="同城游大厅注册走势" type="app" sort="200"></nav>
+          <nav id="app1001300" title="网站注册走势" type="app" sort="300"></nav>
+        </group>
+      </nav>
+      <nav id="nav0203" title="登录人数" type="nav" status="1" sort="30" icon="login_users.png">
+        <group id="grp020301" title="按市场统计" sort="10">
+          <nav id="app1001500" title="同城游全国单日走势" type="app" sort="100"></nav>
+          <nav id="app1001501" title="同城游全国多日走势" type="app" sort="101"></nav>
+          <nav id="app1001502" title="同城游全国同比环比" type="app" sort="102"></nav>
+          
+          <nav id="app1001800" title="同城游县区单日走势" type="app" sort="200"></nav>
+          <nav id="app1001801" title="同城游县区多日走势" type="app" sort="201"></nav>
+          <nav id="app1001802" title="同城游县区同比环比" type="app" sort="202"></nav>
+
+          <nav id="app1001700" title="同城游市(不含县区)单日走势" type="app" sort="300"></nav>
+          <nav id="app1001701" title="同城游市(不含县区)多日走势" type="app" sort="301"></nav>
+          <nav id="app1001702" title="同城游市(不含县区)同比环比" type="app" sort="302"></nav>
+
+          <nav id="app1001600" title="同城游市(含县区)单日走势" type="app" sort="400"></nav>
+          <nav id="app1001601" title="同城游市(含县区)多日走势" type="app" sort="401"></nav>
+          <nav id="app1001602" title="同城游市(含县区)同比环比" type="app" sort="402"></nav>
+        </group>
+        <group id="grp020302" title="按大厅统计" sort="20">
+          <nav id="app1001400" title="大厅单日走势" type="app" sort="100"></nav>
+          <nav id="app1001401" title="大厅多日走势" type="app" sort="101"></nav>
+          <nav id="app1001402" title="大厅同比环比" type="app" sort="102"></nav>
+          <nav id="app1001403" title="大厅用户登陆情况分析" type="app" sort="103"></nav>
+        </group>
+      </nav>
+      <nav id="nav0204" title="充值数据" type="nav" status="1" sort="10" icon="pay_data.png">
+        <group id="grp020401" title="充值走势分析" sort="10">
+          <nav id="app1001900" title="同城游平台充值走势" type="app" sort="100"></nav>
+          <nav id="app1002000" title="同城游PC端充值走势" type="app" sort="200"></nav>
+          <nav id="app1002100" title="同城游移动端充值走势" type="app" sort="300"></nav>
+        </group>
+        <group id="grp020402" title="充值方式占比分析" sort="20">
+          <nav id="app1002001" title="同城游PC端充值方式分析" type="app" sort="100"></nav>
+          <nav id="app1002101" title="同城游移动端充值方式分析" type="app" sort="200"></nav>
+        </group>
+      </nav>
+    </group>
+    <group id="grp03" title="其他工具" sort="30">
+      
+    </group>
+  </navs>
+</root>

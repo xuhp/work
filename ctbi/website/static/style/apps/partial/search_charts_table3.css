@@ -14,6 +14,7 @@
     text-align:center;
     top:0;
     right:0;
+    display:none;
 }
 .show_nav a
 {
@@ -31,16 +32,13 @@
 .data_wrap
 {
     padding-right:30px;
-    padding-left:150px;
+    padding-left:180px;
 }
-.data_wrap,.show_nav
-{
-    display:block;
-}
+
 /*登陆人数三栏布局*/
 .total_data
 {
-    width:130px;
+    width:160px;
     position:absolute;
     top:0;
     left:0;
@@ -49,6 +47,7 @@
     color:#fff;
     font-weight:bold;
     font-size:13px;
+    display:none;
 }
 
 .total_data span, .total_data label
@@ -61,48 +60,9 @@
 }
 .total_data li
 {
-    margin-top:5px;
+    margin-top:15px;
 }
-/*渠道选择*/
-.channel_wrap
+.select_opts
 {
-    position:absolute;
-    background:#eee;
-    z-index:9999;
-    left:70px;
-    min-width:200px;
-    border-radius:5px;
-    box-shadow:1px 1px 5px #000;
-}
-.channel_wrap ul
-{
-    padding:5px;
-}
-.channel_wrap ul li
-{
-    height:25px;
-    line-height:25px;
-}
-.channel_wrap ul li label
-{
-    margin-left:5px;
-}
-.sure_select
-{
-    display:block;
-    margin-top:35px;
-    text-align:center;
-    height:30px;
-    line-height:30px;
-    background:#393939;
-    cursor:pointer;
-    border-radius:0 0 5px 5px;
-    color:#fff;
-    font-size:13px;
-
-}
-.sure_select:hover
-{
-    background:#000;
-    text-decoration:none;
+    width:180px;
 }

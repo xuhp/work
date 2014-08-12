@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <group type="同城游平台在线人数游戏">
+    <action url="/app/onlineusers/page/gameusers_perday" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#gameusers_perday">38010101</action>
+    <action url="/app/onlineusers/op/gameusers_perday" type="op.browser" method="ct.bi.web.apps.controllers.operate#onlineusers#gameusers_perday">38010101</action>
+    <action url="/app/onlineusers/data/gameusers_perday" type="search" method="ct.bi.web.apps.controllers.data#onlineusers#gameusers_perday">38010101</action>
+
+    <action url="/app/onlineusers/page/gameusers_byday" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#gameusers_byday">38010102</action>
+    <action url="/app/onlineusers/op/gameusers_byday" type="op.browser" method="ct.bi.web.apps.controllers.operate#onlineusers#gameusers_byday">38010102</action>
+    <action url="/app/onlineusers/data/gameusers_byday" type="search" method="ct.bi.web.apps.controllers.data#onlineusers#gameusers_byday">38010102</action>
+
+    <action url="/app/onlineusers/page/gamestandard_bymonth" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#gamestandard_bymonth">38010103</action>
+    <action url="/app/onlineusers/op/gamestandard_bymonth" type="op.browser" method="ct.bi.web.apps.controllers.operate#onlineusers#gamestandard_bymonth">38010103</action>
+    <action url="/app/onlineusers/data/gamestandard_bymonth" type="search" method="ct.bi.web.apps.controllers.data#onlineusers#gamestandard_bymonth">38010103</action>
+
+    <action url="/app/onlineusers/page/gamesmonthreport" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#gamesmonthreport">38010104</action>
+    <action url="/app/onlineusers/report/gamesmonthreport" type="report" method="ct.bi.web.apps.controllers.report#onlineusers#gamesbymonth">38010104</action>
+  </group>
+  <group type="同城游平台在线人数大厅">
+    <action url="/app/onlineusers/page/hallusers_perday" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#hallusers_perday">38010105</action>
+    <action url="/app/onlineusers/op/hallusers_perday" type="op.browser" method="ct.bi.web.apps.controllers.operate#onlineusers#hallusers_perday">38010105</action>
+    <action url="/app/onlineusers/data/hallusers_perday" type="search" method="ct.bi.web.apps.controllers.data#onlineusers#hallusers_perday">38010105</action>
+    
+    <action url="/app/onlineusers/page/hallusers_byday" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#hallusers_byday">38010106</action>
+    <action url="/app/onlineusers/op/hallusers_byday" type="op.browser" method="ct.bi.web.apps.controllers.operate#onlineusers#hallusers_byday">38010106</action>
+    <action url="/app/onlineusers/data/hallusers_byday" type="search" method="ct.bi.web.apps.controllers.data#onlineusers#hallusers_byday">38010106</action>
+    
+    <action url="/app/onlineusers/page/hallstandard_bymonth" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#hallstandard_bymonth">38010107</action>
+    <action url="/app/onlineusers/op/hallstandard_bymonth" type="op.browser" method="ct.bi.web.apps.controllers.operate#onlineusers#hallstandard_bymonth">38010107</action>
+    <action url="/app/onlineusers/data/hallstandard_bymonth" type="search" method="ct.bi.web.apps.controllers.data#onlineusers#hallstandard_bymonth">38010107</action>
+  </group>
+  <group type="同城游平台在线人数全国">
+    <action url="/app/onlineusers/page/nationusers_perday" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#nationusers_perday">38010108</action>
+    <action url="/app/onlineusers/op/nationusers_perday" type="op.browser" method="ct.bi.web.apps.controllers.operate#onlineusers#nationusers_perday">38010108</action>
+    <action url="/app/onlineusers/data/nationusers_perday" type="search" method="ct.bi.web.apps.controllers.data#onlineusers#nationusers_perday">38010108</action>
+    
+    <action url="/app/onlineusers/page/nationusers_byday" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#nationusers_byday">38010109</action>
+    <action url="/app/onlineusers/op/nationusers_byday" type="op.browser" method="ct.bi.web.apps.controllers.operate#onlineusers#nationusers_byday">38010109</action>
+    <action url="/app/onlineusers/data/nationusers_byday" type="search" method="ct.bi.web.apps.controllers.data#onlineusers#nationusers_byday">38010109</action>
+      
+    <action url="/app/onlineusers/page/nationstandard_bymonth" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#nationstandard_bymonth">38010110</action>
+    <action url="/app/onlineusers/op/nationstandard_bymonth" type="op.browser" method="ct.bi.web.apps.controllers.operate#onlineusers#nationstandard_bymonth">38010110</action>
+    <action url="/app/onlineusers/data/nationstandard_bymonth" type="search" method="ct.bi.web.apps.controllers.data#onlineusers#nationstandard_bymonth">38010110</action>
+  </group>
+  <group type="同城游平台在线人数地级市（包含县区）">
+    <action url="/app/onlineusers/page/cityusers2_perday" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#cityusers2_perday">38010111</action>
+    <action url="/app/onlineusers/op/cityusers2_perday" type="op.browser" method="ct.bi.web.apps.controllers.operate#onlineusers#cityusers2_perday">38010111</action>
+    <action url="/app/onlineusers/data/cityusers2_perday" type="search" method="ct.bi.web.apps.controllers.data#onlineusers#cityusers2_perday">38010111</action>
+
+    <action url="/app/onlineusers/page/cityusers2_byday" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#cityusers2_byday">38010112</action>
+    <action url="/app/onlineusers/op/cityusers2_byday" type="op.browser" method="ct.bi.web.apps.controllers.operate#onlineusers#cityusers2_byday">38010112</action>
+    <action url="/app/onlineusers/data/cityusers2_byday" type="search" method="ct.bi.web.apps.controllers.data#onlineusers#cityusers2_byday">38010112</action>   
+      
+    <action url="/app/onlineusers/page/citystandard2_bymonth" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#citystandard2_bymonth">38010113</action>
+    <action url="/app/onlineusers/op/citystandard2_bymonth" type="op.browser" method="ct.bi.web.apps.controllers.operate#onlineusers#citystandard2_bymonth">38010113</action>
+    <action url="/app/onlineusers/data/citystandard2_bymonth" type="search" method="ct.bi.web.apps.controllers.data#onlineusers#citystandard2_bymonth">38010113</action>
+
+    <action url="/app/onlineusers/page/citiesmonthreport2" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#citiesmonthreport2">38010114</action>
+    <action url="/app/onlineusers/report/citiesmonthreport2" type="report" method="ct.bi.web.apps.controllers.report#onlineusers#citiesbymonth2">38010114</action>
+  </group>
+  <group type="同城游平台在线人数地级市（不包含县区）">
+    <action url="/app/onlineusers/page/cityusers1_perday" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#cityusers1_perday">38010115</action>
+    <action url="/app/onlineusers/op/cityusers1_perday" type="op.browser" method="ct.bi.web.apps.controllers.operate#onlineusers#cityusers1_perday">38010115</action>
+    <action url="/app/onlineusers/data/cityusers1_perday" type="search" method="ct.bi.web.apps.controllers.data#onlineusers#cityusers1_perday">38010115</action>   
+      
+    <action url="/app/onlineusers/page/cityusers1_byday" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#cityusers1_byday">38010116</action>
+    <action url="/app/onlineusers/op/cityusers1_byday" type="op.browser" method="ct.bi.web.apps.controllers.operate#onlineusers#cityusers1_byday">38010116</action>
+    <action url="/app/onlineusers/data/cityusers1_byday" type="search" method="ct.bi.web.apps.controllers.data#onlineusers#cityusers1_byday">38010116</action>   
+      
+    <action url="/app/onlineusers/page/citystandard1_bymonth" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#citystandard1_bymonth">38010117</action>
+    <action url="/app/onlineusers/op/citystandard1_bymonth" type="op.browser" method="ct.bi.web.apps.controllers.operate#onlineusers#citystandard1_bymonth">38010117</action>
+    <action url="/app/onlineusers/data/citystandard1_bymonth" type="search" method="ct.bi.web.apps.controllers.data#onlineusers#citystandard1_bymonth">38010117</action>
+  </group>
+  <group type="同城游平台在线人数县区">
+    <action url="/app/onlineusers/page/districtusers_perday" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#districtusers_perday">38010118</action>
+    <action url="/app/onlineusers/op/districtusers_perday" type="op.browser" method="ct.bi.web.apps.controllers.operate#onlineusers#districtusers_perday">38010118</action>
+    <action url="/app/onlineusers/data/districtusers_perday" type="search" method="ct.bi.web.apps.controllers.data#onlineusers#districtusers_perday">38010118</action>
+      
+    <action url="/app/onlineusers/page/districtusers_byday" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#districtusers_byday">38010119</action>
+    <action url="/app/onlineusers/op/districtusers_byday" type="op.browser" method="ct.bi.web.apps.controllers.operate#onlineusers#districtusers_byday">38010119</action>
+    <action url="/app/onlineusers/data/districtusers_byday" type="search" method="ct.bi.web.apps.controllers.data#onlineusers#districtusers_byday">38010119</action>
+
+    <action url="/app/onlineusers/page/districtstandard_bymonth" type="app.browser" method="ct.bi.web.apps.controllers.pages#onlineusers#districtstandard_bymonth">38010120</action>
+    <action url="/app/onlineusers/op/districtstandard_bymonth" type="op.browser" method="ct.bi.web.apps.controllers.operate#onlineusers#districtstandard_bymonth">38010120</action>
+    <action url="/app/onlineusers/data/districtstandard_bymonth" type="search" method="ct.bi.web.apps.controllers.data#onlineusers#districtstandard_bymonth">38010120</action>
+  </group>
+  <group type="所有平台注册人数网站">
+    <action url="/app/registeredusers/page/siteusers_basic" type="app.browser" method="ct.bi.web.apps.controllers.pages#registeredusers#siteusers_basic">38020101</action>
+    <action url="/app/registeredusers/op/siteusers_basic" type="op.browser" method="ct.bi.web.apps.controllers.operate#registeredusers#siteusers_basic">38020101</action>
+    <action url="/app/registeredusers/data/siteusers_byday" type="search_by_day" method="ct.bi.web.apps.controllers.data#registeredusers#siteusers_byday">38020101</action>
+    <action url="/app/registeredusers/data/siteusers_bymonth" type="search_by_month" method="ct.bi.web.apps.controllers.data#registeredusers#siteusers_bymonth">38020101</action>
+  </group>
+  <group type="所有平台注册人数全国">
+    <action url="/app/registeredusers/page/nationusers_basic" type="app.browser" method="ct.bi.web.apps.controllers.pages#registeredusers#nationusers_basic">38020102</action>
+    <action url="/app/registeredusers/data/nationusers_byday" type="search_by_day" method="ct.bi.web.apps.controllers.data#registeredusers#nationusers_byday">38020102</action>
+    <action url="/app/registeredusers/data/nationusers_bymonth" type="search_by_month" method="ct.bi.web.apps.controllers.data#registeredusers#nationusers_bymonth">38020102</action>
+  </group>
+  <group type="所有平台注册人数地级市（包含县区）">
+    <action url="/app/registeredusers/page/cityusers2_basic" type="app.browser" method="ct.bi.web.apps.controllers.pages#registeredusers#cityusers2_basic">38020103</action>
+    <action url="/app/registeredusers/op/cityusers2_basic" type="op.browser" method="ct.bi.web.apps.controllers.operate#registeredusers#cityusers2_basic">38020103</action>
+    <action url="/app/registeredusers/data/cityusers2_byday" type="search_by_day" method="ct.bi.web.apps.controllers.data#registeredusers#cityusers2_byday">38020103</action>
+    <action url="/app/registeredusers/data/cityusers2_bymonth" type="search_by_month" method="ct.bi.web.apps.controllers.data#registeredusers#cityusers2_bymonth">38020103</action>
+  </group>
+  <group type="所有平台注册人数地级市（不包含县区）">
+    <action url="/app/registeredusers/page/cityusers1_basic" type="app.browser" method="ct.bi.web.apps.controllers.pages#registeredusers#cityusers1_basic">38020104</action>
+    <action url="/app/registeredusers/op/cityusers1_basic" type="op.browser" method="ct.bi.web.apps.controllers.operate#registeredusers#cityusers1_basic">38020104</action>
+    <action url="/app/registeredusers/data/cityusers1_byday" type="search_by_day" method="ct.bi.web.apps.controllers.data#registeredusers#cityusers1_byday">38020104</action>
+    <action url="/app/registeredusers/data/cityusers1_bymonth" type="search_by_month" method="ct.bi.web.apps.controllers.data#registeredusers#cityusers1_bymonth">38020104</action>
+  </group>
+  <group type="所有平台注册人数县区">
+    <action url="/app/registeredusers/page/districtusers_basic" type="app.browser" method="ct.bi.web.apps.controllers.pages#registeredusers#districtusers_basic">38020105</action>
+    <action url="/app/registeredusers/op/districtusers_basic" type="op.browser" method="ct.bi.web.apps.controllers.operate#registeredusers#districtusers_basic">38020105</action>
+    <action url="/app/registeredusers/data/districtusers_byday" type="search_by_day" method="ct.bi.web.apps.controllers.data#registeredusers#districtusers_byday">38020105</action>
+    <action url="/app/registeredusers/data/districtusers_bymonth" type="search_by_month" method="ct.bi.web.apps.controllers.data#registeredusers#districtusers_bymonth">38020105</action>
+  </group>
+  <group type="同城游平台注册人数手游">
+    <action url="/app/registeredusers/page/mobilegameusers_basic" type="app.browser" method="ct.bi.web.apps.controllers.pages#registeredusers#mobilegameusers_basic">38020201</action>
+    <action url="/app/registeredusers/op/mobilegameusers_basic" type="op.browser" method="ct.bi.web.apps.controllers.operate#registeredusers#mobilegameusers_basic">38020201</action>
+    <action url="/app/registeredusers/data/mobilegameusers_byday" type="search_by_day" method="ct.bi.web.apps.controllers.data#registeredusers#mobilegameusers_byday">38020201</action>
+    <action url="/app/registeredusers/data/mobilegameusers_bymonth" type="search_by_month" method="ct.bi.web.apps.controllers.data#registeredusers#mobilegameusers_bymonth">38020201</action>
+  </group>
+  <group type="同城游平台注册人数大厅">
+    <action url="/app/registeredusers/page/hallusers_basic" type="app.browser" method="ct.bi.web.apps.controllers.pages#registeredusers#hallusers_basic">38020202</action>
+    <action url="/app/registeredusers/op/hallusers_basic" type="op.browser" method="ct.bi.web.apps.controllers.operate#registeredusers#hallusers_basic">38020202</action>
+    <action url="/app/registeredusers/data/hallusers_byday" type="search_by_day" method="ct.bi.web.apps.controllers.data#registeredusers#hallusers_byday">38020202</action>
+    <action url="/app/registeredusers/data/hallusers_bymonth" type="search_by_month" method="ct.bi.web.apps.controllers.data#registeredusers#hallusers_bymonth">38020202</action>
+  </group>
+  <group type="同城游平台登录人数大厅">
+    <action url="/app/loginusers/page/tchallusers_perday" type="app.browser" method="ct.bi.web.apps.controllers.pages#loginusers#tchallusers_perday">38030101</action>
+    <action url="/app/loginusers/op/tchallusers_perday" type="op.browser" method="ct.bi.web.apps.controllers.operate#loginusers#tchallusers_perday">38030101</action>
+    <action url="/app/loginusers/data/tchallusers_perday" type="search" method="ct.bi.web.apps.controllers.data#loginusers#tchallusers_perday">38030101</action>
+  
+    <action url="/app/loginusers/page/tchallusers_byday" type="app.browser" method="ct.bi.web.apps.controllers.pages#loginusers#tchallusers_byday">38030102</action>
+    <action url="/app/loginusers/op/tchallusers_byday" type="op.browser" method="ct.bi.web.apps.controllers.operate#loginusers#tchallusers_byday">38030102</action>
+    <action url="/app/loginusers/data/tchallusers_byday" type="search" method="ct.bi.web.apps.controllers.data#loginusers#tchallusers_byday">38030102</action>
+  
+    <action url="/app/loginusers/page/tchallusers_compare" type="app.browser" method="ct.bi.web.apps.controllers.pages#loginusers#tchallusers_compare">38030103</action>
+    <action url="/app/loginusers/op/tchallusers_compare" type="op.browser" method="ct.bi.web.apps.controllers.operate#loginusers#tchallusers_compare">38030103</action>
+    <action url="/app/loginusers/data/tchallusers_compare" type="search" method="ct.bi.web.apps.controllers.data#loginusers#tchallusers_compare">38030103</action>
+
+    <action url="/app/loginusers/page/tchallusers_peruser" type="app.browser" method="ct.bi.web.apps.controllers.pages#loginusers#tchallusers_peruser">38030104</action>
+    <action url="/app/loginusers/op/tchallusers_peruser" type="op.browser" method="ct.bi.web.apps.controllers.operate#loginusers#tchallusers_peruser">38030104</action>
+    <action url="/app/loginusers/data/tchallusers_peruser" type="search" method="ct.bi.web.apps.controllers.data#loginusers#tchallusers_peruser">38030104</action>
+  </group>
+  <group type="同城游平台登录人数全国">
+    <action url="/app/loginusers/page/tcnationusers_perday" type="app.browser" method="ct.bi.web.apps.controllers.pages#loginusers#tcnationusers_perday">38030105</action>
+    <action url="/app/loginusers/data/tcnationusers_perday" type="search" method="ct.bi.web.apps.controllers.data#loginusers#tcnationusers_perday">38030105</action>
+
+    <action url="/app/loginusers/page/tcnationusers_byday" type="app.browser" method="ct.bi.web.apps.controllers.pages#loginusers#tcnationusers_byday">38030106</action>
+    <action url="/app/loginusers/data/tcnationusers_byday" type="search" method="ct.bi.web.apps.controllers.data#loginusers#tcnationusers_byday">38030106</action>
+  
+    <action url="/app/loginusers/page/tcnationusers_compare" type="app.browser" method="ct.bi.web.apps.controllers.pages#loginusers#tcnationusers_compare">38030107</action>
+    <action url="/app/loginusers/data/tcnationusers_compare" type="search" method="ct.bi.web.apps.controllers.data#loginusers#tcnationusers_compare">38030107</action>
+  </group>
+  <group type="同城游平台登录人数地级市（包含县区）">
+    <action url="/app/loginusers/page/tccityusers2_perday" type="app.browser" method="ct.bi.web.apps.controllers.pages#loginusers#tccityusers2_perday">38030108</action>
+    <action url="/app/loginusers/op/tccityusers2_perday" type="op.browser" method="ct.bi.web.apps.controllers.operate#loginusers#tccityusers2_perday">38030108</action>
+    <action url="/app/loginusers/data/tccityusers2_perday" type="search" method="ct.bi.web.apps.controllers.data#loginusers#tccityusers2_perday">38030108</action>
+  
+    <action url="/app/loginusers/page/tccityusers2_byday" type="app.browser" method="ct.bi.web.apps.controllers.pages#loginusers#tccityusers2_byday">38030109</action>
+    <action url="/app/loginusers/op/tccityusers2_byday" type="op.browser" method="ct.bi.web.apps.controllers.operate#loginusers#tccityusers2_byday">38030109</action>
+    <action url="/app/loginusers/data/tccityusers2_byday" type="search" method="ct.bi.web.apps.controllers.data#loginusers#tccityusers2_byday">38030109</action>
+  
+    <action url="/app/loginusers/page/tccityusers2_compare" type="app.browser" method="ct.bi.web.apps.controllers.pages#loginusers#tccityusers2_compare">38030110</action>
+    <action url="/app/loginusers/op/tccityusers2_compare" type="op.browser" method="ct.bi.web.apps.controllers.operate#loginusers#tccityusers2_compare">38030110</action>
+    <action url="/app/loginusers/data/tccityusers2_compare" type="search" method="ct.bi.web.apps.controllers.data#loginusers#tccityusers2_compare">38030110</action>
+  </group>
+  <group type="同城游平台登录人数地级市（不含县区）">
+    <action url="/app/loginusers/page/tccityusers1_perday" type="app.browser" method="ct.bi.web.apps.controllers.pages#loginusers#tccityusers1_perday">38030111</action>
+    <action url="/app/loginusers/op/tccityusers1_perday" type="op.browser" method="ct.bi.web.apps.controllers.operate#loginusers#tccityusers1_perday">38030111</action>
+    <action url="/app/loginusers/data/tccityusers1_perday" type="search" method="ct.bi.web.apps.controllers.data#loginusers#tccityusers1_perday">38030111</action>
+  
+    <action url="/app/loginusers/page/tccityusers1_byday" type="app.browser" method="ct.bi.web.apps.controllers.pages#loginusers#tccityusers1_byday">38030112</action>
+    <action url="/app/loginusers/op/tccityusers1_byday" type="op.browser" method="ct.bi.web.apps.controllers.operate#loginusers#tccityusers1_byday">38030112</action>
+    <action url="/app/loginusers/data/tccityusers1_byday" type="search" method="ct.bi.web.apps.controllers.data#loginusers#tccityusers1_byday">38030112</action>
+  
+    <action url="/app/loginusers/page/tccityusers1_compare" type="app.browser" method="ct.bi.web.apps.controllers.pages#loginusers#tccityusers1_compare">38030113</action>
+    <action url="/app/loginusers/op/tccityusers1_compare" type="op.browser" method="ct.bi.web.apps.controllers.operate#loginusers#tccityusers1_compare">38030113</action>
+    <action url="/app/loginusers/data/tccityusers1_compare" type="search" method="ct.bi.web.apps.controllers.data#loginusers#tccityusers1_compare">38030113</action>
+  </group>
+  <group type="同城游平台登录人数县区">
+    <action url="/app/loginusers/page/tcdistrictusers_perday" type="app.browser" method="ct.bi.web.apps.controllers.pages#loginusers#tcdistrictusers_perday">38030114</action>
+    <action url="/app/loginusers/op/tcdistrictusers_perday" type="op.browser" method="ct.bi.web.apps.controllers.operate#loginusers#tcdistrictusers_perday">38030114</action>
+    <action url="/app/loginusers/data/tcdistrictusers_perday" type="search" method="ct.bi.web.apps.controllers.data#loginusers#tcdistrictusers_perday">38030114</action>
+  
+    <action url="/app/loginusers/page/tcdistrictusers_byday" type="app.browser" method="ct.bi.web.apps.controllers.pages#loginusers#tcdistrictusers_byday">38030115</action>
+    <action url="/app/loginusers/op/tcdistrictusers_byday" type="op.browser" method="ct.bi.web.apps.controllers.operate#loginusers#tcdistrictusers_byday">38030115</action>
+    <action url="/app/loginusers/data/tcdistrictusers_byday" type="search" method="ct.bi.web.apps.controllers.data#loginusers#tcdistrictusers_byday">38030115</action>
+  
+    <action url="/app/loginusers/page/tcdistrictusers_compare" type="app.browser" method="ct.bi.web.apps.controllers.pages#loginusers#tcdistrictusers_compare">38030116</action>
+    <action url="/app/loginusers/op/tcdistrictusers_compare" type="op.browser" method="ct.bi.web.apps.controllers.operate#loginusers#tcdistrictusers_compare">38030116</action>
+    <action url="/app/loginusers/data/tcdistrictusers_compare" type="search" method="ct.bi.web.apps.controllers.data#loginusers#tcdistrictusers_compare">38030116</action>
+  </group>
+  <group type="同城游平台充值数据">
+    <action url="/app/paydata/page/tcpaytrend" type="app.browser" method="ct.bi.web.apps.controllers.pages#paydata#tcpaytrend">38040101</action>
+    <action url="/app/paydata/data/tcpaytrend" type="search" method="ct.bi.web.apps.controllers.data#paydata#tcpaytrend">38040101</action>
+  
+    <action url="/app/paydata/page/tcpcpaytrend" type="app.browser" method="ct.bi.web.apps.controllers.pages#paydata#tcpcpaytrend">38040102</action>
+    <action url="/app/paydata/data/tcpcpaytrend" type="search" method="ct.bi.web.apps.controllers.data#paydata#tcpcpaytrend">38040102</action>
+    
+    <action url="/app/paydata/page/tcpcpaytyperatio" type="app.browser" method="ct.bi.web.apps.controllers.pages#paydata#tcpcpaytyperatio">38040103</action>
+    <action url="/app/paydata/data/tcpcpaytyperatio" type="search" method="ct.bi.web.apps.controllers.data#paydata#tcpcpaytyperatio">38040103</action>
+  
+    <action url="/app/paydata/page/tcmobilepaytrend" type="app.browser" method="ct.bi.web.apps.controllers.pages#paydata#tcmobilepaytrend">38040104</action>
+    <action url="/app/paydata/data/tcmobilepaytrend" type="search" method="ct.bi.web.apps.controllers.data#paydata#tcmobilepaytrend">38040104</action>
+  
+    <action url="/app/paydata/page/tcmobilepaytyperatio" type="app.browser" method="ct.bi.web.apps.controllers.pages#paydata#tcmobilepaytyperatio">38040105</action>
+    <action url="/app/paydata/data/tcmobilepaytyperatio" type="search" method="ct.bi.web.apps.controllers.data#paydata#tcmobilepaytyperatio">38040105</action>
+  </group>
+</root>

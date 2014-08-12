@@ -14,7 +14,11 @@
 		    url: this_url,//url地址，必填
 		    async: false,//是否同步，默认为同步
 		}),
-		data_len=data_all.length;
+		data_len = data_all.length;
+
+	data_all.sort(function (a,b) {
+	    return a.Sort - b.Sort;
+	})
 	
 	var attention={
 		init:function(){

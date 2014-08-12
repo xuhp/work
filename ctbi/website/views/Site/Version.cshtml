@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>历史版本</title>
+</head>
+<body>
+    @foreach (var version in ViewBag.Versions)
+    {
+        <div>
+            <h2>@version.Version &nbsp;&nbsp;<small>【@version.UpdateDate】</small></h2>
+            <ul>
+                @foreach (var content in version.Contents)
+                {
+                    <li>@content</li>
+                }
+            </ul>
+        </div> 
+    }
+</body>
+</html>

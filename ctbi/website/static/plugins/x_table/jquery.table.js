@@ -100,15 +100,41 @@
                                  }
                          }
                      })
-
                  }
+
+                 //调用事件函数
+                 //鼠标事件
+                 mouse_event();
+
              }
          }
-         //改变选中行颜色
-         $this.delegate('.table_con tr', 'click', function () {
-             $(this).addClass('tr_on')
-                .siblings('tr').removeClass('tr_on');
-         })
+         //鼠标事件
+         function mouse_event() {
+             var $table_con = $('.table_con'),
+                 trs = $table_con[0].getElementsByTagName('tr'),
+                 len = trs.length;
+             console.log(len);
+             for (var i = 0; i < len; i++) {
+                 var this_tr = trs[i];
+                 this_tr.click(function () {
+                     //this.attr('class','')
+                 })
+             }
+
+             //trs.each(function () {
+             //    //点击改变颜色
+             //    $(this).click(function () {
+             //        $(this).addClass('tr_on')
+             //           .siblings('tr').removeClass('tr_on');
+             //    })
+             //    $(this).hover(function () {
+             //        $(this).addClass('cur_tr');
+             //    }, function () {
+             //        $(this).removeClass('cur_tr');
+             //    })
+             //});
+         }
+        
          //创建默认值
          function create_defaults(keys) {
              var keys_len = keys.length;

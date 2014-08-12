@@ -1,0 +1,72 @@
+﻿html, body
+{
+    height:100%;
+}
+.attention_help_wrap
+{
+    position:absolute;
+}
+.report_wrap
+{
+    width:510px;
+    margin:0 auto;
+    height:30px;
+    line-height:30px;
+}
+.h_per30
+{
+    height:30%;
+    width:0px;
+    float:left;
+    margin-bottom:-15px;
+}
+#selected_time
+{
+    width:300px;
+    border:#666 2px solid;
+}
+label
+{
+    font-size:14px;
+}
+/*帮助关注*/
+.attention_help_wrap
+{
+    position:absolute;
+    top:10px;
+    right:15px;
+}
+.attention_help_wrap a,.download
+{
+    float:left;
+    min-width:90px;
+    height:16px;
+    line-height:16px;
+    padding:5px 5px;
+    background:#EEEBEB;
+    display:inline-block;
+    border:1px solid #ffffff;
+    float:right;
+    text-align:center;
+    cursor:pointer;
+}
+.attention_help_wrap a:hover,.download:hover
+{
+    background:#ccc;
+    text-decoration:none;
+}
+.download img
+{
+    margin-right:5px;
+}
+.app_help
+{
+    position:relative;
+}
+.info_tip_wrap
+{
+    position:absolute;
+    top:40px;
+    right:20px;
+    z-index:9999;
+}

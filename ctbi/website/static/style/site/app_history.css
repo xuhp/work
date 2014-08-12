@@ -2,6 +2,10 @@ html,body{
 	background:#5a5a5a;
 	height:100%;
 }
+body
+{
+    overflow-y:scroll;
+}
 .history_table{
 	width:100%;
 	text-align:left;

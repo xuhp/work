@@ -14,18 +14,14 @@ var $slide_head = $('.slide_head'),
 
 var list_nav = {
     init: function (data) {
-        this._app_nav_hover()
         this._open_app(data);
         this._ul_nav_change();
+        //this._clearValue();
         this._close_app();
     },
-    //app_nav显示隐藏
-    _app_nav_hover: function () {
-        $slide_head.mouseover(function () {
-            $app_ul_nav.show();
-        }).mouseout(function () {
-            $app_ul_nav.hide();
-        });
+    //label_tip插件应用
+    _clearValue: function () {
+        $('.add_clear_btn').clearValue();
     },
     //打开应用
     _open_app: function (data) {
@@ -90,7 +86,9 @@ var list_nav = {
             show_cur_app_name(on_nodeid);
             //显示内容
             show_app(on_nodeid);
-            $app_ul_nav.hide();
+
+            //$app_ul_nav.hide();
+            return false;
         });
         //关闭全部
         $app_ul_nav.delegate('.total_close', 'click', function () {
@@ -132,8 +130,6 @@ function create_app_nav(data) {
         $app_ul_nav.append(str);
     }
     $app_ul_nav.append('<li class="split_line"></li><li class="total_close">关闭全部</li>');
-    //对导航进行定位
-    $app_ul_nav.css('left', $slide_head.width());
 }
 //创建iframe
 function create_iframe(nodeid) {

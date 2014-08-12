@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<MenuRole>
+  <ID>38</ID>
+  <ModuleName>GS系统</ModuleName>
+  <ParentID>0</ParentID>
+  <MainUrl>http://gs.ct108.org:1400/site/home/index</MainUrl>
+  <AutoSelect>0</AutoSelect>
+  <Isselect>1</Isselect>
+</MenuRole>

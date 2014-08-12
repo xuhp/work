@@ -5,6 +5,21 @@ var channel_obj = {
     'SitePlatform': '所有网站渠道',
     'Games':'指定游戏渠道'
 }
+//金额总计配置
+var total_list_obj = {
+    'TotalMoney': '充值总额',
+    'TotalPayNum': '总充值笔数',
+    'UsersPerday': '总充值人数（单日去重）',
+    'UsersByday': '总充值人数（范围去重）',
+    'PerDayMoney': '日均充值笔数',
+    'PerDayUsersPerDay': '日均充值人数(单日去重)',
+    'PerDayUsersByDay': '日均充值人数(范围去重)',
+    'PerUserMoneyPerDay': '人均充值额度(单日去重)',
+    'PerUserMoneyByDay': '人均充值额度(范围去重)',
+    'PerDayMoney': '日均充值额度',
+    'TotalPerTimesMoney':'单笔平均额度'
+}
+
 var paydata_common = {
     //获取充值方式
     get_paytype: function (paytype) {
@@ -31,7 +46,8 @@ var paydata_common = {
             if (nodeid != 'all') {
                 var citydata = get_city_data(areadata, nodeid);
                 create_area_option(citydata, $cities);
-            } 
+            }
+
         });
         //创建相关县区列表
         $cities.change(function () {
@@ -63,44 +79,143 @@ var paydata_common = {
                 create_channel_pop(channels);
             }
         });
+        //关闭弹出框
+        $(document).click(function (e) {
+            var $cur_elem = $(e.target);
+            if (!($cur_elem.hasClass('channel_wrap') || $cur_elem.parents('div').hasClass('channel_wrap')) && (!($cur_elem.hasClass('channeltype')))) {
+                $('.channel_wrap').hide();
+            }
+        });
+        var $channeltype = $('#channeltype');
+        //选择相关数据
+        $('.search_condition').delegate('.sure_select', 'click', function () {
+            var $radio_checked = $('.channel_wrap').find(':radio:checked'),
+                nodeid = $radio_checked.attr('nodeid'),
+                $val = $radio_checked.siblings('label').text();
+            switch (nodeid) {
+                case 'children':
+                    var cur_id = $radio_checked.siblings('.select_opts').eq(1).val();
+                    $cur_val = $radio_checked.siblings('.select_opts').find('option:selected').text();
+                    $channeltype.attr({ 'channelid': cur_id, 'channeltype': 'hall' })
+                        .val($cur_val);
+                    break;
+                default:
+                    $channeltype.attr({ 'channelid': nodeid, 'channeltype': channeltype_obj[nodeid] })
+                        .val($val);
+            }
+            $('.channel_wrap').hide();
+        })
+
     },
     //充值走势数据转化
     get_trend_data: function (origin_data) {
-        //var new_data = {
-        //    'Statis': {
-        //        'TotalMoney': 0,
-        //        'TotalPayNum': 0,
-        //        'TotalPayUsers': 0,
-        //        'PerDayMoney': 0,
-        //        'PerDayUsers': 0,
-        //        'PerUserMoney': 0,
-        //        'PerTimesMoney': 0,
-        //    },
-        //    'Details': {
+        console.log(origin_data);
+        var details = origin_data.Details,
+            len = details.length,
+            total_money = 0,
+            total_paynum = 0,
+            total_user = 0;
+        for (var i = 0; i < len; i++) {
+            details[i].Money = details[i].Money / 100;
+            //人均充值笔数
+            details[i].PerUserTimes = Math.round(details[i].PayNum / details[i].PayUsers) || 0;
+            //人均充值额度
+            details[i].PerUserMoney = parseFloat((details[i].Money / (details[i].PayUsers)).toFixed(2)) || 0;
+            //平均单笔充值额度
+            details[i].PerTimesMoney = parseFloat((details[i].Money / details[i].PayNum).toFixed(2)) || 0;
 
-        //    }
-        //}
-        for (var i = 0, len = origin_data.length; i < len; i++) {
-            origin_data[i].PerUserTimes = origin_data[i].PayNum / origin_data[i].PayUsers;
-            origin_data[i].PerUserMoney = origin_data[i].Money / origin_data[i].PayUsers;
-            origin_data[i].PerTimesMoney = origin_data[i].Money / origin_data[i].PayUsers;
+            total_money += details[i].Money;
+            total_paynum += details[i].PayNum;
+            total_user += details[i].PayUsers;
+
+            details[i].Date = common.to_split_date(details[i].Date);
+            details[i].Money = parseFloat((details[i].Money).toFixed(2));
         }
+        origin_data.Totals = {};
+        //充值总额
+        origin_data.Totals.TotalMoney = total_money;
+        //充值总笔数
+        origin_data.Totals.TotalPayNum = total_paynum;
+        //总充值人数（单日去重）
+        origin_data.Totals.UsersPerday = total_user;
+        //总充值人数（范围去重）
+        origin_data.Totals.UsersByday = origin_data.Users;
+        //日均充值笔数
+        origin_data.Totals.PerDayMoney = Math.round(total_paynum / len);
+        //日均充值人数(单日去重)
+        origin_data.Totals.PerDayUsersPerDay = Math.round(total_user / len);
+        //日均充值人数(范围去重)
+        origin_data.Totals.PerDayUsersByDay = Math.round(origin_data.Users / len);
+        //人均充值额度（单日去重）
+        origin_data.Totals.PerUserMoneyPerDay = (total_money / total_user).toFixed(2);
+        //人均充值额度（范围去重）
+        origin_data.Totals.PerUserMoneyByDay = (total_money / origin_data.Users).toFixed(2);
+        //日均充值额度
+        origin_data.Totals.PerDayMoney = (total_money / len).toFixed(2);
+        //单笔平均额度
+        origin_data.Totals.TotalPerTimesMoney = (total_money / total_paynum).toFixed(2);
+        return origin_data;
+    },
+    //总计列表数据展示
+    total_data_show: function (data) {
+        //创建总计列表
+        var total_list = create_total_list(data);
+        $('.total_data_ul').empty().append(total_list);
+    },
+    //充值占比数据转化
+    get_ratio_data: function (origin_data) {
+        var new_data = {
+            'Totals': {
+                'TotalPayAmount': 0,
+                'TotalPayUsers':0
+            },
+            'Details': origin_data
+        }
+        var total_pay_amout = 0,
+            total_pay_users = 0,
+             len = origin_data.length
+        //计算总额
+        for (var i = 0; i < len; i++) {
+            total_pay_amout += origin_data[i].PayAmount;
+            total_pay_users += origin_data[i].PayUsers;
+        }
+        new_data.Totals.TotalPayAmount = total_pay_amout;
+        new_data.Totals.TotalPayUsers = total_pay_users;
+
+        //计算占比
+        for (var i = 0; i < len; i++) {
+            new_data.Details[i].PerAmount = ((new_data.Details[i].PayAmount / total_pay_amout) * 100).toFixed(2) + '%';
+            new_data.Details[i].PerUsers = ((new_data.Details[i].PayUsers / total_pay_users) * 100).toFixed(2) + '%';
+        }
+        return new_data;
     }
 }
+//创建总计列表
+function create_total_list(data) {
+    var keys = common.get_keys(data),
+        str = '';
+    for (var i = 0, len = keys.length; i < len; i++) {
+        str += '<li><label>' + total_list_obj[keys[i]] + '：</label></ br>' +
+            '<span>' + data[keys[i]]+ '</span>';
+    }
+    return str;
+}
+//获取值id的名字
+
 //创建弹出框
 function create_channel_pop(channels) {
     var channels_data = channels.data;
-    var keys = get_keys(channels.data);
+    var keys = common.get_keys(channels.data);
     var str = '<div class="channel_wrap"><ul>'+
-        '<li> <input type="radio" name="channel" id="curid_all"  nodeid="all" /><label for="curid_all">所有渠道</label></li>';
+        '<li> <input type="radio" name="channel" id="curid_all"  nodeid="all" checked="checked" /><label for="curid_all">所有渠道</label></li>';
     for (var i = 0, len = keys.length; i < len; i++) {
         if (typeof (channels_data[keys[i]]) == 'number') {
             str += '<li><input type="radio" name="channel" id="curid_' + channels_data[keys[i]] + '" nodeid="' + channels_data[keys[i]] + '"><label for="curid_' + channels_data[keys[i]] + '">' + channel_obj[keys[i]] + '</label></li>'
         } else {
-            str += '<li class="has_options"><input type="radio" name="channel" id="curid_"><label for="curid_">' + channel_obj[keys[i]] + '</label>： <br><select class="select_opts">';
+            str += '<li class="has_options"><input type="radio" nodeid="children" name="channel" id="curid_"><label for="curid_">' + channel_obj[keys[i]] + '</label>： <br><select class="select_opts">';
             var cur_data = channels_data[keys[i]];
             for (var j = 0, options_len = cur_data.length; j < options_len; j++) {
-                str += '<option nodeid="' + cur_data[j][channels.id] + '">' + cur_data[j][channels.name] + '(' + cur_data[j][channels.id] + ')' + '</option>';
+                str += '<option value="' + cur_data[j][channels.id] + '">' + cur_data[j][channels.name] + '(' + cur_data[j][channels.id] + ')' + '</option>';
             }
             str+='</select></li>';
         }
@@ -108,20 +223,13 @@ function create_channel_pop(channels) {
     str += '</ul>' +
         '<a class="sure_select">确定</a>'+
         '</div>';
+    log(str);
     $('#channeltype').after(str);
     //使用下拉框插件
     $(".select_opts").select2({
         placeholder: "Select a State",
         allowClear: true
     });
-}
-//获取key
-function get_keys(channeldata) {
-    var arr = [];
-    for (key in channeldata) {
-        arr.push(key);
-    }
-    return arr;
 }
 
 

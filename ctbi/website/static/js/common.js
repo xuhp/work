@@ -26,6 +26,21 @@ var common={
 		this_win.find('.frame_wrap').hide();
 		this_win.find('div[name="con'+num+'"]').show();
 	},
+    //将all转换成-1
+	change_all: function (str) {
+	    if (str == 'all') {
+            return -1
+	    }
+	    return str;
+	},
+    //获取键值
+	get_keys: function (data) {
+	    var arr = [];
+	    for (key in data) {
+	        arr.push(key);
+	    }
+	    return arr;
+	},
 	//定位到最底层,主要为了解决iframe的跨越调用问题
 	get_bottom:function($win){
 		if($win.find('body').attr('class')=='bottom_frame'){
@@ -42,7 +57,7 @@ var common={
     //获取UTC时间
 	to_utc_time: function (date) {
 	    var time_arr = date.split(' ');
-	    console.log(time_arr);
+	    log(time_arr);
 	},
 	//将毫秒转换为正常时间
 	to_normal_date:function(ms){
@@ -97,7 +112,7 @@ var common={
 	getUrlPara:function(){
 	    var argsnum = arguments.length;
 	    if (argsnum == 0 || argsnum > 2) {
-	        console.log('args error');
+	        log('args error');
 	        return null;
 	    }
 	    var name = arguments[0];
@@ -152,4 +167,33 @@ function pad(num, n) {
         len++;
     }
     return num;
+}
+
+function log(msg) {
+    if (window["console"]) {
+        if ((navigator.userAgent.indexOf('MSIE') >= 0) && (navigator.userAgent.indexOf('Opera') < 0)) {
+            console.log(msg);
+        } else {
+            console.trace();
+            console.log(msg);
+        }
+    }
+}
+
+//用于调整自适应布局
+var flag = 0;
+$(window).resize(function () {
+    if (flag == 0) {
+        resize_fn();
+    }
+    setTimeout(function () {
+        flag = 0;
+    },2000)
+})
+
+function resize_fn() {
+    flag = 1;
+    setTimeout(function () {
+        $(window).trigger('resize');
+    }, 1000)
 }

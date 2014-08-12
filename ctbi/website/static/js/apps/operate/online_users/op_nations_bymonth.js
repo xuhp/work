@@ -37,7 +37,8 @@ $(function () {
             $header.delegate('.data_search_btn', 'click', function () {
                 var bengin_origin = $start_time.val(),
                     end_origin = $end_time.val();
-                if (bengin_origin == 'undefined' || end_origin == 'undefined') {
+                //日期判断
+                if (!date_judgment.bymonth(bengin_origin, end_origin)) {
                     return false;
                 }
                 var begin = common.to_nosplit_month(bengin_origin),
@@ -48,8 +49,8 @@ $(function () {
                     'begin': begin,
                     'end': end
                 }
-                console.log(this_url);
-                console.log(json_data);
+                log(this_url);
+                log(json_data);
 
                 //获取数据并执行相关操作
                 var origin_data = get_origin_data({
@@ -100,7 +101,7 @@ $(function () {
     //回调函数
     function callbackfn(data) {
         var data = get_show_data(data.sort(compare));
-        console.log(data);
+        log(data);
         if (data.length == 0) {
             $data_show.empty().append('<div class="no_data">对不起，您搜索的时间段内没有数据！</div>');
             download_origin_data = null;
@@ -112,10 +113,6 @@ $(function () {
             charts_bymonth.init(data);
             //表格展示
             download_origin_data = table_show_bymonth(data);
-
-            setTimeout(function () {
-                $(window).trigger('resize');
-            }, 10);
         }
     }
     

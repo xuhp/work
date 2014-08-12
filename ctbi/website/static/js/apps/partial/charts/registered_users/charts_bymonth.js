@@ -57,7 +57,7 @@ var charts_show_bymonth = {
                 data: []
             };
             for (var j = 0, len = orgin_data.length; j < len; j++) {
-                var total_time = orgin_data[j].Date.toString();
+                var total_time = orgin_data[j].Date.toString()+'/00';
                 //high_stock内部采用UTC时间计算
                 var snap_arr = [+new Date(total_time), orgin_data[j][name.key]];
                 seriesOptions[i].data.push(snap_arr);

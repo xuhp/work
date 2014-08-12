@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <config name="TcManageCenterHeader" platformID="38" credential="2sdcxaa12"></config>
+  <config name="TcManageCenterLoginUrl" url="http://admin.ct108.org:2046/syslogin.aspx"></config>
+  <config name="TcManageCenterAdminUrl" url="http://admin.ct108.org:2046"></config>
+
+  <config name="UserCenterHeader" platformID="133" credential="mx832h&amp;ag"></config>
+
+  <config name="GsSysDB" address="Host=192.168.2.31;Protocol=TCP;Port=3306;Compress=false;Pooling=true;Min Pool Size=1;Max Pool Size=100;Connection Lifetime=0;DataBase=gssysdb;User=wangzs;Password=Wangzhishuai;Charset=utf8;"></config>
+  <config name="GsBiDB" address="Host=192.168.2.31;Protocol=TCP;Port=3306;Compress=false;Pooling=true;Min Pool Size=1;Max Pool Size=100;Connection Lifetime=0;DataBase=gsbidb;User=wangzs;Password=Wangzhishuai;Charset=utf8;"></config>
+  <config name="TcLoginUsersDB" address="mongodb://wzs:wzs@9fpj23x:27017,83wm73x:27017,JY4683X:27017/?connect=replicaset;slaveOk=true;safe=true;connectTimeoutMS=2000;socketTimeoutMS=2000" db="loginUsers"></config>
+  <config name="TcPayDataDB" address="mongodb://wzs:wzs@9fpj23x:27017,83wm73x:27017,JY4683X:27017/?connect=replicaset;slaveOk=true;safe=true;connectTimeoutMS=2000;socketTimeoutMS=2000" db="GsPayDB"></config>
+  <config name="Redis" host="192.168.1.101" post="6379" db="12" maxWritePoolSize="10" maxReadPoolSize="10"></config>
+  
+  <config name="NoPermissionUrl" url="/site/util/nopermission"></config>
+  <config name="ErrorUrl" url="/site/util/error"></config>
+
+  <config name="AppHistoryLimit" limit="50"></config>
+  <config name="AppAbout" notfound="未知应用,应用已失效！"></config>
+
+  <config name="AgentUrlGet" url="http://localhost:1441/data/get/"></config>
+
+  <config name="TcPayChannels" hallappid="30" siteappid="6901"></config>
+
+  <config name="NoLoginTest" value="False" username="chendong" truename="测试人员" uid="274"></config>
+  <config name="SuperAdmin" usernames="wangzs"></config>
+</root>

@@ -22,7 +22,7 @@ $(function () {
     //布局
     adaption_w_h();
 
-    var op_game_users_byday = {
+    var tc_pay_trend = {
         init: function () {
             this._jdpicker();
             this._clear_value();
@@ -46,8 +46,8 @@ $(function () {
                 //获取时间
                 var bengin_origin = $('#start_time').val(),
                     end_origin = $('#end_time').val();
-                console.log(new Date(bengin_origin).getTime());
-                if (bengin_origin == '' || end_origin == '') {
+                //日期判断
+                if (!date_judgment.byday(bengin_origin, end_origin)) {
                     return false;
                 }
                 var begin = common.to_nosplit_date(bengin_origin),
@@ -70,7 +70,6 @@ $(function () {
                         regtime = common.get_no_split_date(cur_ms - 90 * 24 * 60 * 60 * 1000);
                         break;
                 }
-                console.log(regtime);
 
                 var this_url = url.domain + url.port + interFace.pay_tcpaytrend;
                 var json_data = {
@@ -80,8 +79,6 @@ $(function () {
                     'minamount': minamount,
                     'regtime': regtime
                 }
-                console.log(this_url);
-                console.log(json_data);
                 //获取数据并执行相关操作
                 var origin_data = get_origin_data({
                     url: this_url,//url地址，必填
@@ -113,25 +110,23 @@ $(function () {
     
     //回调函数
     function callbackfn(data) {
-        console.log(data);
-        var data = paydata_common.get_trend_data(data.Details.sort(compare));
-
-        if (data.length == 0) {
+        data.Details = data.Details.sort(compare);
+        var origin_data = paydata_common.get_trend_data(data);
+        if (data.Details.length == 0) {
             $con.append('<div class="no_data">对不起，您搜索的时间段内没有数据！</div>');
             download_origin_data = null;
         } else {
-            $('.data_wrap,.show_nav').show();
+            $('.total_data,.data_wrap,.show_nav').show();
+            //总计列表展示
+            paydata_common.total_data_show(origin_data.Totals);
             //图表展示
-            charts_show_byday.init(data);
+            charts_show_trend.init(origin_data.Details);
             //表格展示
-            download_origin_data = table_show_byday(data);
+            download_origin_data = table_show_trend(origin_data.Details);
 
-            setTimeout(function () {
-                $(window).trigger('resize');
-            }, 10)
         }
     }
 
     //初始化页面
-    op_game_users_byday.init();
+    tc_pay_trend.init();
 });

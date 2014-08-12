@@ -2,16 +2,18 @@
     Layout = "~/Views/Apps/Layout/_Layout_Search_Charts_Table1.cshtml";
 }
 
-<p class="fl">
-    <label for="selected_time">请选择日期：</label>
-    <input type="text" id="selected_time" name="selected_time" class="big_input add_clear_btn " />
-</p>
-<a class="data_search_btn fl pos_btn big_btn ml20">搜索</a>
+<div class="search_condition clearfix mr350">
+    <p class="fl">
+        <label for="selected_time">请选择日期：</label>
+        <input type="text" id="selected_time" name="selected_time" class="normal_input add_clear_btn w120" />
+    </p>
+    <p class="fl">
+        <a class="data_search_btn fl pos_btn normal_btn ml20">搜索</a>
+    </p>
+</div>
 
-<div class="attention_help_wrap">
+<div class="attention_help_wrap clearfix">
     <a class="app_help">Info</a>
-    @* 帮助信息 *@
-    @Html.Raw(ViewBag.Desc)
     <a class="download"><img src="/Static/image/common/icon/download.png" />表格数据下载</a>
 </div>
 
@@ -20,11 +22,14 @@
     <script src="/Static/js/apps/partial/charts/online_users/charts_perday.js"></script>
     <script src="/Static/js/apps/partial/table/online_users/table_perday.js"></script>
     <script src="/Static/js/apps/operate/online_users/op_nations_perday.js"></script>
+    <script src="/Static/js/common/help_info.js"></script>
     <script src="/Static/js/layout/nations.js"></script>
     <script>
         $(function () {
-            var state = @ViewBag.AttentionState;
-            nations.init(state);
+            var state = @ViewBag.AttentionState,
+                help_info=@Html.Raw(ViewBag.Desc);
+            //bottom代表指向下的提示框
+            nations.init(state,help_info,'top');
         });
     </script>
 }

@@ -18,6 +18,9 @@ var src={
 	attention:'/site/attention/index',
 	attention_manage:'/site/attention/manage',
 	apphistory: '/site/apphistory/index',
+	version: '/site/home/version',
+	about: '/site/home/about',
+    loginstatus: '/site/util/loginstatus',
     //在线人数
 	op_gameusers_perday: '/app/onlineusers/op/gameusers_perday',//游戏单日在线人数走势
 	op_gameusers_byday: '/app/onlineusers/op/gameusers_byday',//游戏多日在线人数走势
@@ -45,6 +48,7 @@ var src={
 	op_tchallusers_perday: '/app/loginusers/op/tchallusers_perday',//同城游大厅登录人数单日查询应用
 	op_tchallusers_byday: '/app/loginusers/op/tchallusers_byday',//同城游大厅登录人数多日查询应用
 	op_tchallusers_compare: '/app/loginusers/op/tchallusers_compare',//同城游大厅登录人数同比环比应用
+	op_tchallusers_peruser:'/app/loginusers/op/tchallusers_peruser',//同城游大厅用户每天登陆情况分析应用
 	op_tccityusers2_perday: '/app/loginusers/op/tccityusers2_perday',//同城游地级市（包含县区）登录人数单日查询应用
 	op_tccityusers2_byday: '/app/loginusers/op/tccityusers2_byday',//同城游地级市（包含县区）登录人数多日查询应用
 	op_tccityusers2_compare: '/app/loginusers/op/tccityusers2_compare',//同城游地级市（包含县区）登录人数同比环比应用
@@ -87,6 +91,7 @@ var page_mapped = {
     tchallusers_perday: src.op_tchallusers_perday,
     tchallusers_byday: src.op_tchallusers_byday,
     tchallusers_compare: src.op_tchallusers_compare,
+    tchallusers_peruser:src.op_tchallusers_peruser,
     tccityusers2_perday: src.op_tccityusers2_perday,
     tccityusers2_byday: src.op_tccityusers2_byday,
     tccityusers2_compare: src.op_tccityusers2_compare,
@@ -106,6 +111,9 @@ var interFace={
 	remove_attention: '/site/attention/remove',//移除指定appid的关注
 	general_download: '/app/csv/report/normal',//普通csv文件下载
 	recordhistory: '/site/apphistory/recordhistory',//添加应用的浏览记录
+	gamesbymonth: '/app/onlineusers/report/gamesbymonth',//游戏在线人数月度报表导出应用
+	citiesbymonth2: '/app/onlineusers/report/citiesbymonth2',//地级市(包含县区)在线人数月度报表导出应用
+
     //在线人数
 	gameusers_perday: '/app/onlineusers/data/gameusers_perday',//获取单日的在线人数详情信息
 	gameusers_byday: '/app/onlineusers/data/gameusers_byday',//获取多日的在线人数信息
@@ -144,6 +152,7 @@ var interFace={
 	login_tchallusers_perday: '/app/loginusers/data/tchallusers_perday',//同城游大厅,获取单日登录人数详情信息【接口】
 	login_tchallusers_byday: '/app/loginusers/data/tchallusers_byday',//同城游大厅,获取多日登录人数详情信息【接口】
 	login_tchallusers_compare: '/app/loginusers/data/tchallusers_compare',//同城游大厅,获取登录人数同比环比信息【接口】
+	login_tchallusers_peruser: '/app/loginusers/data/tchallusers_peruser',//同城游大厅用户每天登陆情况分析应用
 	login_tcnationusers_perday: '/app/loginusers/data/tcnationusers_perday',//同城游全国,获取单日登录人数详情信息【接口】
 	login_tcnationusers_byday: '/app/loginusers/data/tcnationusers_byday',//同城游全国,获取单日登录人数详情信息【接口】
 	login_tcnationusers_compare: '/app/loginusers/data/tcnationusers_compare',//同城游全国,获取登录人数同比环比信息【接口】
@@ -171,5 +180,17 @@ var icon={
 
 /* 错误提示 */
 var tipsStr={
-	ajax_system_error:'对不起，系统发生未知错误'
+    ajax_system_error: '对不起，系统发生未知错误',
+    search_tip: '请完善查询条件',
+    date_diff: '开始时间不能大于结束时间',
+    gt_90day: '查询时间不能大于90天',
+    gt_24month:'查询时间不能大于24个月'
+
+}
+
+//充值渠道配置
+var channeltype_obj = {
+    'all': '',
+    '6901': 'appid',
+    '30': 'appid'
 }

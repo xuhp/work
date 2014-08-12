@@ -21,6 +21,7 @@
 			<include>~/Static/js/common/pay_attention.js</include>
       <include>~/Static/js/common/download_search_table.js</include>
       <include>~/Static/js/common/add_nav_con.js</include>
+      <include>~/Static/js/common/date_of_judgment.js</include>
       <include>~/Static/js/apps/partial/list/list_nav.js</include>
 		</bundles>
     
@@ -47,6 +48,15 @@
       <include>~/Static/js/apps/partial/table/login_users/table_perday.js</include>
       <include>~/Static/js/apps/partial/table/login_users/table_compare.js</include>
     </bundles>
+
+   <bundles name="~/bundles/paydata/charts_table/js">
+    <include>~/Static/js/apps/partial/table/pay_data/table_trend.js</include>
+     <include>~/Static/js/apps/partial/charts/pay_data/charts_trend.js</include>
+     <include>~/Static/js/apps/partial/table/pay_data/table_ratio_money.js</include>
+     <include>~/Static/js/apps/partial/table/pay_data/table_ratio_users.js</include>
+     <include>~/Static/js/apps/partial/charts/pay_data/charts_ratio_money.js</include>
+     <include>~/Static/js/apps/partial/charts/pay_data/charts_ratio_users.js</include>
+   </bundles>
     
 	</scripts>
     

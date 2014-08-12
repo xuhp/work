@@ -41,7 +41,7 @@ function get_origin_data(options) {
                 alert(json.data);
             }else{
                 this_data = json.data;
-                console.log(this_data);
+                log(this_data);
                 //执行回调函数
                 opts.callback.funName(this_data, opts.callback.options);
             }

@@ -16,8 +16,10 @@ $(function(){
 		    url: this_url,//url地址，必填
 		    async: false,//是否同步，false为同步
 		}),//所有数据
-		data_search={"Groups":[]};//搜索数据
-		
+		data_search = { "Groups": [] };//搜索数据
+
+	log(data_all);
+
     //给data_all的最外层加入id,统一对数据的操作
     data_all.ID='wrap00';
 	var site_nav={
@@ -30,6 +32,7 @@ $(function(){
 			this._open_app();
 			this._navsite();
 			this._app_search();
+			this._no_permission();
 		},
 	    //清除input内容
 		_clear_value: function () {
@@ -63,7 +66,7 @@ $(function(){
 		},
 		//点击进入下一层
 		_go_to_child_groups:function(){
-			$con.delegate('.child_groups','click',function(){
+		    $con.delegate('.allow_true .child_groups', 'click', function () {
 				var $app=$(this).parents('.app'),
 					nodeid=$app.attr('nodeid'),
 					title=$app.find('.app_info a').text(),
@@ -80,7 +83,7 @@ $(function(){
 		},
 		//打开app
 		_open_app:function(){
-			$con.delegate('.add_nav_con','click',function(){
+		    $con.delegate('.allow_true .add_nav_con', 'click', function () {
 				var nodeid=$(this).parents('.app').attr('nodeid'),
 					cur_data=get_cur_data(data_all,nodeid);
 				add_nav_con({
@@ -89,6 +92,12 @@ $(function(){
 					id:cur_data.ID
 				})
 			});
+		},
+	    //无权限操作
+		_no_permission: function () {
+		    $con.delegate('.allow_false', 'click', function () {
+		        alert('对不起，您没有访问此应用的权限！');
+		    })
 		},
 		//面包屑导航操作
 		_navsite:function(){
@@ -107,18 +116,27 @@ $(function(){
 				create_navsite(data_navsite_cur);
 			})
 		},
-		//app搜索
+	    //app搜索
 		_app_search:function(){
 			$header.delegate('#app_search','keyup',function(){
 				//将搜索数据清空
 				data_search={"Groups":[]};
-				var	$val=$(this).val();
-				//重新获取搜索数据
-				get_search_data(data_all,$val,'root');
-				//展示数据
-				create_con(data_search);
-				//修改面包屑导航
-				$navsite.text('搜索中...');
+				var $val = $(this).val();
+			    //当$val为空时，回到初始数据首页
+				if ($val == '') {
+				    //创建应用层
+				    create_con(data_all);
+				    $navsite.text('网站地图导航');
+				} else {
+				    //重新获取搜索数据
+				    get_search_data(data_all, $val, '网站导航');
+                    //搜索数据
+				    log(data_search);
+				    //展示数据
+				    create_con(data_search);
+				    //修改面包屑导航
+				    $navsite.empty().append('<a class="navsite_a" nodeid="wrap00">网站地图导航</a><span class="songti"> &gt; </span><span>搜索页</span>');
+				}
 			})
 		}
 	};
@@ -161,7 +179,7 @@ $(function(){
 				//第二层循环输出app
 				var a_len=data.Groups[i].Navs.length;
 				for(var j=0;j<a_len;j++){
-					str+='<div class="app" nodeid="'+data.Groups[i].Navs[j].ID+'">';
+				    str += '<div class="app allow_' + data.Groups[i].Navs[j].Allow + '"  nodeid="' + data.Groups[i].Navs[j].ID + '">';
 					//如果NavType为nav，则还含有子app
 					//否则为app,点击直接打开应用
 					if(data.Groups[i].Navs[j].NavType=='nav'){
@@ -178,7 +196,7 @@ $(function(){
 			str+='</div></div>';
 		}
 		$con.empty().append(str);	
-	};
+	}
 	
 	//修改面包屑导航数据
 	function revise_navsite_data(data_all, nodeid, data_navsite_cur) {
@@ -223,10 +241,6 @@ $(function(){
 	
 	//获取符合搜索要求的数据,将数据格式拼凑成和源数据一样，公用创建函数
 	function get_search_data(data_all,$val,groups_title){
-		//当$val为空时，直接退出函数
-		if($val==''){
-			return false;
-		}
 		var	g_len=data_all.Groups.length;
 		for(var i=0;i<g_len;i++){
 			var a_len=data_all.Groups[i].Navs.length,
@@ -251,7 +265,6 @@ $(function(){
 						'Tooltip':data_all.Groups[i].Navs[j].Tooltip
 					}
 					new_data.Navs.push(single_data);
-					
 				}
 				//继续循环
 				var new_title=groups_title+' > '+ this_title;

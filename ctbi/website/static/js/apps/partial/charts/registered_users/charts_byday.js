@@ -13,7 +13,7 @@ var charts_show_byday = {
     _charts_show: function (data) {
         //显示图表
         var stock_data = this._get_stock_data(data);
-        console.log(stock_data);
+        log(stock_data);
         $('.charts_wrap').highcharts('StockChart', {
             rangeSelector: {
                 selected: 1,

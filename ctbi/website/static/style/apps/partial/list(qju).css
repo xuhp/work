@@ -1,0 +1,149 @@
+/*
+* /Static/style/apps/partial/list.css
+*/
+.slide_head{
+	height:30px;
+	background:#000;
+    border-top:1px solid #666;
+    position:relative;
+}
+.slide_head h1
+{
+    color:#fff;
+    line-height:30px;
+    padding:0 20px 0 8px;
+    font-weight:bold;
+    font-size:13px;
+    cursor:pointer;
+}
+.app_ul_wrap
+{
+    background:#6A6A6A;
+    color:#fff;
+    box-shadow:3px 3px 6px #000;
+    border-radius:2px;
+    padding:5px;
+    display:none;
+    position:absolute;
+    top:0;
+    width:250px;
+    right:-260px;
+    z-index:999;
+}
+.app_ul_nav
+{
+    width:100%;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.app_ul_nav li
+{
+    line-height:25px;
+    padding:0 25px 0 5px;
+    position:relative;
+}
+.app_ul_nav .split_line
+{
+    height:0;
+    line-height:0px;
+    border-top:1px solid #fff;
+    margin:5px 0 ;
+}
+.total_close
+{
+    text-align:center;
+}
+.app_ul_nav li b
+{
+    position:absolute;
+    right:5px;
+    display:none;
+    top:0px;
+    font-weight:100;
+}
+.app_ul_nav li:hover b
+{
+    display:inline-block;
+}
+.app_ul_nav li:hover
+{
+    background:#333;
+    cursor:pointer;
+    box-shadow:0 0 5px #333;
+}
+.search_info{
+	height:22px;
+	padding:5px;
+	background:#7b7b7b;
+    border:1px solid #999;
+    box-shadow:1px 1px 3px #000;
+    position:relative;
+}
+.search_info input{
+	width:88%;
+	padding:0 1%;
+    padding-left:11%;
+	border:none;
+	height:100%;
+}
+.search_icon {
+    width: 15px;
+    height: 15px;
+    display: block;
+    background: url("/Static/image/common/icon/search.png");
+    position: absolute;
+    top: 8px;
+    left: 7px;
+    color: #bbb;
+    z-index: 9;
+}
+.right_triangle
+{
+    width: 0;
+    height: 0;
+    line-height:0px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #fff;
+    display:block;
+    position:absolute;
+    right:10px;
+    top:10px;
+}
+.table_con tr:hover
+{
+    cursor:pointer;
+}
+.frame_wrap
+{ 
+    height:100%;
+}
+.attention_help_wrap
+{
+    height:30px;
+    line-height:30px;
+    color:#fff;
+    width:98%;
+    padding:0 1% 1px;
+    background:#454545;
+}
+.attention_help_wrap a
+{
+    color:#fff;
+    cursor:pointer;
+    display:inline-block;
+    background:#000;
+    height:29px;
+    text-align:center;
+    width:49.5%;
+}
+.attention_help_wrap a:hover
+{
+    text-decoration:none;
+    background:#111;
+}
+.add_attention,remove_attention
+{
+    float:left;
+}

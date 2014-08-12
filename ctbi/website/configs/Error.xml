@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <error code="1000000">对不起，您尚未开通此权限，请联系管理员申请权限操作！</error>
+  <error code="1000001">请勿非法操作！</error>
+  <error code="1000002">取消关注发生异常！</error>
+  <error code="1000003">添加关注发生异常！</error>
+</root>

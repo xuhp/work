@@ -41,7 +41,8 @@ $(function () {
             $header.delegate('.data_search_btn', 'click', function () {
                 var date_orgin = $selected_time.val(),
                     date = common.to_nosplit_date(date_orgin);
-                if (date_orgin == 'undefined') {
+                if (date_orgin == '') {
+                    alert(tipsStr.search_tip);
                     return false;
                 }
                 var this_url = url.domain + url.port + interFace.nationusers_perday;
@@ -108,9 +109,6 @@ $(function () {
             charts_show_perday.init(data);
             //表格展示
             download_origin_data = table_show_perday(data);
-            setTimeout(function () {
-                $(window).trigger('resize');
-            }, 10)
         }
     }
     //初始化页面

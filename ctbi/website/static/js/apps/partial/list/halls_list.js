@@ -38,8 +38,8 @@ var list = {
         //获取表格原始数据
         var row_data = get_data(data);
         table_data.row = row_data;
+        log(row_data);
         this._table_parsing(table_data);
-        this._clearValue();
         this._search(row_data);
         this._list_nav(data);
     },
@@ -50,10 +50,6 @@ var list = {
         $('.table_wrap').table(table_data);
         //对外层元素和table重新进行布局（主要是为了实现滚动条添加padding的效果）
         $(window).trigger('resize');
-    },
-    //label_tip插件应用
-    _clearValue: function () {
-        $('.add_clear_btn').clearValue();
     },
     //应用搜索
     _search: function (row_data) {
@@ -78,8 +74,8 @@ function create_table(data) {
 function get_search_data(row_data, $val) {
     var search_data = [];
     for (var i = 0, len = row_data.length; i < len; i++) {
-        console.log(row_data[i].values.HallName);
-        if (row_data[i].values.HallName != null && row_data[i].values.HallName.indexOf($val) >= 0) {
+        log(row_data[i].values.HallName);
+        if ((row_data[i].values.HallName != null && row_data[i].values.HallName.indexOf($val) >= 0) || row_data[i].values.HallID==$val) {
             search_data.push(row_data[i]);
         }
     }

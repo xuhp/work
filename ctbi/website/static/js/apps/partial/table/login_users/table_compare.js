@@ -199,7 +199,7 @@ function table_show_compare(data) {
     var keys = get_key(table_data);
     var row_data = get_table_data(data, keys);
     table_data.row = row_data;
-    console.log(data);
+    log(data);
     $('.data_show').table(table_data);
     $('.choose_condition').show();
     //计算表格宽度

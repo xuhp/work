@@ -1,0 +1,58 @@
+﻿@*左右布局*@
+@using CT.BI.WEB.BASE
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>地级市(包含县区)在线人数月度报表导出</title>
+    <link href="/Static/style/common.css" rel="stylesheet" />
+    <link href="/Static/style/apps/report.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="attention_help_wrap clearfix">
+    </div>
+    <div class="h_per30"></div>
+    <div class="report_wrap clearfix cb">
+        <label for="selected_time" class="fl mr10"><b>请选择月份：</b></label>
+        <input type="text" id="selected_time" name="selected_time" onclick="setmonth(this)" class="big_input add_clear_btn w120 white_bg fl" />
+        <button class="data_search_btn fl dark_btn big_btn ml20">导出报表</button>
+    </div>
+     @if (BaseController.IsResoucePack())
+     { 
+         @Styles.Render("~/bundles/comlib/css")
+         @Scripts.Render("~/bundles/comlib/js")
+         @Scripts.Render("~/bundles/busilib/js")
+     }
+     else
+     {
+        <script src="/Static/plugins/jquery/1.11/jquery.min.js"></script>
+        <script src="/Static/js/common.js"></script>
+        <script src="/Static/js/config.js"></script>
+        <script src="/Static/js/common/getdata/get_origin_data.js"></script>
+        <script src="/Static/js/common/pay_attention.js"></script>
+        <script src="/Static/plugins/select_month/DatePicker.js"></script>
+     }
+    <script src="/Static/js/apps/partial/export/export_report.js"></script>
+    <script>
+        $(function () {
+            //初始化
+            export_report.init({
+                'interFace': 'citiesbymonth2'
+            });
+        })
+    </script>
+    <script src="/Static/js/layout/nations.js"></script>
+    <script>
+        $(function () {
+            var state = @ViewBag.AttentionState;
+            nations.init(state);
+        });
+    </script>
+</body>
+</html>
+
+
+     
+   

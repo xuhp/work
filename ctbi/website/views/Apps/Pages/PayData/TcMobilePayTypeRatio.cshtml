@@ -1,15 +1,15 @@
 ﻿@{
-    Layout = "~/Views/Apps/Layout/_Layout_Search_Charts_Table1.cshtml";
+    Layout = "~/Views/Apps/Layout/_Layout_Search_Charts_Table4.cshtml";
 }
-<div class="search_condition clearfix">
+<div class="search_condition clearfix mr350">
 <p class="fl">
 	<label>日期范围：</label>
-	<input type="text" id="start_time" name="start_time" class="normal_input add_clear_btn " /> —
-    <input type="text" id="end_time" name="end_time" class="normal_input add_clear_btn mr20" />
+	<input type="text" id="start_time" name="start_time" class="normal_input add_clear_btn w80" />
+    <input type="text" id="end_time" name="end_time" class="normal_input add_clear_btn mr20 w80" />
 </p>
 <p class="fl pr">
-    <label for="channeltype">充值渠道：</label>
-    <input id="channeltype" name="channeltype" class="normal_input add_clear_btn"/>
+    <label for="channeltype" class="channeltype">充值渠道：</label>
+    <input id="channeltype" name="channeltype" class="channeltype normal_input add_clear_btn w80" channeltype="" channelid="all" />
 </p>
 <p class="fl">
     <a class="data_search_btn fl pos_btn normal_btn ml20">搜索</a>
@@ -17,32 +17,48 @@
 </div>
 <div class="attention_help_wrap">
     <a class="app_help">Info</a>
-    @* 帮助信息 *@
-    @Html.Raw(ViewBag.Desc)
     <a class="download"><img src="/Static/image/common/icon/download.png" />表格数据下载</a>
 </div>
 
 @section BottomResource{
   @if (CT.BI.WEB.BASE.BaseController.IsResoucePack())
      { 
-        @Scripts.Render("~/bundles/loginusers/charts_table/js")
+          @Scripts.Render("~/bundles/paydata/charts_table/js")
      }
      else
      {
-        
+         <script src="/Static/js/apps/partial/table/pay_data/table_trend.js"></script>
+        <script src="/Static/js/apps/partial/charts/pay_data/charts_trend.js"></script>
+        <script src="/Static/js/apps/partial/table/pay_data/table_ratio_money.js"></script>
+        <script src="/Static/js/apps/partial/table/pay_data/table_ratio_users.js"></script>
+        <script src="/Static/js/apps/partial/charts/pay_data/charts_ratio_money.js"></script>
+        <script src="/Static/js/apps/partial/charts/pay_data/charts_ratio_users.js"></script>
      }
     @Scripts.Render("~/bundles/highstock")
     <script src="/Static/js/apps/operate/paydata/common/common.js"></script>
-    <script src="/Static/js/apps/operate/paydata/tc_pcpay_type_ratio.js"></script>
+    <script src="/Static/js/apps/operate/paydata/tc_mobilepay_type_radio.js"></script>
     <script>
-
+        var channeldata=@Html.Raw(ViewBag.Channels);
+        channeldata_wrap={
+            'Games':channeldata
+        }
+        tc_mobilepay_type_radio.init({
+             'channels':{
+                 'data':channeldata_wrap,
+                 'id':'GameID',//创建select时用以区分手机和pc
+                 'name':'GameName',//同上
+             }
+         });
     </script>
 
+    <script src="/Static/js/common/help_info.js"></script>
     <script src="/Static/js/layout/nations.js"></script>
     <script>
         $(function () {
-            var state = @ViewBag.AttentionState;
-            nations.init(state);
+            var state = @ViewBag.AttentionState,
+              help_info=@Html.Raw(ViewBag.Desc);
+            //bottom代表向下的提示框
+            nations.init(state,help_info,'top');
         });
     </script>
 }

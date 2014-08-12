@@ -47,7 +47,7 @@
     }
     //右侧
     function east_layout($elem, opts) {
-        //添加拖动条
+        //添加拖动条data_all
         if (opts.resizer) {
             $elem.after(create_layout_resizer('east'));
         }
@@ -113,8 +113,8 @@
                 $('.ui_layout_resizer_move').css('left', e.clientX - diff);
             })
             //mouseup的时候解绑mousemove函数
-            $(document).unbind('mouseup').mouseup(function (e) {
-                $(document).unbind('mousemove');
+            $(document).mouseup(function (e) {
+                //$(document).unbind('mousemove');
                 $resizer_move = $parent.children('.ui_layout_resizer_move');
                 if ($resizer_move.length > 0) {
                     $elem.outerWidth($resizer_move.offset().left);

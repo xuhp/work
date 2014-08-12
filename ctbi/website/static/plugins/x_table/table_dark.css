@@ -33,7 +33,7 @@
 .table_con{
 	width:100%;
 }
-.table_con tr:hover td
+.table_con tr.cur_tr td
 {
     color:#fc3;
     background:#000;

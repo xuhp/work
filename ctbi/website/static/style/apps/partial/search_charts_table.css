@@ -9,7 +9,7 @@
 }
 .search_condition
 {
-    margin-right:350px;
+   
 }
 .search_condition p
 {
@@ -41,7 +41,6 @@
 .header .normal_input
 {
     background:#fff;
-    width:80px;
 }
 .no_data
 {
@@ -102,7 +101,7 @@
 .info_tip_wrap
 {
     position:absolute;
-    top:40px;
+    top:45px;
     right:20px;
     z-index:9999;
 }
@@ -132,4 +131,47 @@
 .checkbox_wrap label
 {
     margin-right:8px;
+}
+/*渠道选择*/
+.channel_wrap
+{
+    position:absolute;
+    background:#eee;
+    z-index:9999;
+    left:70px;
+    min-width:200px;
+    border-radius:5px;
+    box-shadow:1px 1px 5px #000;
+}
+.channel_wrap ul
+{
+    padding:5px;
+}
+.channel_wrap ul li
+{
+    height:25px;
+    line-height:25px;
+}
+.channel_wrap ul li label
+{
+    margin-left:5px;
+}
+.sure_select
+{
+    display:block;
+    margin-top:35px;
+    text-align:center;
+    height:30px;
+    line-height:30px;
+    background:#393939;
+    cursor:pointer;
+    border-radius:0 0 5px 5px;
+    color:#fff;
+    font-size:13px;
+
+}
+.sure_select:hover
+{
+    background:#000;
+    text-decoration:none;
 }

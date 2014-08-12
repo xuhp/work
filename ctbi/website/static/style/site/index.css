@@ -113,14 +113,14 @@ html, body {
 /*tab_nav*/
 .tab_nav{
 	height:30px;
-	padding:0 120px 0 120px;
-	position:relative;
+    position:relative;
+	/*padding:0 120px 0 120px;
+	position:relative;*/
 }
 .tab_nav_btn_wrap{
-	padding-right:30px;
-	position:absolute;
+	padding:0 40px 0 30px;
+	position:relative;
 	overflow:hidden;
-	top:0;
 }
 .tab_nav_btn_wrap_inner{
 	overflow:hidden;
@@ -164,7 +164,7 @@ html, body {
 .menu_nav{
 	position:absolute;
 	top:10px;
-	right:120px;
+	right:20px;
 }
 .menu_triangle{
 	font-size:14px;
@@ -217,10 +217,12 @@ html, body {
 }
 #main_right .frame_wrap{
 	height:100%;
-	display:none;
 }
-#main_right .frame_wrap{
-	display:block;
+.frame_wrap_index
+{
+    
+    background:url("/Static/image/common/index_bg.png") center no-repeat; 
+    background-size:80%;
 }
 /*slideNav*/
 #slideNav{
@@ -345,6 +347,10 @@ html, body {
 	padding: 5px 2px;
 	z-index: 9;
 	padding:2px;
+    max-height:400px;
+    overflow-y:auto;
+    overflow-x:hidden;
+
 }
 .menu_ul li{
 	cursor:pointer;

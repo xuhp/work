@@ -24,7 +24,7 @@ var download_origin_data;
 //布局
 adaption_w_h();
 
-var tc_pcpay_trend = {
+var tc_mobilepay_trend = {
     init: function (opts) {
         this._get_search_data(opts);
         this._jdpicker();
@@ -58,7 +58,8 @@ var tc_pcpay_trend = {
             //获取时间
             var bengin_origin = $start_time.val(),
                 end_origin = $end_time.val();
-            if (bengin_origin == 'undefined' || end_origin == 'undefined') {
+            //日期判断
+            if (!date_judgment.byday(bengin_origin, end_origin)) {
                 return false;
             }
             var begin = common.to_nosplit_date(bengin_origin),
@@ -66,33 +67,41 @@ var tc_pcpay_trend = {
             //获取充值额度
             var minamount = $('#minamount').val() || -1,
                 maxamount = $('#maxamount').val() || -1;
+            //判断是否仅首充
+            var firstpay = $('#firstpay')[0].checked;
             //获取用户注册时间
-            var reg_val = $('.regtime  option:selected').text(),
+            var regid = $('.regtime  option:selected').attr('nodeid'),
                 cur_ms = new Date().getTime(),
                 regtime;
-            switch (reg_val) {
-                case '不限注册时间':
-                    regtime = common.get_no_split_date(cur_ms);
+            switch (regid) {
+                case 'all':
+                    regtime = -1;
                     break;
-                case '注册30天内的用户':
+                case '30':
                     regtime = common.get_no_split_date(cur_ms - 30 * 24 * 60 * 60 * 1000);
                     break;
-                case '注册90天内的用户':
+                case '90':
                     regtime = common.get_no_split_date(cur_ms - 90 * 24 * 60 * 60 * 1000);
                     break;
             }
-            console.log(regtime);
+            //获取充值方式
+            var paytype = $('.paytype option:selected').attr('nodeid');
+            //获取充值渠道
+            var gameid = $('#channeltype').attr('channelid');
 
-            var this_url = url.domain + url.port + interFace.pay_tcpaytrend;
+            var this_url = url.domain + url.port + interFace.pay_tcmobilepaytrend;
             var json_data = {
-                'begin': begin,
-                'end': end,
+                'begindate': begin,
+                'enddate': end,
                 'maxamount': maxamount,
                 'minamount': minamount,
+                'gameid': common.change_all(gameid),
+                'firstpay': firstpay,
+                'paytype': common.change_all(paytype),
                 'regtime': regtime
             }
-            console.log(this_url);
-            console.log(json_data);
+            log(this_url);
+            log(json_data);
             //获取数据并执行相关操作
             var origin_data = get_origin_data({
                 url: this_url,//url地址，必填
@@ -121,29 +130,24 @@ var tc_pcpay_trend = {
 function compare(a, b) {
     return a.Date - b.Date;
 }
-//将原始数据转换成可显示数据
-function get_show_data(orgin_data) {
-    for (var i = 0, len = orgin_data.length; i < len; i++) {
-        orgin_data[i].Date = common.to_split_date(orgin_data[i].Date);
-    }
-    return orgin_data;
-}
+
 //回调函数
 function callbackfn(data) {
-    var data = get_show_data(data.sort(compare));
-    if (data.length == 0) {
+    data.Details = data.Details.sort(compare);
+    var origin_data = paydata_common.get_trend_data(data);
+    if (data.Details.length == 0) {
         $con.append('<div class="no_data">对不起，您搜索的时间段内没有数据！</div>');
         download_origin_data = null;
     } else {
-        $('.data_wrap,.show_nav').show();
+        $('.total_data,.data_wrap,.show_nav').show();
+        //总计列表展示
+        paydata_common.total_data_show(origin_data.Totals);
         //图表展示
-        charts_show_byday.init(data);
+        log(origin_data);
+        charts_show_trend.init(origin_data.Details);
         //表格展示
-        download_origin_data = table_show_byday(data);
+        download_origin_data = table_show_trend(origin_data.Details);
 
-        setTimeout(function () {
-            $(window).trigger('resize');
-        }, 10)
     }
 }
 

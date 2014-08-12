@@ -100,7 +100,8 @@ $(function () {
     function search_byday() {
         var bengin_origin = $start_time_byday.val(),
                   end_origin = $end_time_byday.val();
-        if (bengin_origin == 'undefined' || end_origin == 'undefined') {
+        //日期判断
+        if (!date_judgment.byday(bengin_origin, end_origin)) {
             return false;
         }
         var begin = common.to_nosplit_date(bengin_origin),
@@ -131,7 +132,8 @@ $(function () {
     function search_bymonth() {
         var bengin_origin = $start_time_bymonth.val(),
                    end_origin = $end_time_bymonth.val();
-        if (bengin_origin == 'undefined' || end_origin == 'undefined') {
+        //日期判断
+        if (!date_judgment.bymonth(bengin_origin, end_origin)) {
             return false;
         }
         var begin = common.to_nosplit_month(bengin_origin),
@@ -177,7 +179,7 @@ $(function () {
     }
     //回调函数
     function callbackfn_byday(data) {
-        console.log(data);
+        log(data);
         var origin_data = get_show_data(data.sort(compare), 'date');
         if (origin_data.length == 0) {
             $data_show.empty().append('<div class="no_data">对不起，您搜索的时间段内没有数据！</div>');
@@ -190,10 +192,6 @@ $(function () {
             charts_show_byday.init(origin_data);
             //表格展示
             download_origin_data = table_show_byday(origin_data);
-
-            setTimeout(function () {
-                $(window).trigger('resize');
-            }, 10);
         }
     }
     function callbackfn_bymonth(data) {
@@ -209,10 +207,6 @@ $(function () {
             charts_show_bymonth.init(origin_data);
             //表格展示
             download_origin_data = table_show_bymonth(origin_data);
-
-            setTimeout(function () {
-                $(window).trigger('resize');
-            }, 10);
         }
     }
     

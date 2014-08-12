@@ -7,7 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>GS系统首页GS系统首页GS系统首页GS系统首页GS系统首页GS系统首页</title>
+    <title>GS系统首页</title>
     <link rel="stylesheet" type="text/css" href="/Static/style/common.css" />
     <link rel="stylesheet" type="text/css" href="/Static/style/site/index.css" />
 </head>
@@ -25,14 +25,14 @@
 				<li class="common_frame attention_manage"><a>关注内容设置</a></li>
 				@*<li class="event_manage"><a>事件管理</a></li>*@
 				<li class="ul_split"></li>
-				<li class="version"><a>版本说明</a></li>
-				<li class="about_gs"><a>关于GS系统</a></li>
+				<li class="common_frame version"><a>版本说明</a></li>
+				<li class="common_frame about_gs"><a>关于GS系统</a></li>
 				<li class="ul_split"></li>
-				<li class="login_to_system"><a>跳转到管理后台</a></li>
-				<li class="exit_system"><a>退出系统</a></li>
+				<li class="login_to_system"><a href="@ViewBag.AdminUrl" target="_blank">跳转到管理后台</a></li>
+                <li class="exit_system" id="exit_system"><a href="@ViewBag.LoginUrl">退出系统</a></li>
 			</ul>
 		</div><!--end logo-->
-		<div class="tab_nav">
+		<div class="tab_nav fl">
 			<div class="tab_nav_btn_wrap">
 				<div class="tab_nav_btn_wrap_inner clearfix">
 					<a href="#" class="tab_nav_btn tab_nav_on home" name="tab_btn_0">home</a>
@@ -45,17 +45,16 @@
 				</ul>
 			</div>
 		</div>
-		<div class="welcome">
+		<div class="welcome fr">
             <span class="vertical_line"></span>
-			你好，<span>徐华平</span>
+			你好，<span> @ViewBag.CurrentUser </span>
 		</div>
 	</div>
 	<!--end header-->
 	<!--start container-->
 	<div id="container" class="clearfix">
 		<div id="main_right">
-			<div class="frame_wrap" name="con_0">
-				<img src="/Static/image/common/index_bg.png" class="index_img" style="text-align:center;" />
+			<div class="frame_wrap frame_wrap_index" name="con_0">
 			</div>
 		</div><!--end #main-->
 		<div id="slideNav" class="fr">

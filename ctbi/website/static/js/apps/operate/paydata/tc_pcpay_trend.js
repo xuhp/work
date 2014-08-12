@@ -3,19 +3,18 @@
 *@Author:      xuhp
 *@email:       xuhp@ct108.com
 *@Description: 
-* 同城游多日充值走势
+* 同城游PC多日充值走势
 */
 //获取dom
-
 var $win = $(window),
-$header = $('.header'),
-$start_time = $header.find('#start_time'),
-$end_time = $header.find('#end_time'),
-$data_search_btn = $header.find('.data_search_btn'),
-$con = $('.container'),
-$data_show = $con.children('.data_show'),
-$charts = $('.wrap_charts'),
-$table = $('wrap_table');
+    $header = $('.header'),
+    $start_time = $header.find('#start_time'),
+    $end_time = $header.find('#end_time'),
+    $data_search_btn = $header.find('.data_search_btn'),
+    $con = $('.container'),
+    $data_show = $con.children('.data_show'),
+    $charts = $('.wrap_charts'),
+    $table = $('wrap_table');
 //获取url参数
 var curid = common.getUrlPara('curid');
 //下载数据
@@ -58,7 +57,7 @@ var tc_pcpay_trend = {
             //获取时间
             var bengin_origin = $start_time.val(),
                 end_origin = $end_time.val();
-            if (bengin_origin == 'undefined' || end_origin == 'undefined') {
+            if (bengin_origin == '' || end_origin == '') {
                 return false;
             }
             var begin = common.to_nosplit_date(bengin_origin),
@@ -67,29 +66,56 @@ var tc_pcpay_trend = {
             var minamount = $('#minamount').val() || -1,
                 maxamount = $('#maxamount').val() || -1;
             //获取用户注册时间
-            var reg_val = $('.regtime  option:selected').text(),
+            var regid = $('.regtime  option:selected').attr('nodeid'),
                 cur_ms = new Date().getTime(),
                 regtime;
-            switch (reg_val) {
-                case '不限注册时间':
-                    regtime = common.get_no_split_date(cur_ms);
+            switch (regid) {
+                case 'all':
+                    regtime = -1;
                     break;
-                case '注册30天内的用户':
+                case '30':
                     regtime = common.get_no_split_date(cur_ms - 30 * 24 * 60 * 60 * 1000);
                     break;
-                case '注册90天内的用户':
+                case '90':
                     regtime = common.get_no_split_date(cur_ms - 90 * 24 * 60 * 60 * 1000);
                     break;
             }
-            console.log(regtime);
+            //获取地区信息
+            var areaid='',
+                provinceid = $('.provinces option:selected').attr('nodeid'),
+                cityid = $('.cities option:selected').attr('nodeid'),
+                districtid = $('.districts option:selected').attr('nodeid');
+            var id_arr = [districtid, cityid, provinceid];
+            console.log(id_arr);
+            for (var i = 0, len = id_arr.length; i < len; i++) {
+                if (id_arr[i] != 'all') {
+                    areaid = id_arr[i];
+                    break;
+                }
+            }
+            //判断是否仅首充
+            var firstpay = $('#firstpay')[0].checked;
+            //获取充值方式
+            var paytype = $('.paytype option:selected').attr('nodeid');
+            //获取充值渠道
+            var channeltype = $('#channeltype').attr('channeltype'),
+                channelid = $('#channeltype').attr('channelid');
 
-            var this_url = url.domain + url.port + interFace.pay_tcpaytrend;
+            console.log(channeltype);
+
+            var this_url = url.domain + url.port + interFace.pay_tcpcpaytrend;
             var json_data = {
-                'begin': begin,
-                'end': end,
+                'begindate': begin,
+                'enddate': end,
                 'maxamount': maxamount,
                 'minamount': minamount,
-                'regtime': regtime
+                'regtime': regtime,
+                'channeltype': channeltype || '',
+                'channelid': common.change_all(channelid),
+                'firstpay':firstpay,
+                'paytype': common.change_all(paytype),
+                'regtime': regtime,
+                'areaid': areaid
             }
             console.log(this_url);
             console.log(json_data);
@@ -121,29 +147,24 @@ var tc_pcpay_trend = {
 function compare(a, b) {
     return a.Date - b.Date;
 }
-//将原始数据转换成可显示数据
-function get_show_data(orgin_data) {
-    for (var i = 0, len = orgin_data.length; i < len; i++) {
-        orgin_data[i].Date = common.to_split_date(orgin_data[i].Date);
-    }
-    return orgin_data;
-}
+ 
 //回调函数
 function callbackfn(data) {
-    var data = get_show_data(data.sort(compare));
-    if (data.length == 0) {
+    data.Details = data.Details.sort(compare);
+    var origin_data = paydata_common.get_trend_data(data);
+    if (data.Details.length == 0) {
         $con.append('<div class="no_data">对不起，您搜索的时间段内没有数据！</div>');
         download_origin_data = null;
     } else {
-        $('.data_wrap,.show_nav').show();
+        $('.total_data,.data_wrap,.show_nav').show();
+        //总计列表展示
+        paydata_common.total_data_show(origin_data.Totals);
         //图表展示
-        charts_show_byday.init(data);
+        log(origin_data);
+        charts_show_trend.init(origin_data.Details);
         //表格展示
-        download_origin_data = table_show_byday(data);
+        download_origin_data = table_show_trend(origin_data.Details);
 
-        setTimeout(function () {
-            $(window).trigger('resize');
-        }, 10)
     }
 }
 

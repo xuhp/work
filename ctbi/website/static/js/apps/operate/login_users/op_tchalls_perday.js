@@ -43,7 +43,8 @@ $(function () {
             $header.delegate('.data_search_btn', 'click', function () {
                 var date_orgin = $selected_time.val(),
                     date = common.to_nosplit_date(date_orgin);
-                if (date_orgin == 'undefined') {
+                if (date_orgin == '') {
+                    alert(tipsStr.search_tip);
                     return false;
                 }
                 var this_url = url.domain + url.port + interFace.login_tchallusers_perday;
@@ -51,8 +52,8 @@ $(function () {
                     'hallid': curid,
                     'date': date
                 }
-                console.log(this_url);
-                console.log(json_data);
+                log(this_url);
+                log(json_data);
                 //获取数据并执行相关操作
                 var origin_data = get_origin_data({
                     url: this_url,//url地址，必填
@@ -112,7 +113,7 @@ $(function () {
     //回调函数
     function callbackfn( data) {
         var data = get_show_data(data.sort(compare));
-        console.log(data);
+        log(data);
         if (data.length==0) {
             $data_show.empty().append('<div class="no_data">对不起，您搜索的时间段内没有数据！</div>');
             download_origin_data = null;
@@ -124,9 +125,7 @@ $(function () {
             charts_show_perday.init(data);
             //表格展示
             download_origin_data=table_show_perday(data);
-            setTimeout(function () {
-                $(window).trigger('resize');
-            }, 10)
+        
         }
     }
     //初始化页面

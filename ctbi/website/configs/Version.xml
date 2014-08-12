@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <version date="20140820" ver="v8.0.0">
+    <content>全新界面设计</content>
+    <content>帐号体系和权限体系由任务系统转到畅唐管理后台</content>
+    <content>移除GS系统中失效模块</content>
+    <content>新增应用关注模块和历史模块</content>
+    <content>新增同城游平台充值统计分析应用</content>
+    <content>新增同城游PC端充值统计分析应用</content>
+    <content>新增同城游移动端充值统计分析应用</content>
+  </version>
+</root>

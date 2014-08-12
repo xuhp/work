@@ -104,6 +104,23 @@ html,body {
     width:60px;
     height:60px;
 }
+.allow_false > a
+{
+    position:relative;
+}
+.allow_false>a:after
+{
+    content: "";
+    display:block;
+    position:absolute;
+    width:60px;
+    height:60px;
+	border-radius:3px;
+    top:0;
+    left:0;
+    background:#333;
+    opacity:0.8;
+}
 .app a img{
 	width:60px;
 	height:60px;
@@ -145,9 +162,4 @@ html,body {
 .navsite a:hover
 {
     color:#000;
-}
-
-#app_search
-{
-    height:30px;
 }

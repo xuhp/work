@@ -2,32 +2,34 @@
     Layout = "~/Views/Apps/Layout/_Layout_Search_Charts_Table1.cshtml";
 }
 
-<p class="fl condition">
-    按
-    <select class="big_input">
-        <option value="0">日</option>
-        <option value="1">月</option>
-    </select>
-    查询：
-</p>
-<p class="fl byday">
-    <label for="start_time_byday">开始日期：</label>
-	<input type="text" id="start_time_byday" name="start_time_byday" class="big_input add_clear_btn mr20" />
-    <label for="end_time_byday">结束日期：</label>
-	<input type="text" id="end_time_byday" name="end_time_byday" class="big_input add_clear_btn " />
-</p>
-<p class="fl bymonth" style="display:none;">
-    <label for="start_time_bymonth">开始月份：</label>
-	<input type="text" id="start_time_bymonth" name="start_time_bymonth" onclick="setmonth(this)" class="big_input add_clear_btn mr20" />
-    <label for="end_time_bymonth">结束月份：</label>
-	<input type="text" id="end_time_bymonth" name="end_time_bymonth" onclick="setmonth(this)" class="big_input add_clear_btn " />
-</p>
-<a class="data_search_btn fl pos_btn big_btn ml20">搜索</a>
+<div class="search_condition clearfix mr350">
+    <p class="fl condition">
+        按
+        <select class="normal_input">
+            <option value="0">日</option>
+            <option value="1">月</option>
+        </select>
+        查询
+    </p>
+    <p class="fl byday">
+        <label for="start_time_byday">开始日期：</label>
+	    <input type="text" id="start_time_byday" name="start_time_byday" class="normal_input add_clear_btn mr20 w80" />
+        <label for="end_time_byday">结束日期：</label>
+	    <input type="text" id="end_time_byday" name="end_time_byday" class="normal_input add_clear_btn w80" />
+    </p>
+    <p class="fl bymonth" style="display:none;">
+        <label for="start_time_bymonth">开始月份：</label>
+	    <input type="text" id="start_time_bymonth" name="start_time_bymonth" onclick="setmonth(this)" class="normal_input add_clear_btn mr20 w80" />
+        <label for="end_time_bymonth">结束月份：</label>
+	    <input type="text" id="end_time_bymonth" name="end_time_bymonth" onclick="setmonth(this)" class="normal_input add_clear_btn w80" />
+    </p>
+    <p class="fl">
+        <a class="data_search_btn fl pos_btn normal_btn ml20">搜索</a>
+    </p>
+</div>
 
 <div class="attention_help_wrap">
     <a class="app_help">Info</a>
-    @* 帮助信息 *@
-    @Html.Raw(ViewBag.Desc)
     <a class="download"><img src="/Static/image/common/icon/download.png" />表格数据下载</a>
 </div>
 
@@ -45,11 +47,14 @@
      }
     @Scripts.Render("~/bundles/highstock")
     <script src="/Static/js/apps/operate/registered_users/op_nations_basic.js"></script>
+    <script src="/Static/js/common/help_info.js"></script>
     <script src="/Static/js/layout/nations.js"></script>
     <script>
         $(function () {
-            var state = @ViewBag.AttentionState;
-            nations.init(state);
+            var state = @ViewBag.AttentionState,
+               help_info=@Html.Raw(ViewBag.Desc);
+            //bottom代表向下的提示框
+            nations.init(state,help_info,'top');
         });
     </script>
 }

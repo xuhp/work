@@ -707,7 +707,7 @@ error = function (code, stop) {
 	}
 	// else ...
 	if (win.console) {
-		console.log(msg);
+		log(msg);
 	}
 };
 

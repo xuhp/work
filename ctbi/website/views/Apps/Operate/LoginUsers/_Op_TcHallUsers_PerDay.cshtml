@@ -2,13 +2,18 @@
     Layout = "~/Views/Apps/Layout/_Layout_Search_Charts_Table1.cshtml";
 }
 
-<p class="fl">
-    <label for="selected_time">请选择日期：</label>
-    <input type="text" id="selected_time" name="selected_time" class="big_input add_clear_btn " />
-</p>
-<a class="data_search_btn fl pos_btn big_btn ml20">搜索</a>
-
-<a class="download"><img src="/Static/image/common/icon/download.png" />表格数据下载</a>
+<div class="search_condition clearfix mr130">
+    <p class="fl">
+        <label for="selected_time">请选择日期：</label>
+        <input type="text" id="selected_time" name="selected_time" class="normal_input add_clear_btn w120" />
+    </p>
+    <p class="fl">
+        <a class="data_search_btn fl pos_btn normal_btn ml20">搜索</a>
+    </p>
+</div>
+<div class="attention_help_wrap clearfix">
+    <a class="download"><img src="/Static/image/common/icon/download.png" />表格数据下载</a>
+</div>
 
 @section BottomResource{
     @if (CT.BI.WEB.BASE.BaseController.IsResoucePack())

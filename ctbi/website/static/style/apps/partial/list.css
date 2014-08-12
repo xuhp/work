@@ -7,6 +7,10 @@
     border-top:1px solid #666;
     position:relative;
 }
+.slide_head:hover .app_ul_nav
+{
+    display:block;
+}
 .slide_head h1
 {
     color:#fff;
@@ -15,6 +19,8 @@
     font-weight:bold;
     font-size:13px;
     cursor:pointer;
+    position:relative;
+    z-index:99;
 }
 .app_ul_nav
 {
@@ -29,6 +35,9 @@
     width:250px;
     right:-260px;
     z-index:999;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .app_ul_nav li
 {

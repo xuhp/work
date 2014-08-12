@@ -31,6 +31,6 @@ function table_show_perday(data) {
     var row_data = get_table_data(data, ['Time', 'Users']);
     table_data.row = row_data;
     $('.table_wrap').table(table_data);
-    console.log(table_data);
+    log(table_data);
     return table_data;
 }
